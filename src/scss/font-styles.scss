@@ -1,0 +1,17 @@
+@mixin reformagrotesk {
+    $path: "../fonts/ReformaGrotesk";
+
+    @font-face {
+        font-family: "ReformaGrotesk";
+        src: url(#{$path}/ReformaGroteskMedium.eot);
+        src: local("ReformaGroteskMedium"),
+        local("ReformaGroteskMedium"),
+        url(#{$path}/ReformaGroteskMedium.eot?#iefix) format("embedded-opentype"),
+        url(#{$path}/ReformaGroteskMedium.woff) format("woff"),
+        url(#{$path}/ReformaGroteskMedium.ttf) format("truetype");
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+@include reformagrotesk();

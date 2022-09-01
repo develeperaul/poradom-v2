@@ -1,0 +1,12 @@
+@tailwind base;
+@layer base {
+    body {
+        @apply text-xl font-stolzl;
+        letter-spacing: -0.01em;
+    }
+
+    h2 {
+        @apply text-8xl xl:text-9.75xl text-white uppercase font-reformagrotesk;
+        letter-spacing: -0.01em;
+    }
+}

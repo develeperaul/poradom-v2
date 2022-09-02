@@ -1,0 +1,26 @@
+include ./rainbow.pug
+mixin card-application(title)
+  div(class="relative flex gap-x bg-dark  px-5 py-15 xl:py-0  xl:px-24 xl:flex-row xl:justify-between xl:items-center gap-x-24 mb-7.5 mt-3.75 xl:mt-7.5 xl:mb-40")
+    div(class="absolute top-0 left-1/2 transform -translate-y-1/2 -translate-x-1/2")
+      +rainbow
+    div.w-full(class="xl:py-10")
+      h2(class="text-8xl xl:text-9.75xl mb-9 xl:mb-10") #{title}
+      form(data-form)
+        .items-end(class='xl:flex xl:gap-5')
+          div(class='xl:flex xl:flex-wrap xl:gap-2.5')
+            .text-field.text-field_floating(class='mb-8.75 xl:mb-0')
+              input.text-field__input(data-type='text' data-special-offer='' type='text' name='name' placeholder='Иван Иванов')
+            .text-field.text-field_floating.mb-7(class='xl:mb-0')
+              input.text-field__input.tel(data-type='phone' data-special-offer='' type='text' name='phone' placeholder='+7 (999) 999-99-99')
+          button.button.bg-yellow.w-full.text-title(type='submit' class='xl:w-auto') Отправить
+        label.checkbox-other
+          input(data-special-offer='' checked='checked' data-type='checkbox' type='checkbox')
+          p.text-base.normal-case
+            | Даю согласие на обработку 
+            a.checkbox__link(href='personal-data.pdf' target='_blank')
+              | персональных данных
+
+
+    div(class="hidden xl:py-10 xl:block relative shrink-0")
+      img(src=require("./img/images/travel-guide/01.png"), alt="" class="absolute -left-17.5 z-10 -bottom-0")
+      img(src=require("./img/icons/logo-gray.svg"), width="512" height="330" alt="andersen" class=" opacity-10")

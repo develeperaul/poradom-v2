@@ -1,0 +1,15 @@
+include ../components/flag.pug
+include ../components/card-application.pug
+section 
+  .container
+    div 
+    +flag(2)
+    h2(class="text-center text-dark") локация
+    h3(class="text-center text-4xl text-gray mb-7.5") 54.756604, 55.745656
+
+    img(src=require("./img/images/travel-guide/20minuts.png"), alt="20minuts")
+    div(class="hidden xl:flex")
+      img(src=require("./img/images/travel-guide/20minuts.png"), alt="20minuts")
+      div
+
+    +card-application('заказать звонок')(class="mb-30 xl:mb-40")

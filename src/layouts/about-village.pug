@@ -2,6 +2,7 @@ include ../components/flag.pug
 include ../components/number.pug
 include ../components/advantage.pug
 include ../components/rainbow.pug
+include ../components/card-application.pug
 - var advantage01 = 'Фельдшерско-акушерский пункт ';
 - var advantage02 = '2000 м2 детских пространств';
 - var advantage03 = 'Закрытый периметр посёлка, шлагбаумы';
@@ -14,8 +15,8 @@ include ../components/rainbow.pug
 - var advantage10 = 'Спортивное звено, скейт-парк, беговая дорожка';
 section 
   
-  +flag(1)
   div(class="container")
+    +flag(1)
     div(class="mt-7.5")
       h2(class="text-center text-dark mb-7.5") о поселке
       h2(class=" mb7.5  xl:mb-10") Таун-парк <br class=" xl:hidden"> андерсен — mini-город с maxi-возможностями рядом с Дёмой  
@@ -40,31 +41,8 @@ section
         +advantage('icon-09', advantage09, 'bg-yellow')
         +advantage('icon-10', advantage10, 'bg-bordeaux')
       
-      div(class="relative flex gap-x bg-dark py-15 px-5 xl:py-10 xl:px-24 xl:flex-row xl:justify-between xl:items-center gap-x-24 mb-7.5 xl:mb-40")
-        div(class="absolute top-0 left-1/2 transform -translate-y-1/2 -translate-x-1/2")
-          +rainbow
-        div.w-full
-          h2(class="text-8xl xl:text-9.75xl mb-9 xl:mb-10") запросить презентацию
-          form(data-form)
-            .items-end(class='xl:flex xl:gap-5')
-              div(class='xl:flex xl:flex-wrap xl:gap-2.5')
-                .text-field.text-field_floating(class='mb-8.75 xl:mb-0')
-                  input.text-field__input(data-type='text' data-special-offer='' type='text' name='name' placeholder='Иван Иванов')
-                .text-field.text-field_floating.mb-7(class='xl:mb-0')
-                  input.text-field__input.tel(data-type='phone' data-special-offer='' type='text' name='phone' placeholder='+7 (999) 999-99-99')
-              button.button.bg-yellow.w-full.text-title(type='submit' class='xl:w-auto') Отправить
-            label.checkbox-other
-              input(data-special-offer='' checked='checked' data-type='checkbox' type='checkbox')
-              p.text-base.normal-case
-                | Даю согласие на обработку 
-                a.checkbox__link(href='personal-data.pdf' target='_blank')
-                  | персональных данных
+      +card-application('запросить презентацию')(class="mb-30 xl:mb-40")
 
-
-        div(class="hidden xl:block relative")
-          img(src=require("./img/images/travel-guide/01.png"), alt="" class="absolute -left-17.5 z-10 -bottom-10")
-          img(src=require("./img/icons/logo-gray.svg"), alt="andersen" class=" opacity-10")
-    
       div(class=" flex flex-col gap-2.5 xl:gap-3.75 xl:flex-row mb-30 xl:mb-40")
         div(class="bg-dark p-5 flex flex-col gap-12")
           h3(class=" text-gray text-5.25-5xl") таунхаусы <br class="xl:hidden"> и дома от

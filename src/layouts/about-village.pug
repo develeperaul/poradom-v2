@@ -1,0 +1,77 @@
+include ../components/flag.pug
+include ../components/number.pug
+include ../components/advantage.pug
+include ../components/rainbow.pug
+- var advantage01 = 'Фельдшерско-акушерский пункт ';
+- var advantage02 = '2000 м2 детских пространств';
+- var advantage03 = 'Закрытый периметр посёлка, шлагбаумы';
+- var advantage04 = 'Центральные коммуникации, артезианская вода';
+- var advantage05 = 'До школы 6 минут на школьном автобусе';
+- var advantage06 = 'Торговый центр, пункты выдачи маркетплейсов';
+- var advantage07 = 'Кафе, пекарни, фермерские продукты';
+- var advantage08 = 'Единая дизайн-среда, променад';
+- var advantage09 = 'Более 100 камер и полная безопасность';
+- var advantage10 = 'Спортивное звено, скейт-парк, беговая дорожка';
+section 
+  
+  +flag(1)
+  div(class="container")
+    div(class="mt-7.5")
+      h2(class="text-center text-dark mb-7.5") о поселке
+      h2(class=" mb7.5  xl:mb-10") Таун-парк <br class=" xl:hidden"> андерсен — mini-город с maxi-возможностями рядом с Дёмой  
+      div(class="flex flex-col gap-3.5 mb-15 xl:flex-row xl:items-center xl:gap-31.25 xl:mb-20")
+        div(class="flex flex-col gap-5 xl:gap-15")
+          div(class="flex gap-5") 
+            +number(200)
+            span(class="text-4xl xl:text-5.25-5xl font-reformagrotesk") таунхаусов
+          div(class="flex gap-5") 
+            +number(100)
+            span(class="text-4xl xl:text-5.25-5xl font-reformagrotesk") индивидуальных <br> жилых домов
+        img(src=require("./img/images/travel-guide/tuk-tuk.png"), alt="")
+      div(class="advantages mb-15 xl:mb-40")
+        +advantage('icon-01', advantage01, 'bg-blue')
+        +advantage('icon-02', advantage02, 'bg-yellow')
+        +advantage('icon-03', advantage03, 'bg-green-dark')
+        +advantage('icon-04', advantage04, 'bg-red')
+        +advantage('icon-05', advantage05, 'bg-red')
+        +advantage('icon-06', advantage06, 'bg-brown')
+        +advantage('icon-07', advantage07, 'bg-green-dark')
+        +advantage('icon-08', advantage08, 'bg-blue')
+        +advantage('icon-09', advantage09, 'bg-yellow')
+        +advantage('icon-10', advantage10, 'bg-bordeaux')
+      
+      div(class="relative flex gap-x bg-dark py-15 px-5 xl:py-10 xl:px-24 xl:flex-row xl:justify-between xl:items-center gap-x-24 mb-7.5 xl:mb-40")
+        div(class="absolute top-0 left-1/2 transform -translate-y-1/2 -translate-x-1/2")
+          +rainbow
+        div.w-full
+          h2(class="text-8xl xl:text-9.75xl mb-9 xl:mb-10") запросить презентацию
+          form(data-form)
+            .items-end(class='xl:flex xl:gap-5')
+              div(class='xl:flex xl:flex-wrap xl:gap-2.5')
+                .text-field.text-field_floating(class='mb-8.75 xl:mb-0')
+                  input.text-field__input(data-type='text' data-special-offer='' type='text' name='name' placeholder='Иван Иванов')
+                .text-field.text-field_floating.mb-7(class='xl:mb-0')
+                  input.text-field__input.tel(data-type='phone' data-special-offer='' type='text' name='phone' placeholder='+7 (999) 999-99-99')
+              button.button.bg-yellow.w-full.text-title(type='submit' class='xl:w-auto') Отправить
+            label.checkbox-other
+              input(data-special-offer='' checked='checked' data-type='checkbox' type='checkbox')
+              p.text-base.normal-case
+                | Даю согласие на обработку 
+                a.checkbox__link(href='personal-data.pdf' target='_blank')
+                  | персональных данных
+
+
+        div(class="hidden xl:block relative")
+          img(src=require("./img/images/travel-guide/01.png"), alt="" class="absolute -left-17.5 z-10 -bottom-10")
+          img(src=require("./img/icons/logo-gray.svg"), alt="andersen" class=" opacity-10")
+    
+      div(class=" flex flex-col gap-2.5 xl:gap-3.75 xl:flex-row mb-30 xl:mb-40")
+        div(class="bg-dark p-5 flex flex-col gap-12")
+          h3(class=" text-gray text-5.25-5xl") таунхаусы <br class="xl:hidden"> и дома от
+          +number('6.5', 'с землей', 'млн', 'руб')(class="justify-between")
+        div(class="bg-dark p-5 flex flex-col gap-12")
+          h3(class=" text-gray text-5.25-5xl") в ипотеку *
+          +number('28.5', 'платеж ', 'тыс', 'руб')(class="justify-between")
+        div(class="bg-dark p-5 flex flex-col gap-12")
+          h3(class=" text-gray text-5.25-5xl") эскроу<br class="xl:hidden">-счета
+          +number('100', 'гарантия', '%')(class="justify-between")

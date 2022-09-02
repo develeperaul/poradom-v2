@@ -1,15 +1,15 @@
-@import "./tail.scss";  
+@import "./_mixins.scss";
+@import "./tail.scss";
 @import "./base.scss";
 @import "./utilities.scss";
-@import "./_mixins.scss";
 @import "./font-styles.scss";
 @import "./stolzl-font.scss";
-
 
 @import "./core/checkbox.scss";
 @import "./core/input.scss";
 
-@import 'animate.css';
+@import "./components/advantage.scss";
 
+@import "./layouts/_navigation.scss";
 
-
+@import "animate.css";

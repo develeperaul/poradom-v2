@@ -1,12 +1,27 @@
 @tailwind base;
 @layer base {
-    body {
-        @apply text-xl font-stolzl;
-        letter-spacing: -0.01em;
-    }
+  body {
+    @apply text-xl font-stolzl bg-background text-white;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply text-white uppercase font-reformagrotesk;
+  }
+  h1 {
+    @apply text-8xl xl:text-14.75xl;
+  }
+  h2 {
+    @apply text-5.25-5xl xl:text-9.75xl;
+  }
+  h3 {
+  }
 
-    h2 {
-        @apply text-8xl xl:text-9.75xl text-white uppercase font-reformagrotesk;
-        letter-spacing: -0.01em;
-    }
+  p,
+  .base {
+    @apply text-base xl:text-lg text-white;
+    letter-spacing: -0.02em;
+  }
 }

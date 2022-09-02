@@ -1,8 +1,34 @@
 @tailwind utilities;
-
 @layer utilities {
-    button {
-        @apply py-3.5 px-7;
-        min-width: 200px;
+  .wrapper {
+    @apply container px-0;
+  }
+
+  .wrapper-container {
+    @apply container px-0 xl:px-25;
+  }
+
+  .button {
+    @apply py-3.5 px-7 text-base;
+    min-width: 200px;
+    letter-spacing: -0.02rem;
+    height: max-content;
+    &_yellow {
+      @apply bg-yellow text-title;
     }
+  }
+
+  .advantages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 160px));
+    gap: 30px 15px;
+    @include screen-xl {
+      grid-template-columns: repeat(auto-fit, minmax(0, 290px));
+      gap: 60px 20px;
+    }
+  }
+
+  .gap-x {
+    @apply -mx-5 xl:mx-0;
+  }
 }

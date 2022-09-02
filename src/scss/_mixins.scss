@@ -1,5 +1,7 @@
+$xl: theme("screens.xl");
+
 @mixin screen-xl {
-    @media screen and (min-width: $xl) {
-        @content;
-    }
+  @media screen and (min-width: $xl) {
+    @content;
+  }
 }

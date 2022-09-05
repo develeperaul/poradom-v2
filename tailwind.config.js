@@ -73,9 +73,32 @@ module.exports = {
       addComponents({
         ".container": {
           maxWidth: "100%",
+          padding: "0 20px",
+          marginRight: "auto",
+          marginLeft: "auto",
+          "@screen xl": {
+            maxWidth: "1920px",
+            padding: "0 40px",
+          },
+        },
+        ".container-100": {
+          marginRight: "auto",
+          marginLeft: "auto",
+          maxWidth: "100%",
+          padding: "0 20px",
           "@screen xl": {
             maxWidth: "1920px",
             padding: "0 100px",
+          },
+        },
+        ".container-195": {
+          maxWidth: "100%",
+          padding: "0 20px",
+          marginRight: "auto",
+          marginLeft: "auto",
+          "@screen xl": {
+            maxWidth: "1920px",
+            padding: "0 195px",
           },
         },
       });

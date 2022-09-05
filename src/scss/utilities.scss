@@ -1,5 +1,8 @@
 @tailwind utilities;
 @layer utilities {
+  .w-850 {
+    width: 850px;
+  }
   .wrapper {
     @apply container px-0;
   }

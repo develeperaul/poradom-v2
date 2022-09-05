@@ -1,15 +1,39 @@
-include ../components/flag.pug
+include ../components/flag-content.pug
+include ../components/number.pug
 include ../components/card-application.pug
 section 
-  .container
-    div 
-    +flag(2)
-    h2(class="text-center text-dark") локация
-    h3(class="text-center text-4xl text-gray mb-7.5") 54.756604, 55.745656
-
-    img(src=require("./img/images/travel-guide/20minuts.png"), alt="20minuts")
-    div(class="hidden xl:flex")
-      img(src=require("./img/images/travel-guide/20minuts.png"), alt="20minuts")
-      div
-
+  div(class="container-195 pr-25")
+    +flag-content(2, 'локация')
+    div(class="xl:hidden") 
+      h2(class="text-center text-dark") локация
+      h3(class="text-center text-4xl text-gray mb-7.5") 54.756604, 55.745656
+    div(class="relative travel-time mb-7.5 xl:mb-44 flex justify-between")
+      div 
+        div(class="text-8xl xl:text-9.75xl font-reformagrotesk") 20 минут
+        img(src=require("./img/icons/road-car.svg"), alt="road-car" class="travel-time__car-road")
+        div(class="travel-time__to") 
+          div(class="text-8xl xl:text-9.75xl font-reformagrotesk text-gray mb-5 xl:mb-7.5") от уфы
+          p(class="text-gray") Местонахождение: <br> деревня Начапкино <br> на юго-западе Уфы
+        img(src=require("./img/images/travel-guide/20minuts.png"), alt="20minuts" class="travel-time__icon")
+      div(class="travel-time__map")  
+    div(class="hidden xl:flex justify-between mb-32")
+      div(class="shrink-0 xl:-ml-40")
+        img(src=require("./img/images/travel-guide/20minuts.png"), alt="20minuts" width="758" height="717" )
+      div(class="w-850 flex flex-col gap-60")
+        div(class="flex justify-between")
+          h4(class=" text-5.25-5xl text-gray") от Монумента Дружбы <br> через Дёмское шоссе
+          +number(21,null,'км')
+        div(class="flex justify-between")
+          h4(class=" text-5.25-5xl text-gray") От Затонского моста
+          +number(22,null,'км')
+        div(class="flex justify-between")
+          h4(class=" text-5.25-5xl text-gray") от дЁмы
+          +number(10,null,'км')
+        div(class="flex justify-between")
+          h4(class=" text-5.25-5xl text-gray") до школы
+          +number(8,null,'км')
+        div(class="flex justify-between")
+          h4(class=" text-5.25-5xl text-gray") до нового дома
+          +number(1,null,'км')
+  .container-100
     +card-application('заказать звонок')(class="mb-30 xl:mb-40")

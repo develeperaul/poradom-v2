@@ -1,4 +1,4 @@
-include ../components/flag.pug
+include ../components/flag-content.pug
 include ../components/number.pug
 include ../components/advantage.pug
 include ../components/rainbow.pug
@@ -15,12 +15,14 @@ include ../components/card-application.pug
 - var advantage10 = 'Спортивное звено, скейт-парк, беговая дорожка';
 section 
   
-  div(class="container")
-    +flag(1)
+  div(class="container-195")
+    +flag-content(1, 'о поселке')
     div(class="mt-7.5")
-      h2(class="text-center text-dark mb-7.5") о поселке
-      h2(class=" mb7.5  xl:mb-10") Таун-парк <br class=" xl:hidden"> андерсен — mini-город с maxi-возможностями рядом с Дёмой  
-      div(class="flex flex-col gap-3.5 mb-15 xl:flex-row xl:items-center xl:gap-31.25 xl:mb-20")
+      h2(class="text-center text-dark mb-7.5 xl:hidden") о поселке
+      div(class="hidden xl:block")
+        +rainbow()(class="justify-center mb-25")
+      h2(class=" mb7.5  xl:mb-10") Таун-парк <br class=" xl:hidden"> андерсен — mini-город <br class="hidden xl:block"> с maxi-возможностями рядом с Дёмой  
+      div(class="flex flex-col gap-3.5 mb-15 xl:flex-row xl:items-center xl:justify-center xl:gap-31.25 xl:mb-20")
         div(class="flex flex-col gap-5 xl:gap-15")
           div(class="flex gap-5") 
             +number(200)
@@ -40,10 +42,10 @@ section
         +advantage('icon-08', advantage08, 'bg-blue')
         +advantage('icon-09', advantage09, 'bg-yellow')
         +advantage('icon-10', advantage10, 'bg-bordeaux')
-      
-      +card-application('запросить презентацию')(class="mb-30 xl:mb-40")
-
-      div(class=" flex flex-col gap-2.5 xl:gap-3.75 xl:flex-row mb-30 xl:mb-40")
+  div.container-100  
+    +card-application('запросить презентацию')(class="mb-30 xl:mb-40")
+  div.container-195
+    div(class=" flex flex-col gap-2.5 xl:gap-3.75 xl:flex-row xl:justify-center mb-30 xl:mb-40")
         div(class="bg-dark p-5 flex flex-col gap-12")
           h3(class=" text-gray text-5.25-5xl") таунхаусы <br class="xl:hidden"> и дома от
           +number('6.5', 'с землей', 'млн', 'руб')(class="justify-between")

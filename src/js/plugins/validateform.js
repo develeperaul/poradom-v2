@@ -64,8 +64,14 @@ export default class Validate {
       case 'email':
       this.inputIsvalid(input, EMAIL_REGEXP.test(input.value))
       break
+      case 'text':
+        this.inputIsvalid(input, input.value.length > 3);
+        break
+      case 'checkbox':
+        this.inputIsvalid(input, input.checked);
+        break
       default :
-          this.inputIsvalid(input, input.value.length > 3);
+        break;
       }
     }
   inputIsvalid(input,condition){

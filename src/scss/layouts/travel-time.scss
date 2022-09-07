@@ -1,15 +1,28 @@
 .travel-time {
+  @include screen-lg {
+    width: 560px;
+  }
   @include screen-xl {
+    width: inherit;
     height: 720px;
   }
   &__car-road {
     padding: 0 40px;
+    margin-bottom: 20px;
+    @include screen-lg {
+      padding: 0;
+      width: 250px;
+      transform: translateX(240px);
+      margin-bottom: 25px;
+    }
     @include screen-xl {
+      transform: translateX(0);
       top: 20px;
       position: relative;
       left: 40px;
       width: 500px;
       height: 100px;
+      margin-bottom: 30px;
     }
   }
   &__to {
@@ -21,16 +34,31 @@
   }
   &__icon {
     display: none;
-    @include screen-xl {
+    @include screen-lg {
       display: block;
+      width: 323px;
+      transform: translateY(-180px);
+      margin-bottom: -180px;
+    }
+    @include screen-xl {
       position: absolute;
       bottom: 0;
       left: -10rem;
+      transform: translateY(0px);
+      margin-bottom: -0px;
     }
   }
 
   &__map {
-    background-color: #fff;
+    background-color: transparent;
+    width: calc(100% + 40px);
+    min-height: 320px;
+    margin: 0 -20px;
+    @include screen-lg {
+      width: 730px;
+      height: 620px;
+      margin: 0;
+    }
     @include screen-xl {
       width: 850px;
       height: 720px;

@@ -4,7 +4,9 @@
   align-items: center;
   text-align: center;
   gap: 10px;
+  flex-basis: 160px;
   @include screen-xl {
+    flex-basis: 290px;
     gap: 20px;
   }
   &__logo {

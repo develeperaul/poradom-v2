@@ -1,11 +1,120 @@
 include ../components/flag-content.pug
 include ../components/card-application.pug
-section(class="pb-20 xl:pb-40")
+section(class="pb-20 xl:pb-60" id="why")
   div(class="container-195")
     +flag-content(3)
     h2(class="text-center text-dark mb-7.5 xl:hidden") преимущества
     h2(class="text-8xl xl:text-9.75xl mb-7.5 xl:mb-15") почему андерсен
   div.container-100
+
+    div(class="swiper fraction fractionSwiper lg:hidden mb-20 -mx-5")
+      .swiper-wrapper
+        .swiper-slide
+          div(class="bg-red px-5 pt-6 pb-10 flex flex-col justify-between")
+            img(src=require("./img/images/book-img/book-02.png"), alt="01" class="mb-8.75 lg:mb-10")
+            div(class="mb-12")
+              h2.mb-5 первый в россии загородный поселок с проектным финансированием
+              p В пул платежей входят «прямые» оплаты за газ, воду, электричество, Интернет
+                |  и платеж за обслуживание поселка Управляющей компанией «Смородина».
+                |  Такой порядок  позволяет практически вдвое (по сравнению с платежами
+                |  за городские квартиры) сократить расходы на обслуживание вашего дома
+            div(class="fraction__content")    
+              div.fraction__content-navigation
+                .swiper-prev
+                .swiper-next 
+              div(class="swiper-fraction swiper-fraction_white ")
+        .swiper-slide
+          div(class="bg-blue px-5 pt-6 pb-10 flex flex-col justify-between")
+            img(src=require("./img/images/book-img/book-01.png"), alt="01" class="mb-8.75 lg:mb-10")
+            div(class="mb-12")
+              h2.mb-5 22 минуты из города <br> и 2 дороги из уфы
+              div
+                p Андерсен расположен в деревне Начапкино между Дёмским районом
+                  |  и Затоном. Выбирайте любую из 2-х дорог: через Бельский или Затонский мост.
+                <br>
+                p К 2025 году планируется строительство нового моста, который будет выходить практически напрямую к дороге на Начапкино*. В 10-ти минутах от Андерсена находится Дёмский район
+                  |  с полной городской инфраструктурой: школами, детскими садами, больницами, станцией скорой помощи и многим другим.
+                <br>
+                p *Информация об открытии нового моста через р. Белая — из открытых информационноых источников 
+            div(class="fraction__content")    
+              div.fraction__content-navigation
+                .swiper-prev
+                .swiper-next 
+              div(class="swiper-fraction swiper-fraction_white ")
+        .swiper-slide
+          div(class="bg-red px-5 pt-6 pb-10 flex flex-col justify-between")
+            img(src=require("./img/images/book-img/book-02.png"), alt="01" class="mb-8.75 lg:mb-10")
+            div(class="mb-12")
+              h2.mb-5 коммуналка <br> за полцены
+              p В пул платежей входят «прямые» оплаты за газ, воду, электричество, Интернет
+                |  и платеж за обслуживание поселка Управляющей компанией «Смородина».
+                |  Такой порядок  позволяет практически вдвое (по сравнению с платежами
+                |  за городские квартиры) сократить расходы на обслуживание вашего дома
+            div(class="fraction__content")    
+              div.fraction__content-navigation
+                .swiper-prev
+                .swiper-next 
+              div(class="swiper-fraction swiper-fraction_white ")
+
+        .swiper-slide
+          div(class="bg-red px-5 pt-6 pb-10 flex flex-col justify-between")
+            img(src=require("./img/images/book-img/book-02.png"), alt="01" class="mb-8.75 lg:mb-10")
+            div(class="mb-12")
+              h2.mb-5
+              p 
+            div(class="fraction__content")    
+              div.fraction__content-navigation
+                .swiper-prev
+                .swiper-next 
+              div(class="swiper-fraction swiper-fraction_white ")
+        .swiper-slide
+          div(class="bg-red px-5 pt-6 pb-10 flex flex-col justify-between")
+            img(src=require("./img/images/book-img/book-02.png"), alt="01" class="mb-8.75 lg:mb-10")
+            div(class="mb-12")
+              h2.mb-5
+              p 
+            div(class="fraction__content")    
+              div.fraction__content-navigation
+                .swiper-prev
+                .swiper-next 
+              div(class="swiper-fraction swiper-fraction_white ")
+
+        
+
+        .swiper-slide
+          div(class="bg-red px-5 pt-6 pb-10 flex flex-col justify-between")
+            img(src=require("./img/images/book-img/book-02.png"), alt="01" class="mb-8.75 lg:mb-10")
+            div(class="mb-12")
+              h2.mb-5
+              p 
+            div(class="fraction__content")    
+              div.fraction__content-navigation
+                .swiper-prev
+                .swiper-next 
+              div(class="swiper-fraction swiper-fraction_white ")
+              
+        .swiper-slide
+          div(class="bg-red px-5 pt-6 pb-10 flex flex-col justify-between")
+            img(src=require("./img/images/book-img/book-02.png"), alt="01" class="mb-8.75 lg:mb-10")
+            div(class="mb-12")
+              h2.mb-5
+              p 
+            div(class="fraction__content")    
+              div.fraction__content-navigation
+                .swiper-prev
+                .swiper-next 
+              div(class="swiper-fraction swiper-fraction_white ")
+        //- .swiper-slide.bg-red.px-5
+        //-   div(class="fraction__content")
+        //-     img(src="", alt="")
+        //-     div 
+        //-       h2.mb-5 
+        //-       p
+        //-     div.fraction__content-navigation
+        //-       .swiper-prev
+        //-       .swiper-next 
+        //-     div(class="swiper-fraction swiper-fraction_white ")
+
     div(class="hidden xl:block xl:mb-44")
       include ../components/book.pug
     +card-application('выбрать таунхаус или дом', false)

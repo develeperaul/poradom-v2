@@ -2,7 +2,6 @@
   transition: opacity 0.4s 0.2s;
 }
 
-
 .page {
   width: 50%;
   height: 800px;
@@ -27,7 +26,7 @@
   position: relative;
   transform-style: preserve-3d;
   backface-visibility: hidden;
-  
+
   /*box-shadow: 0 0 0 1px #e3dfd8;*/
 }
 
@@ -43,14 +42,14 @@
   transition: transform 1.4s;
   backface-visibility: hidden;
   transform-style: preserve-3d;
-  cursor: pointer;
+  /*cursor: pointer;*/
   user-select: none;
-  background-color: theme('colors.dark');
+  background-color: theme("colors.dark");
   padding: 40px;
 }
 
 .book .page:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
@@ -65,12 +64,16 @@
   pointer-events: all;
   transform: translateX(5px) rotateY(0deg);
   right: 0;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, .15) 0%, rgba(0, 0, 0, 0) 10%);
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.15) 0%,
+    rgba(0, 0, 0, 0) 10%
+  );
 }
 
-.book .page:nth-child(odd):hover {
+/*.book .page:nth-child(odd):hover {
   transform: rotateY(-15deg);
-}
+}*/
 
 .book .page:nth-child(odd):hover:before {
   background: rgba(0, 0, 0, 0.03);
@@ -85,7 +88,11 @@
   transform: translateX(-5px) rotateY(180deg);
   transform-origin: 100% 0;
   left: 0;
-  background-image: linear-gradient(to left, rgba(0, 0, 0, .12) 0%, rgba(0, 0, 0, 0) 10%);
+  background-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.12) 0%,
+    rgba(0, 0, 0, 0) 10%
+  );
 }
 
 .book .page:nth-child(even):before {
@@ -110,9 +117,9 @@
   transform: translateX(-5px) rotateY(0deg);
 }
 
-.book .page.flipped:nth-child(even):hover {
+/*.book .page.flipped:nth-child(even):hover {
   transform: rotateY(15deg);
-}
+}*/
 
 .book .page.flipped:nth-child(even):hover:before {
   background: rgba(0, 0, 0, 0.03);
@@ -121,7 +128,6 @@
 .book .page.flipped:nth-child(even):before {
   background: rgba(0, 0, 0, 0);
 }
-
 
 .page:nth-child(odd) {
   background-position: right top;
@@ -136,7 +142,8 @@
     list-style: inherit;
     padding-left: 20px;
   }
-  p, li {
+  p,
+  li {
     text-transform: capitalize;
   }
 }
@@ -151,9 +158,9 @@
     left: 0;
     transform: translate(-50%, -50%);
   }
-  
+
   .swiper-next {
-    right: 0; 
+    right: 0;
     transform: translate(50%, -50%) rotate(180deg);
   }
 }

@@ -11,6 +11,7 @@
 @import "./components/flag.scss";
 @import "./components/advantage.scss";
 @import "./components/book.scss";
+@import "./components/card-application.scss";
 
 @import "./layouts/_navigation.scss";
 @import "./layouts/travel-time.scss";
@@ -39,25 +40,60 @@
 
 .village-slider {
   height: 260px;
-  
-    @include screen-xl {
-      height: 860px;
-    }
-  
-    &__slide {
-      background-image: url(../img/images/bg.jpg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      object-fit: cover;
-      height: 100%;
-    }
+  @include screen-lg {
+    height: 540px;
+  }
+  @include screen-xl {
+    height: 860px;
+  }
+
+  &__slide {
+    background-image: url(../img/images/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    height: 100%;
+  }
 }
 .mainSliwper {
   .swiper-pagination {
     bottom: 30px;
     @include screen-xl {
       bottom: 72px;
+    }
+  }
+}
+.swiper-fraction {
+  @apply text-gray font-reformagrotesk text-4xl;
+  width: max-content;
+  &_white {
+    @apply text-white;
+  }
+}
+.fraction {
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    &-navigation {
+      display: flex;
+      gap: 10px;
+      .swiper-prev,
+      .swiper-next {
+        position: static;
+        transform: translate(0);
+        background: transparent;
+        border: none;
+        background-image: url("../img/icons/up-arrow.svg");
+      }
+      .swiper-next {
+        transform: rotate(90deg);
+      }
+      .swiper-prev {
+        transform: rotate(-90deg);
+      }
     }
   }
 }

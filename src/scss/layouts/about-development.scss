@@ -2,7 +2,7 @@
   &__top {
     display: flex;
     flex-direction: column;
-    @include screen-xl {
+    @include screen-lg {
       flex-direction: row;
       align-items: center;
     }
@@ -12,17 +12,26 @@
       align-self: flex-end;
       transform: translateY(-110px);
       margin-bottom: -80px;
-
-      @include screen-xl {
+      @include screen-lg {
         transform: translateY(0);
         margin-bottom: 0;
+        order: 3;
+        width: 110px;
+        height: 110px;
+        align-self: flex-start;
+      }
+      @include screen-xl {
         width: 320px;
         height: 320px;
         margin-right: 115px;
+        order: 1;
       }
     }
     &-text {
       @apply text-5.25-5xl;
+      @include screen-lg {
+        order: 1;
+      }
       @include screen-xl {
         order: 3;
         margin-right: 21px;
@@ -33,13 +42,18 @@
       width: 161px;
       height: 189px;
       align-self: flex-end;
-      transform: translate(20px,-110px);
+      transform: translate(20px, -110px);
       margin-bottom: -100px;
+      @include screen-lg {
+        order: 2;
+        width: 181px;
+        height: 211px;
+        transform: translate(-20px, 0);
+        margin-bottom: 0;
+      }
       @include screen-xl {
-        transform: translate(0,0);
         width: 434px;
         height: 510px;
-        order: 2;
         transform: translateY(-125px);
         margin-bottom: -125px;
       }

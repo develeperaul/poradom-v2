@@ -22,11 +22,14 @@
   }
 
   .advantages {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(0, 160px));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px 15px;
+    @include screen-lg {
+      gap: 70px 30px;
+    }
     @include screen-xl {
-      grid-template-columns: repeat(auto-fit, minmax(0, 290px));
       gap: 60px 20px;
     }
   }
@@ -36,17 +39,17 @@
   }
 
   .text-border {
-    color: theme('colors.background') !important;
-    text-shadow: 2px 0 2px theme('colors.dark'), 0 2px 2px theme('colors.dark'), -2px 0 2px theme('colors.dark'), 0 -2px 2px theme('colors.dark');
+    color: theme("colors.background") !important;
+    text-shadow: 2px 0 2px theme("colors.dark"), 0 2px 2px theme("colors.dark"),
+      -2px 0 2px theme("colors.dark"), 0 -2px 2px theme("colors.dark");
   }
 
   .label {
     @apply text-base xl:text-lg capitalize;
-    border: 5px solid #FFFFFF;
+    border: 5px solid #ffffff;
     border-radius: 6px;
     padding: 10px;
     @include screen-xl {
-
       padding: 18px;
     }
     &-01 {
@@ -58,7 +61,7 @@
     }
 
     &-02 {
-      @apply bg-green absolute right-3 top-30 ;
+      @apply bg-green absolute right-3 top-30;
       transform: rotate(7.85deg);
       @include screen-xl {
         right: 15%;
@@ -73,5 +76,24 @@
     }
   }
 
-  
+  .card {
+    @apply bg-dark p-5;
+    @include screen-lg {
+      width: 360px;
+    }
+    @include screen-xl {
+      width: 500px;
+    }
+    &__static {
+      min-height: 230px;
+      position: relative;
+      @include screen-xl {
+        min-height: 300px;
+      }
+    }
+  }
+  .vetical {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+  }
 }

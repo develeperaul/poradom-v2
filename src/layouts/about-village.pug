@@ -13,7 +13,7 @@ include ../components/card-application.pug
 - var advantage08 = 'Единая дизайн-среда, променад';
 - var advantage09 = 'Более 100 камер и полная безопасность';
 - var advantage10 = 'Спортивное звено, скейт-парк, беговая дорожка';
-section 
+section(id="new") 
   
   div(class="container-195")
     +flag-content(1, 'о поселке')
@@ -21,17 +21,20 @@ section
       h2(class="text-center text-dark mb-7.5 xl:hidden") о поселке
       div(class="hidden xl:block")
         +rainbow()(class="justify-center mb-25")
-      h2(class=" mb7.5  xl:mb-10") Таун-парк <br class=" xl:hidden"> андерсен — mini-город <br class="hidden xl:block"> с maxi-возможностями рядом с Дёмой  
-      div(class="flex flex-col gap-3.5 mb-15 xl:flex-row xl:items-center xl:justify-center xl:gap-31.25 xl:mb-20")
-        div(class="flex flex-col gap-5 xl:gap-15")
+      h2(class="lg:text-8xl mb-7.5  xl:mb-10") Таун-парк <br class=" lg:hidden"> андерсен — <br class="hidden lg:block xl:hidden"> mini-город <br class="hidden xl:block"> с maxi-возможностями <br class="hidden lg:block xl:hidden"> рядом с Дёмой  
+      div(class="flex flex-col gap-3.5 mb-15 lg:flex-row lg:items-center lg:justify-center xl:gap-31.25 xl:mb-20")
+        div(class="flex flex-col gap-5 xl:gap-15 ")
           div(class="flex gap-5") 
             +number(200)
             span(class="text-4xl xl:text-5.25-5xl font-reformagrotesk") таунхаусов
           div(class="flex gap-5") 
             +number(100)
             span(class="text-4xl xl:text-5.25-5xl font-reformagrotesk") индивидуальных <br> жилых домов
-        img(src=require("./img/images/travel-guide/tuk-tuk.png"), alt="")
-      div(class="advantages mb-15 xl:mb-40")
+        div
+          img(src=require("./img/images/travel-guide/tuk-tuk.png"), alt=""
+            srcset=require("./img/images/travel-guide/tuk-tuk.png") + " 514w"
+          sizes=" (max-width:1200px) 359px, 514px")
+      div(class="advantages mb-15 lg:mb-30 xl:mb-40")
         +advantage('icon-01', advantage01, 'bg-blue')
         +advantage('icon-02', advantage02, 'bg-yellow')
         +advantage('icon-03', advantage03, 'bg-green-dark')
@@ -43,8 +46,8 @@ section
         +advantage('icon-09', advantage09, 'bg-yellow')
         +advantage('icon-10', advantage10, 'bg-bordeaux')
   div.container-100  
-    +card-application('запросить презентацию')(class="mb-30 xl:mb-40")
-  div(class="swiper mainSwiper village-slider mb-15 xl:mb-20")
+    +card-application('запросить презентацию')(class="mb-30 lg:mb-0 xl:mb-40")
+  div(class="swiper mainSwiper village-slider mb-15 xl:mb-20" id="photos")
     div(class='swiper-wrapper')
       div(class="swiper-slide ") 
         div(class="village-slider__slide")
@@ -62,13 +65,13 @@ section
     .swiper-next  
     div(class="swiper-pagination")
   div.container-195
-    div(class=" flex flex-col gap-2.5 xl:gap-3.75 xl:flex-row xl:justify-center mb-30 xl:mb-40")
-        div(class="bg-dark p-5 flex flex-col gap-12")
+    div(class=" flex flex-wrap flex-col gap-2.5 xl:gap-3.75 lg:justify-center lg:flex-row xl:justify-center mb-30 xl:mb-40")
+        div(class="card flex flex-col gap-12 ")
           h3(class=" text-gray text-5.25-5xl") таунхаусы <br class="xl:hidden"> и дома от
           +number('6.5', 'с землей', 'млн', 'руб')(class="justify-between")
-        div(class="bg-dark p-5 flex flex-col gap-12")
+        div(class="card flex flex-col gap-12 ")
           h3(class=" text-gray text-5.25-5xl") в ипотеку *
           +number('28.5', 'платеж ', 'тыс', 'руб')(class="justify-between")
-        div(class="bg-dark p-5 flex flex-col gap-12")
+        div(class="card flex flex-col gap-12")
           h3(class=" text-gray text-5.25-5xl") эскроу<br class="xl:hidden">-счета
           +number('100', 'гарантия', '%')(class="justify-between")

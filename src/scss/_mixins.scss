@@ -1,4 +1,11 @@
+$lg: theme("screens.lg");
 $xl: theme("screens.xl");
+
+@mixin screen-lg {
+  @media screen and (min-width: $lg) {
+    @content;
+  }
+}
 
 @mixin screen-xl {
   @media screen and (min-width: $xl) {

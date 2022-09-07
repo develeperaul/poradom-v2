@@ -1,0 +1,10 @@
+.card-application {
+  &__icon {
+    @include screen-lg {
+      width: 349px;
+    }
+    @include screen-xl {
+      width: 460px;
+    }
+  }
+}

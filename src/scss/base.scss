@@ -1,5 +1,9 @@
 @tailwind base;
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply text-xl font-stolzl bg-background text-white;
     letter-spacing: -0.01em;

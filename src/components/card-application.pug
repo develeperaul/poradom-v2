@@ -1,12 +1,22 @@
 include ./rainbow.pug
-mixin card-application(title, form=true)
+mixin card-application(title, form=true, images=false)
   if(form)
-    - var iconLeft= "-left-17.5"
-    - var gap = "gap-x-24"
+    - var iconLeft= "-left-17.5 bottom-0"
+    - var gap = "xl:gap-x-24 lg:gap-x-5"
   else 
-    - var iconLeft= "left-5"
+    - var iconLeft= "left-5 bottom-0"
     - var gap = null
-  div(class="relative flex gap-x bg-dark  px-5 py-15 xl:py-0  xl:px-24 xl:flex-row xl:justify-between xl:items-center  mb-7.5 xl:mb-40" class=gap)
+  if(images)
+    - var contentIcon
+    - var classIcon
+    - var iconLeft = 'left-1/2 transorm -translate-x-1/2 -bottom-40 lg:bottom-0'
+    - var card = "pb-40 lg:pb-5 gap-5 "
+  else
+    - var contentIcons = "hidden lg:block"
+    - var classIcon = "hidden xl:block"
+    - var iconLeft
+    - var card
+  div(class="card-application relative flex flex-col  gap-x bg-dark  px-5 py-15 xl:py-0  xl:px-24 xl:flex-row xl:justify-between lg:items-center " class=gap class=card)&attributes(attributes)
     div(class="absolute top-0 left-1/2 transform -translate-y-1/2 -translate-x-1/2")
       +rainbow
     div.w-full(class="xl:py-10")
@@ -28,6 +38,9 @@ mixin card-application(title, form=true)
                 | персональных данных
       else
         button.button.bg-yellow.w-full.text-title(type='submit' class='xl:w-auto') выбрать
-    div(class="hidden xl:py-10 xl:block relative shrink-0")
-      img(src=require("./img/images/travel-guide/01.png"), alt="" class="absolute  z-10 -bottom-0" class=iconLeft)
-      img(src=require("./img/icons/logo-gray.svg"), width="512" height="330" alt="andersen" class=" opacity-10")
+    div(class=" xl:py-10  relative shrink-0" class=contentIcons)
+      img(src=require("./img/images/travel-guide/01.png"), alt=""
+        srcset=require("./img/images/travel-guide/01.png") + " 700w"
+        sizes=" (max-width:1200px) 349px, 514px"
+       class="card-application__icon absolute z-10  pb" class=iconLeft)
+      img(src=require("./img/icons/logo-gray.svg"), width="512" height="330" alt="andersen" class=" opacity-10 " class=classIcon)

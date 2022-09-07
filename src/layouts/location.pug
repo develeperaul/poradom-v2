@@ -1,25 +1,30 @@
 include ../components/flag-content.pug
 include ../components/number.pug
 include ../components/card-application.pug
-section 
+section(id="20min")
   div(class="container-195 xl:pr-25")
     +flag-content(2, 'локация')
     div(class="xl:hidden") 
       h2(class="text-center text-dark") локация
       h3(class="text-center text-4xl text-gray mb-7.5") 54.756604, 55.745656
-    div(class="relative travel-time mb-7.5 xl:mb-44 flex justify-between")
-      div(class="flex flex-col xl:block")
+    div(class="relative travel-time mb-7.5 xl:mb-44 flex flex-col gap-10 xl:gap-0 xl:flex-row justify-between")
+      div(class="flex flex-col w-full xl:block")
         div(class="text-8xl xl:text-9.75xl font-reformagrotesk") 20 минут
-        img(src=require("./img/icons/road-car.svg"), alt="road-car" class="travel-time__car-road")
+        img(src=require("./img/icons/road-car_m.svg"), alt="road-car_m" class="travel-time__car-road xl:hidden")
+        img(src=require("./img/icons/road-car.svg"), alt="road-car" class="travel-time__car-road hidden xl:block")
         div(class="travel-time__to self-end") 
           div(class="text-8xl xl:text-9.75xl font-reformagrotesk text-gray mb-5 xl:mb-7.5") от уфы
-          p(class="text-gray") Местонахождение: <br> деревня Начапкино <br> на юго-западе Уфы
+          p(class="capitalize") Местонахождение: <br> деревня Начапкино <br> на юго-западе Уфы
         img(src=require("./img/images/travel-guide/20minuts.png"), alt="20minuts" class="travel-time__icon")
-      div(class="travel-time__map")  
-    div(class="hidden xl:flex justify-between mb-32")
-      div(class="shrink-0 xl:-ml-40")
+      div(class="xl:flex xl:items-end xl:gap-5")
+        h3(class="hidden xl:block text-center text-5.25-5xl text-dark vetical ") 54.756604, 55.745656
+        div(class="travel-time__map shrink-0")
+          img(src=require("./img/map.gif"), alt="" )
+       
+    div(class="xl:flex justify-between mb-32")
+      div(class="lg:hidden xl:block shrink-0 xl:-ml-40")
         img(src=require("./img/images/travel-guide/20minuts.png"), alt="20minuts" width="758" height="717" )
-      div(class=" hidden w-850 xl:flex xl:flex-col xl:gap-60")
+      div(class=" hidden xl:flex w-850 xl:flex-col xl:gap-60" style="max-height: 725px; overflow: scroll;")
         div(class="flex justify-between")
           h4(class=" text-5.25-5xl text-gray") от Монумента Дружбы <br> через Дёмское шоссе
           +number(21,null,'км')
@@ -35,6 +40,32 @@ section
         div(class="flex justify-between")
           h4(class=" text-5.25-5xl text-gray") до нового дома
           +number(1,null,'км')
+
+      div(class="hidden lg:flex flex-wrap lg:gap-2.5 xl:hidden")
+        div(class="card card__static")
+          h3(class=" text-gray text-5.25-5xl") От Затонского моста
+          div(class="absolute right-6 bottom-0")
+            +number(21,null,'км')
+        div(class="card card__static")
+          h3(class=" text-gray text-5.25-5xl") от дЁмы
+          div(class="absolute right-6 bottom-0")
+            +number(10,null,'мин')
+        div(class="card card__static")
+          h3(class=" text-gray text-5.25-5xl") до школы
+          div(class="absolute right-6 bottom-0")
+            +number(8,null,'км')
+        div(class="card card__static") 
+          h3(class=" text-gray text-5.25-5xl") от миловки
+          div(class="absolute right-6 bottom-0")
+            +number(12,null,'км')
+        div(class="card card__static")
+          h3(class=" text-gray text-5.25-5xl") до нового <br> дома
+          div(class="absolute right-6 bottom-0")
+            +number(1,null,'км')
+        div(class="card card__static ")
+          h3(class=" text-gray text-5.25-5xl") от Монумента <br> Дружбы через <br> Дёмское <br> шоссе
+          div(class="absolute right-6 bottom-0")
+            +number(21,null,'км')
   .container-100
     +card-application('заказать звонок')(class="mb-30 xl:mb-40")
   div(class="container px-0")
@@ -49,6 +80,6 @@ section
         span(class=" text-8xl xl:text-14.75xl font-reformagrotesk text-border") в башикирии в башикирии в башикирии в башикирии в башикирии в башикирии 
 
       img(src=require("./img/images/rooster.png"), alt="" class=" absolute top-0 w-full h-full object-cover")
-      p(class="label label-01  ") Беззаборная среда
-      p(class="label label-02  ") Единый дизайн-код
-      p(class="label label-03 ") Променад
+      p(class="label label-01  animate__animated animate__fadeIn animate__fadeOut animate__infinite animate__slower animate__delay-1s") Беззаборная среда
+      p(class="label label-02  animate__animated animate__fadeIn animate__fadeOut animate__infinite animate__slower animate__delay-3s") Единый дизайн-код
+      p(class="label label-03 animate__animated animate__fadeIn animate__fadeOut animate__infinite animate__slower animate__delay-5s") Променад

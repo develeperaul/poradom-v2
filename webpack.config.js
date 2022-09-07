@@ -103,7 +103,7 @@ module.exports = {
     filename: `./js/${fileName("js")}`,
     path: path.resolve(__dirname, "dist"),
     publicPath: "",
-    assetModuleFilename: "src/assets/images/[name].[ext]",
+    assetModuleFilename: "src/assets/images/[name][ext]",
   },
   devServer: {
     historyApiFallback: true,

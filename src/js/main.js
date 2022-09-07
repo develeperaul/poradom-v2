@@ -4,16 +4,16 @@ import "../index.pug";
 
 //plugins
 
-import Validate from "./plugins/validateform";
+import "./plugins/send-form";
 import "./plugins/telmask";
 
-import "./plugins/glightbox"
+import "./plugins/glightbox";
 
-import "./plugins/ticker"
+import "./plugins/ticker";
 
-import "./plugins/swiper"
+import "./plugins/swiper";
 
-import "./plugins/book"
+import "./plugins/book";
 // import "../scss/_base.scss"
 
 //для заглушки

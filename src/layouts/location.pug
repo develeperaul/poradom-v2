@@ -22,7 +22,7 @@ section(id="20min")
           img(src=require("./img/map.gif"), alt="" )
        
     div(class="xl:flex justify-between mb-32")
-      div(class="lg:hidden xl:block shrink-0 xl:-ml-40")
+      div(class="lg:hidden xl:block shrink-0 mb-12 xl:-ml-40")
         img(src=require("./img/images/travel-guide/20minuts.png"), alt="20minuts" width="758" height="717" )
       div(class=" hidden xl:flex w-850 xl:flex-col xl:gap-60" style="max-height: 725px; overflow: scroll;")
         div(class="flex justify-between")
@@ -40,6 +40,39 @@ section(id="20min")
         div(class="flex justify-between")
           h4(class=" text-5.25-5xl text-gray") до нового дома
           +number(1,null,'км')
+
+      div(class="swiper fraction fractionSwiper lg:hidden mb-20")
+        .swiper-wrapper.mb-5
+          div(class="card card__static swiper-slide")
+            h3(class=" text-gray text-5.25-5xl") От Затонского моста
+            div(class="absolute right-6 bottom-0")
+              +number(21,null,'км')
+
+          div(class="card card__static swiper-slide")
+            h3(class=" text-gray text-5.25-5xl") от дЁмы
+            div(class="absolute right-6 bottom-0")
+              +number(10,null,'мин')
+          div(class="card card__static swiper-slide")
+            h3(class=" text-gray text-5.25-5xl") до школы
+            div(class="absolute right-6 bottom-0")
+              +number(8,null,'км')
+          div(class="card card__static swiper-slide") 
+            h3(class=" text-gray text-5.25-5xl") от миловки
+            div(class="absolute right-6 bottom-0")
+              +number(12,null,'км')
+          div(class="card card__static swiper-slide")
+            h3(class=" text-gray text-5.25-5xl") до нового <br> дома
+            div(class="absolute right-6 bottom-0")
+              +number(1,null,'км')
+          div(class="card card__static swiper-slide ")
+            h3(class=" text-gray text-5.25-5xl") от Монумента <br> Дружбы через <br> Дёмское <br> шоссе
+            div(class="absolute right-6 bottom-0")
+              +number(21,null,'км')
+        div(class="fraction__content")
+          div.fraction__content-navigation
+            .swiper-prev
+            .swiper-next 
+          div(class="swiper-fraction ")
 
       div(class="hidden lg:flex flex-wrap lg:gap-2.5 xl:hidden")
         div(class="card card__static")

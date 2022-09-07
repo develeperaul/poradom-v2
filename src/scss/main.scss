@@ -10,8 +10,54 @@
 
 @import "./components/flag.scss";
 @import "./components/advantage.scss";
+@import "./components/book.scss";
 
 @import "./layouts/_navigation.scss";
 @import "./layouts/travel-time.scss";
+@import "./layouts/histtory.scss";
+@import "./layouts/about-development.scss";
+
+@import "./swiper.scss";
 
 @import "animate.css";
+@import "glightbox/dist/css/glightbox.css";
+
+.header-slider {
+  height: 670px;
+  @include screen-xl {
+    height: 810px;
+  }
+  &__slide {
+    background-image: url(../img/images/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    height: 100%;
+  }
+}
+
+.village-slider {
+  height: 260px;
+  
+    @include screen-xl {
+      height: 860px;
+    }
+  
+    &__slide {
+      background-image: url(../img/images/bg.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      object-fit: cover;
+      height: 100%;
+    }
+}
+.mainSliwper {
+  .swiper-pagination {
+    bottom: 30px;
+    @include screen-xl {
+      bottom: 72px;
+    }
+  }
+}

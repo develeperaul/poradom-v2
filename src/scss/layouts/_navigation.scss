@@ -1,7 +1,7 @@
 .navigation {
   @apply py-2.5 xl:py-3.25;
   &__logo {
-    @apply xl:bg-title px-5 -my-3.25 py-3.25;
+    @apply xl:bg-title xl:px-5 xl:-my-3.25 xl:py-3.25;
     &-icon {
       width: 102px;
       height: 70px;

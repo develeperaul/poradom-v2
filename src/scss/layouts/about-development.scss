@@ -1,0 +1,48 @@
+.about-development {
+  &__top {
+    display: flex;
+    flex-direction: column;
+    @include screen-xl {
+      flex-direction: row;
+      align-items: center;
+    }
+    &-logo {
+      width: 160px;
+      height: 160px;
+      align-self: flex-end;
+      transform: translateY(-110px);
+      margin-bottom: -80px;
+
+      @include screen-xl {
+        transform: translateY(0);
+        margin-bottom: 0;
+        width: 320px;
+        height: 320px;
+        margin-right: 115px;
+      }
+    }
+    &-text {
+      @apply text-5.25-5xl;
+      @include screen-xl {
+        order: 3;
+        margin-right: 21px;
+      }
+    }
+
+    &-icon {
+      width: 161px;
+      height: 189px;
+      align-self: flex-end;
+      transform: translate(20px,-110px);
+      margin-bottom: -100px;
+      @include screen-xl {
+        transform: translate(0,0);
+        width: 434px;
+        height: 510px;
+        order: 2;
+        transform: translateY(-125px);
+        margin-bottom: -125px;
+      }
+    }
+  }
+}

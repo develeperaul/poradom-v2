@@ -1,0 +1,23 @@
+include ../components/flag-content.pug
+footer(class="pb-10 xl:pb-15")
+  div(class="container")
+    div(class=" mb-15 xl:mb-10 xl:flex xl:items-center xl:justify-between")
+      div(class="flex justify-between items-center mb-10 xl:mb-0") 
+        img(src=require("./img/icons/logo-bordered.svg"), alt="person-search" )
+        a(href="#" class="xl:hidden block") Наверх
+      div(class="xl:flex xl:gap-28 xl:items-center")
+        a(href="#" class="hidden xl:block") Наверх
+        button(href="#" class="w-full button button_yellow") Заказать звонок
+    div(class="w-full h-px bg-gray mb-10 xl:mb-5")
+    div(class=" capitalize flex flex-col xl:flex-row xl:items-center xl:justify-between")
+      div(class="mb-7.5 xl:mb-0  flex flex-col xl:flex-row gap-2.5 xl:gap-40") 
+        a(href="#" class="text-gray text-xs") © 2022 Андерсен
+        div(class="flex flex-col xl:flex-row gap-2.5  xl:gap-25")
+          a(href="#" class="text-gray text-xs") Политика конфиденциальности
+          a(href="#" class="text-gray text-xs ") Проектная декларация
+      div(class="flex items-end gap-7.5")
+        p(class="text-gray text-xs") Проектная декларация
+        a(href="#")
+          img(src=require("./img/icons/logo-yesidea.svg"), alt="yesidea")   
+
+      

@@ -1,0 +1,47 @@
+.dot {
+  background-image: url(../img/icons/dot.svg);
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin: 0 2px;
+}
+  .dot-active.dot-active-main {
+    background-image: url(../img/icons/dot-active.svg);
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    transform: translateY(10%);
+  }
+
+
+  .swiper-next,
+  .swiper-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    border-radius: 9999px;
+    background-color: #fff;
+    border: 2px solid theme('colors.gray');
+    background-image: url("../img/icons/left-arrow.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    cursor: pointer;
+    @include screen-xl {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  .swiper-next {
+    right: 20px;
+    transform: translateY(-50%) rotate(180deg);
+  }
+  
+  .swiper-prev {
+    left: 20px;
+  }

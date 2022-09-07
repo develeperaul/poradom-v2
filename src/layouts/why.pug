@@ -1,9 +1,12 @@
 include ../components/flag-content.pug
 include ../components/card-application.pug
-section
+section(class="pb-20 xl:pb-40")
   div(class="container-195")
     +flag-content(3)
-    h2(class="text-8xl xl:text-9.75xl xl:mb-15") почему андерсен
+    h2(class="text-center text-dark mb-7.5 xl:hidden") преимущества
+    h2(class="text-8xl xl:text-9.75xl mb-7.5 xl:mb-15") почему андерсен
   div.container-100
+    div(class="hidden xl:block xl:mb-44")
+      include ../components/book.pug
     +card-application('выбрать таунхаус или дом', false)
 

@@ -6,8 +6,53 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
   body
-    include ./layouts/base-navigation.pug
-    include ./layouts/about-village.pug
-    include ./layouts/location.pug
-    include ./layouts/why.pug
-    //- include ./layouts/history.pug
+    
+    header 
+      include ./layouts/base-navigation.pug
+      div(class="container px-0")
+        div(class="swiper mainSwiper header-slider")
+          div(class="swiper-wrapper")
+            div(class="swiper-slide ") 
+              div(class="header-slider__slide")
+                div.container.h-full
+                  div(class="flex flex-col justify-end h-full pb-28 xl:pb-22.75")
+                    h2 добро <br> пожаловать <br> в андерсен
+            div(class="swiper-slide ") 
+              div(class="header-slider__slide")
+                div.container.h-full
+                  div(class="flex flex-col justify-end h-full pb-28 xl:pb-22.75")
+                    h2 добро <br> пожаловать <br> в андерсен
+            div(class="swiper-slide ") 
+              div(class="header-slider__slide")
+                div.container.h-full
+                  div(class="flex flex-col justify-end h-full pb-28 xl:pb-22.75")
+                    h2 добро <br> пожаловать <br> в андерсен
+          div(class="swiper-pagination")
+        div(class="font-reformagrotesk text-center hidden xl:flex divide-x")
+          div(class="bg-dark p-2.75 w-full ")
+            a(href="#") новый уникальный посёлок 
+          div(class="bg-dark p-2.75 w-full ")
+            a(href="#") 20 минут от уфы
+          div(class="bg-dark p-2.75 w-full ")
+            a(href="#") фотоальбом
+          div(class="bg-dark p-2.75 w-full ")
+            a(href="#") почему andersen
+          div(class="bg-dark p-2.75 w-full ")
+            a(href="#") о застройщике
+          div(class="bg-dark p-2.75 w-full ")
+            a(href="#") история строительства
+          div(class="bg-dark p-2.75 w-full ")
+            a(href="#") записаться на экскурсию
+          div(class="bg-yellow p-2.75 w-full")
+            a(href="#") выбрать таунхаус
+
+       
+    main
+      include ./layouts/about-village.pug
+      include ./layouts/location.pug
+      include ./layouts/why.pug
+      include ./layouts/history.pug
+      include ./layouts/about-development.pug
+
+
+    include ./layouts/footer.pug

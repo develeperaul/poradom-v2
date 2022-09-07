@@ -17,7 +17,7 @@ section
   
   div(class="container-195")
     +flag-content(1, 'о поселке')
-    div(class="mt-7.5")
+    div()
       h2(class="text-center text-dark mb-7.5 xl:hidden") о поселке
       div(class="hidden xl:block")
         +rainbow()(class="justify-center mb-25")
@@ -44,6 +44,23 @@ section
         +advantage('icon-10', advantage10, 'bg-bordeaux')
   div.container-100  
     +card-application('запросить презентацию')(class="mb-30 xl:mb-40")
+  div(class="swiper mainSwiper village-slider mb-15 xl:mb-20")
+    div(class='swiper-wrapper')
+      div(class="swiper-slide ") 
+        div(class="village-slider__slide")
+          div.container.h-full
+            div(class="flex flex-col justify-end h-full pb-28 xl:pb-22.75")
+      div(class="swiper-slide ") 
+        div(class="village-slider__slide")
+          div.container.h-full
+            div(class="flex flex-col justify-end h-full pb-28 xl:pb-22.75")
+      div(class="swiper-slide ") 
+        div(class="village-slider__slide")
+          div.container.h-full
+            div(class="flex flex-col justify-end h-full pb-28 xl:pb-22.75")
+    .swiper-prev
+    .swiper-next  
+    div(class="swiper-pagination")
   div.container-195
     div(class=" flex flex-col gap-2.5 xl:gap-3.75 xl:flex-row xl:justify-center mb-30 xl:mb-40")
         div(class="bg-dark p-5 flex flex-col gap-12")

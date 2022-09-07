@@ -3,10 +3,11 @@
     height: 720px;
   }
   &__car-road {
-    top: 20px;
-    position: relative;
-    left: 40px;
+    padding: 0 40px;
     @include screen-xl {
+      top: 20px;
+      position: relative;
+      left: 40px;
       width: 500px;
       height: 100px;
     }

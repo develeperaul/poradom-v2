@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     extend: {
       spacing: {
+        2.75: "0.688rem",
         3.25: "0.813rem",
         3.75: "0.938rem",
         5.25: "1.3125rem",
@@ -43,8 +44,11 @@ module.exports = {
       background: "#292929",
       gray: "#98999D",
       red: "#A61C20",
+      'red-light': '#A61C20',
       bordeaux: "#6B0A10",
       blue: "#20609F",
+      'blue-light': "#3978B8",
+      green: '#2F7144',
       "green-dark": "#575B41",
       brown: "#5A3814",
     },

@@ -1,10 +1,15 @@
-include ../components/flag.pug
-section
-  div(class="container")
-    div(class="flex gap-5")
-      +flag
-      h2(class="text-8xl xl:text-9.75xl") смотреть онлайн <br> историю строительства
-    div
-      img(src=require("./img/images/travel-guide/person-search.png"), alt="person-search")
+include ../components/flag-content.pug
+section(class="pb-20 xl:pb-40")
+  div(class="container-195 xl:pr-25")
+    +flag-content(null, 'live')
+    div(class="xl:flex xl:justify-between")
+      h2(class=" text-5.25-5xl mb-10 xl:mb-0  xl:text-9.75xl") смотреть онлайн <br> историю строительства
+      div(class="history")
+        div(class="history__quard")
+          div(class="history__play-wrapper absolute top-0") 
+            a(href="https://vimeo.com/115041822" class="history__play glightbox glightbox__center")
+              div(class="history__play-triangle")
+          img(src=require("./img/images/travel-guide/person-search.png"), alt="person-search" class="history__img")
+
 
       

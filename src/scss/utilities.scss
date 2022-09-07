@@ -34,4 +34,44 @@
   .gap-x {
     @apply -mx-5 xl:mx-0;
   }
+
+  .text-border {
+    color: theme('colors.background') !important;
+    text-shadow: 2px 0 2px theme('colors.dark'), 0 2px 2px theme('colors.dark'), -2px 0 2px theme('colors.dark'), 0 -2px 2px theme('colors.dark');
+  }
+
+  .label {
+    @apply text-base xl:text-lg capitalize;
+    border: 5px solid #FFFFFF;
+    border-radius: 6px;
+    padding: 10px;
+    @include screen-xl {
+
+      padding: 18px;
+    }
+    &-01 {
+      @apply bg-yellow absolute left-3 top-1/2;
+      transform: rotate(-15deg);
+      @include screen-xl {
+        left: 10%;
+      }
+    }
+
+    &-02 {
+      @apply bg-green absolute right-3 top-30 ;
+      transform: rotate(7.85deg);
+      @include screen-xl {
+        right: 15%;
+      }
+    }
+    &-03 {
+      @apply bg-red absolute right-3 top-3/4 transform -rotate-6;
+      transform: rotate(-15deg);
+      @include screen-xl {
+        right: 28%;
+      }
+    }
+  }
+
+  
 }

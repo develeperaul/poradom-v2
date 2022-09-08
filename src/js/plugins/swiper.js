@@ -60,3 +60,26 @@ new Swiper(".fractionSwiper", {
     prevEl: ".swiper-prev",
   },
 });
+
+new Swiper(".floorsSwiper", {
+  modules: [Navigation, Pagination, Autoplay],
+  loop: true,
+  direction: "vertical",
+  pagination: {
+    dynamicBullets: true,
+    el: ".swiper-pagination-floor",
+    bulletActiveClass: "floor-active",
+    bulletClass: "floor",
+    type: "bullets",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return (
+        '<span class="' +
+        className +
+        '"> <span>' +
+        (index + 1) +
+        "</span> </span>"
+      );
+    },
+  },
+});

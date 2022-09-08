@@ -6,7 +6,8 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
   body
-    
+    include ./layouts/popups/request-call.pug
+
     header 
       include ./layouts/base-navigation.pug
       div(class="container px-0")
@@ -44,14 +45,14 @@ html(lang="ru")
           div(class="bg-dark p-2.75 w-full ")
             a(href="#application") записаться на экскурсию
           div(class="bg-yellow p-2.75 w-full")
-            a(href="#") выбрать таунхаус
+            a(href="choice-element.html") выбрать таунхаус
 
        
     main
       include ./layouts/about-village.pug
       include ./layouts/location.pug
       include ./layouts/why.pug
-      //- include ./layouts/history.pug
+      include ./layouts/history.pug
       include ./layouts/about-development.pug
 
 

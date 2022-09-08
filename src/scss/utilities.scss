@@ -20,6 +20,23 @@
       @apply bg-yellow text-title;
     }
   }
+  .button__group {
+    display: flex;
+    gap: 10px;
+  }
+  .button__round {
+    @apply bg-white text-gray p-3.5;
+    border-radius: 8px;
+    border: 1px solid theme("colors.gray");
+    min-width: 190px;
+    &_active {
+      @apply bg-yellow text-white;
+      border-color: theme("colors.blue");
+    }
+    &_disabled {
+      @apply opacity-30;
+    }
+  }
 
   .advantages {
     display: flex;

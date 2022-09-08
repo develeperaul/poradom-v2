@@ -1,0 +1,24 @@
+section(data-popup style="transform:translateY(-100%); display:none; z-index:10000" class="bg-dark h-screen absolute w-full animate__animated")
+  include ../base-navigation-popup.pug
+  .container-95    
+    div(class=" pt-15")          
+      img( src=require("../../img/icons/close.svg") alt="close", class=" cursor-pointer mx-auto mb-5.25 xl:mb-17.5" data-close )              
+      div(class='xl:flex xl:justify-between xl:items-center')
+        div
+          h2.mb-10 заказать звонок
+          form(data-form='')
+            .items-end(class='xl:flex xl:gap-5')
+              div(class='xl:flex xl:flex-wrap xl:gap-2.5')
+                .text-field.text-field_floating(class='mb-8.75 xl:mb-0')
+                  input.text-field__input(data-type='text' data-special-offer='' type='text' name='name' placeholder='Иван')
+                .text-field.text-field_floating.mb-7(class='xl:mb-0')
+                  input.text-field__input.tel(data-type='phone' data-special-offer='' type='text' name='phone' placeholder='+7 (999) 999-99-99')
+              button.button.bg-yellow.w-full(type='submit' class='xl:w-auto') &Ocy;&tcy;&pcy;&rcy;&acy;&vcy;&icy;&tcy;&softcy;
+            label.checkbox-other
+              input(data-special-offer='' checked='' data-type='checkbox' type='checkbox')
+              p(class=" capitalize")
+                | Даю согласие на обработку 
+                a.checkbox__link(href='personal-data.pdf' target='_blank')
+                  | персональных данных
+              
+        img( src=require("../../img/images/travel-guide/01.png") alt="close", class=" hidden xl:block")              

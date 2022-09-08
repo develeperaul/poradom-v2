@@ -1,0 +1,50 @@
+.plans {
+}
+
+.plan {
+  position: relative;
+
+  &__map {
+    position: relative;
+    width: auto;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    scrollbar-width: none;
+    /* хром, сафари */
+
+    /* ie 10+ */
+
+    -ms-overflow-style: none;
+
+    & > img {
+      height: 100%;
+      max-width: initial;
+      width: auto;
+      @include screen-xl {
+        max-width: inherit !important;
+        width: 100%;
+      }
+    }
+
+    & > svg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: visible !important;
+    }
+
+    & > svg polygon {
+      fill-opacity: 0.5;
+      stroke-width: 2px;
+      cursor: pointer;
+    }
+  }
+  &__map::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+}

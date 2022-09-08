@@ -123,16 +123,18 @@ module.exports = {
     new HTMLWebpackPlugin({
       filename: "index.html",
       template: path.resolve(__dirname, "src/index.pug"),
+      minify: { collapseWhitespace: false },
       chunks: ["main", "index"],
     }),
-    // ...PAGES.map((page) => {
-    //   return new HTMLWebpackPlugin({
-    //     template: path.resolve(__dirname, `src/pages/${page}`),
-    //     filename: page,
-    //     minify: { collapseWhitespace: false },
-    //     chunks: ["main", page.replace(".pug", "")],
-    //   });
-    // }),
+    ...PAGES.map((page) => {
+      console.log(page);
+      return new HTMLWebpackPlugin({
+        template: path.resolve(__dirname, `src/pages/${page}`),
+        filename: page.replace(".pug", ".html"),
+        minify: { collapseWhitespace: false },
+        chunks: ["main", page.replace(".pug", "")],
+      });
+    }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: `./css/${fileName("css")}`,

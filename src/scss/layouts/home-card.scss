@@ -1,0 +1,6 @@
+.home-card {
+  display: grid;
+  @include screen-xl {
+    grid-template-columns: 470px 1fr;
+  }
+}

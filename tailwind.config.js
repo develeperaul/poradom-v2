@@ -43,6 +43,7 @@ module.exports = {
       dark: "#3F3F3F",
       background: "#292929",
       gray: "#98999D",
+      "gray-light": "#EDEDEE",
       red: "#A61C20",
       "red-light": "#A61C20",
       bordeaux: "#6B0A10",
@@ -51,6 +52,7 @@ module.exports = {
       green: "#2F7144",
       "green-dark": "#575B41",
       brown: "#5A3814",
+      purple: "#4F4D5B",
     },
     screens: {
       // xl: "1200px",
@@ -84,6 +86,16 @@ module.exports = {
           "@screen xl": {
             maxWidth: "1920px",
             padding: "0 40px",
+          },
+        },
+        ".container-95": {
+          marginRight: "auto",
+          marginLeft: "auto",
+          maxWidth: "100%",
+          padding: "0 20px",
+          "@screen xl": {
+            maxWidth: "1920px",
+            padding: "0 95px",
           },
         },
         ".container-100": {

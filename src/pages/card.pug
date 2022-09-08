@@ -1,0 +1,63 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Карточка
+  body(class="xl:h-screen")
+    include ../components/back.pug
+    include ../components/number.pug
+    section(class="flex flex-col justify-between h-full ")
+      .container.pl-0
+        include ../layouts/base-navigation-popup.pug
+      .container.px-0.grow
+        div(class="home-card h-full ") 
+          div(class="bg-gray-light p-10 flex flex-col gap-5 ")
+            div(class="relative -left-5")
+              +back('gray')
+            div(class="flex flex-col justify-between h-full")
+              div
+                div(class="flex mb-5")
+                  +number("197 м")
+                  span(class="text-yellow font-reformagrotesk text-8xl mt-2")
+                    |2
+                div(class="flex gap-6 mb-7.5")
+                  h3(class="text-dark text-5.25-5xl") ЛИТЕР 12
+                  h3(class="text-dark text-5.25-5xl") ТАУНХАУС №4
+                div(class="grid grid-cols-2 gap-y-5") 
+                  div 
+                    h3(class="text-green text-5.25-5xl") 6.78
+                    p(class=" text-dark text-base lowercase") s участка, сот
+
+                  div 
+                    h3(class="text-green text-5.25-5xl") 24
+                    p(class=" text-dark text-base lowercase") гараж, м <sup>2</sup>
+
+                  div 
+                    h3(class="text-green text-5.25-5xl") 3
+                    p(class=" text-dark text-base lowercase") этажа
+
+                  div 
+                    h3(class="text-green text-5.25-5xl") 3
+                    p(class=" text-dark text-base lowercase") спальни
+              button(class="button button_yellow") Узнать цену      
+
+          div(class="bg-yellow p-32 pr-10")
+            div(style="width:520px; height: 560px")
+              .swiper.floorsSwiper(style="width:520px; height: 560px")
+                .swiper-wrapper
+                  .swiper-slide
+                    img(src=require("../img/images/home-plan.png"), alt="floor")
+                  .swiper-slide
+                    img(src=require("../img/images/home-plan.png"), alt="floor")
+                .swiper-pagination-floor
+      .container.px-0 
+        div(class="font-reformagrotesk text-center hidden xl:flex divide-x")
+            div(class="bg-dark p-2.75 w-full ")
+              a(href="#new") про ипотеку
+            div(class="bg-dark p-2.75 w-full ")
+              a(href="#20min") Комплектация таунхауса
+            div(class="bg-green p-2.75 w-full")
+              a(href="#") забронировать таунхаус
+    

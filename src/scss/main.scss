@@ -12,16 +12,23 @@
 @import "./components/advantage.scss";
 @import "./components/book.scss";
 @import "./components/card-application.scss";
+@import "./components/plans.scss";
+@import "./components/toggle.scss";
 
 @import "./layouts/_navigation.scss";
 @import "./layouts/travel-time.scss";
 @import "./layouts/histtory.scss";
 @import "./layouts/about-development.scss";
+@import "./layouts/home-card.scss";
 
 @import "./swiper.scss";
 
 @import "animate.css";
 @import "glightbox/dist/css/glightbox.css";
+
+:root {
+  --animate-duration: 3s;
+}
 
 .header-slider {
   height: 670px;

@@ -61,20 +61,63 @@ new Swiper(".fractionSwiper", {
   },
 });
 
+new Swiper(".fractionCardSwiper", {
+  modules: [Navigation, Pagination, Autoplay],
+  // loop: true,
+  spaceBetween: 16,
+  pagination: {
+    type: "fraction",
+    el: ".swiper-fraction",
+    bulletActiveClass: "numb-active",
+    bulletClass: "numb",
+    renderFraction: function (currentClass, totalClass) {
+      console.log(
+        '<span class="' +
+          "0" +
+          currentClass +
+          '"></span>' +
+          " of " +
+          '<span class="' +
+          totalClass +
+          '"></span>'
+      );
+      return (
+        '<span class="' +
+        currentClass +
+        '"></span>' +
+        "/" +
+        '<span class="' +
+        totalClass +
+        '"></span>'
+      );
+    },
+  },
+  navigation: {
+    nextEl: ".swiper-next",
+    prevEl: ".swiper-prev",
+  },
+});
+
 new Swiper(".floorsSwiper", {
   modules: [Navigation, Pagination, Autoplay],
+  spaceBetween: 16,
   loop: true,
   direction: "vertical",
+  simulateTouch: false,
+  allowTouchMove: false,
   pagination: {
-    dynamicBullets: true,
     el: ".swiper-pagination-floor",
+    progressbarOpposite: true,
     bulletActiveClass: "floor-active",
     bulletClass: "floor",
     type: "bullets",
     clickable: true,
     renderBullet: function (index, className) {
+      let spaceBottom = index !== 0 ? "mt-2.5 xl:mt-5" : "";
       return (
         '<span class="' +
+        spaceBottom +
+        " " +
         className +
         '"> <span>' +
         (index + 1) +

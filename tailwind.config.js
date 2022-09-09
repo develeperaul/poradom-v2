@@ -39,6 +39,7 @@ module.exports = {
     colors: {
       white: "#ffffff",
       yellow: "#F7941D",
+      "yellow-darken": "#BF6F0E",
       title: "#231F20",
       dark: "#3F3F3F",
       background: "#292929",
@@ -55,7 +56,6 @@ module.exports = {
       purple: "#4F4D5B",
     },
     screens: {
-      // xl: "1200px",
       lg: "770px",
       xl: "1440px",
     },

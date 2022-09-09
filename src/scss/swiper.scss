@@ -45,14 +45,21 @@
   left: 20px;
 }
 .swiper-pagination-floor {
+  padding-bottom: 50px;
   width: 46px !important;
   transform: rotate(180deg) !important;
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 0 !important;
+  top: 0 !important;
+  z-index: 10;
+  @include screen-lg {
+    padding-bottom: 0;
+  }
 }
 .floor {
   @apply font-reformagrotesk text-2xl;
+  transform: rotate(180deg) !important;
+  cursor: pointer;
   width: 42px;
   height: 46px;
   background-image: url(../img/icons/label-paginate.svg);

@@ -1,5 +1,23 @@
 @tailwind utilities;
 @layer utilities {
+
+  .nav {
+    &__top {
+
+      &_fixed {
+          position: fixed;
+          top: 0;
+          z-index: 99 !important;
+          width: 100%;
+          opacity: 0;
+          transition: opacity 0.2s ease;
+      
+          &-open {
+            opacity: 1;
+          }
+        }
+    }
+  }
   .w-850 {
     width: 850px;
   }
@@ -12,7 +30,8 @@
   }
 
   .button {
-    @apply py-3.5 px-7 text-base;
+    @apply py-3.5 text-base;
+    text-align:center;
     min-width: 200px;
     letter-spacing: -0.02rem;
     height: max-content;
@@ -25,7 +44,7 @@
     gap: 10px;
   }
   .button__round {
-    @apply bg-white text-gray p-3.5;
+    @apply bg-white text-gray py-3.5;
     border-radius: 8px;
     border: 1px solid theme("colors.gray");
     min-width: 190px;
@@ -36,6 +55,24 @@
     &_disabled {
       @apply opacity-30;
     }
+  }
+
+
+  .button_rounded {
+    border-radius: 8px;
+  }
+
+  .button__blue {
+    @apply bg-blue text-white;
+    border-color: theme("colors.blue")
+  }
+
+  .button_none-minw {
+    min-width: auto;
+  }
+
+  .button_none-bg {
+    background: transparent;
   }
 
   .advantages {
@@ -224,6 +261,11 @@
     &-text {
       fill: #f7941d;
       font: normal 24px theme("fontFamily.reformagrotesk");
+      &_big {
+        fill:#fff;
+        font: normal 48px theme("fontFamily.reformagrotesk");
+      }
     }
   }
+
 }

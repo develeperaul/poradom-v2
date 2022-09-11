@@ -4,3 +4,41 @@
     grid-template-columns: 470px 1fr;
   }
 }
+
+
+.home-card-about {
+  @include screen-xl {
+    display: grid;
+    grid-template-columns: 470px 1fr ;
+    max-width: fit-content;
+  }
+
+  &__center {
+    display: flex;
+    height: 100%;
+
+  }
+}
+
+
+.home-card-about__slide {
+  @include screen-xl {
+    display: flex;
+    height: 100%;
+  }
+  &-left {
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+    }
+  }
+  &-right {
+    @include screen-xl {
+      width: 470px;
+      flex-shrink: 0;
+
+    }
+  }
+}

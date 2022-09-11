@@ -1,0 +1,96 @@
+extend ../layouts/layouts/other.pug
+
+
+block content
+    include ../components/back.pug
+    include ../components/number-mini.pug
+    include ../components/floors-slider.pug
+    include ../components/liters.pug
+
+    section(class="flex flex-col justify-between h-full grow ")
+      .container.grow(class="flex flex-col px-0")
+        div(class="home-card-about h-full grow flex ") 
+          div(class="bg-gray-light hidden  xl:p-10 xl:flex xl:flex-col xl:gap-5 ")
+            div(class="relative xl:-left-5")
+              +back('gray')
+            div(class="flex flex-col justify-between h-full")
+              div
+                div(class="flex gap-5 xl:flex-col mb-7.5")
+                  div(class="flex")
+                    +number-mini("197 м")
+                    span(class="text-yellow font-reformagrotesk text-4xl xl:text-6xl mt-1 xl:mt-0")
+                      |2
+                  div(class="flex flex-col gap-2.5  xl:flex-row xl:gap-6 ")
+                    h3(class="text-dark text-4xl xl:text-5.25-5xl") ЛИТЕР 12
+                    h3(class="text-dark text-4xl xl:text-5.25-5xl") ТАУНХАУС №4
+                div(class="grid mb-20 lg:mb-10 xl:mb-20  grid-cols-2 lg:grid-cols-4  xl:grid-cols-2 gap-y-5") 
+                  div 
+                    h3(class="text-green text-5.25-5xl") 6.78
+                    p(class=" text-dark text-base lowercase") s участка, сот
+
+                  div 
+                    h3(class="text-green text-5.25-5xl") 24
+                    p(class=" text-dark text-base lowercase") гараж, м <sup>2</sup>
+
+                  div 
+                    h3(class="text-green text-5.25-5xl") 3
+                    p(class=" text-dark text-base lowercase") этажа
+
+                  div 
+                    h3(class="text-green text-5.25-5xl") 3
+                    p(class=" text-dark text-base lowercase") спальни
+              button(class="button button_yellow") Узнать цену      
+
+          //- div(class="bg-yellow -mx-5 px-5 py-15 lg:pt-20 xl:mx-0 xl:pl-32 xl:pt-30 xl:pr-10 xl:pb-12")
+          div(class="bg-gray-light py-10 px-5 xl:px-0 xl:py-0")
+            div(class="xl:hidden") 
+              +back('gray')(class="xl:hidden")
+              div(class="flex gap-2.5 mb-7.5 xl:mb-0")
+                button(class="button button__round button_none-bg button_none-minw   text-gray w-full") Из чего построен
+                button(class="button button__round button__blue button_none-minw   bg-blue w-full") Как отделан
+
+            div(class="swiper mainSwiperr home-card-about__center home-card-about-slider -mx-5 xl:mx-0 mb-15 xl:mb-20" id="photos")
+              div(class='swiper-wrapper')
+                div(class="swiper-slide ") 
+                  div(class="home-card-about__slide")
+                    div(class="home-card-about__slide-left relative mb-10 xl:mb-0")
+                      img(src=require("../img/images/bg.png"), alt="")
+                      .swiper-prev
+                      .swiper-next
+                    div(class="home-card-about__slide-right px-5 xl:py-20 xl:px-10 xl:relative")
+                      div(class="hidden xl:flex gap-2.5 mb-7.5 xl:mb-0")
+                        button(class="button button__round button_none-bg button_none-minw   text-gray w-full") Из чего построен
+                        button(class="button button__round button__blue button_none-minw   bg-blue w-full") Как отделан
+                      div(class="xl:absolute xl:top-1/2 xl:pr-10")
+                        h3(class="text-5.25-5xl text-title mb-5 xl:mb-10") Стены, перегородки  и откосы окон
+                        p(class="text-gray normal-case") Улучшенная штукатурка цементными
+                          | (в санузлах, бойлерной, гараже, кладовой) и гипсовыми (в остальных помещениях) смесями. Местами применение обшивки и коробов из ГКЛ   
+
+                  
+                
+          //- div(class="bg-gray-light py-10 px-5 xl:py-20 xl:px-10 xl:relative")
+          //-   +back('gray')(class="xl:hidden")
+          //-   div(class="flex gap-2.5 mb-7.5 xl:mb-0")
+          //-     button(class="button button__round button_none-bg button_none-minw   text-gray w-full") Из чего построен
+          //-     button(class="button button__round button__blue button_none-minw   bg-blue w-full") Как отделан
+          //-   div(class="swiper mainSwiperr home-card-about__center home-card-about-slider -mx-5 xl:mx-0 mb-15 xl:mb-20" id="photos")
+          //-     div(class='swiper-wrapper')
+          //-       div(class="swiper-slide ") 
+          //-         img(src=require("../img/images/bg.png"), alt="")
+          //-     .swiper-prev
+          //-     .swiper-next  
+          //-     div(class="swiper-pagination")
+          //-   div(class="xl:absolute xl:top-1/2 xl:pr-10")
+          //-     h3(class="text-5.25-5xl text-title mb-5 xl:mb-10") Стены, перегородки  и откосы окон
+          //-     p(class="text-gray normal-case") Улучшенная штукатурка цементными
+          //-       | (в санузлах, бойлерной, гараже, кладовой) и гипсовыми (в остальных помещениях) смесями. Местами применение обшивки и коробов из ГКЛ   
+                
+      .container.px-0(class="hidden xl:block") 
+        div(class="font-reformagrotesk text-center hidden xl:flex divide-x")
+            div(class="bg-dark p-2.75 w-full ")
+              a(href="#new") про ипотеку
+            div(class="bg-gray p-2.75 w-full ")
+              a(href="#20min") Комплектация таунхауса
+            div(class="bg-green p-2.75 w-full")
+              a(href="#") забронировать таунхаус
+    

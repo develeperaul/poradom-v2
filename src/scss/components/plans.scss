@@ -3,7 +3,17 @@
 
 .plan {
   position: relative;
-
+  height: 60vh;
+  @include screen-xl {
+    height: 100%;
+  }
+  &-wrapper {
+    position: absolute;
+    height: 60vh;
+    @include screen-xl {
+      position: relative;
+    }
+  }
   &__map {
     position: relative;
     width: auto;

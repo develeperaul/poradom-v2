@@ -67,6 +67,9 @@ export default class Validate {
       case 'checkbox':
       this.inputIsvalid(input, input.checked);
       break
+      case 'numeric':
+      this.inputIsvalid(input, input.value);
+      break
       default :
           this.inputIsvalid(input, input.value.length > 3);
       }

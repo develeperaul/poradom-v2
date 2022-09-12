@@ -57,21 +57,24 @@ module.exports = {
     },
     screens: {
       lg: "770px",
+      lg2: "1024px",
       xl: "1440px",
     },
     container: {
       center: true,
-      screens: {
-        DEFAULT: "1920px",
-        // lg: "1440px",
-        xl: "1920px",
-      },
-      // sm: "100%",
-      padding: {
-        DEFAULT: "20px",
-        lg: "100px",
-        xl: "100px",
-      },
+      // screens: {
+      //   DEFAULT: "1920px",
+      //   lg: "1200px",
+      //   lg2: "1660px",
+      //   xl: "1920px",
+      // },
+      // // sm: "100%",
+      // padding: {
+      //   DEFAULT: "20px",
+      //   lg2: "100px",
+      //   lg: "100px",
+      //   xl: "100px",
+      // },
     },
   },
 
@@ -83,6 +86,10 @@ module.exports = {
           padding: "0 20px",
           marginRight: "auto",
           marginLeft: "auto",
+          "@screen lg2": {
+            maxWidth: "1660px",
+            padding: "0 40px",
+          },
           "@screen xl": {
             maxWidth: "1920px",
             padding: "0 40px",
@@ -93,6 +100,10 @@ module.exports = {
           marginLeft: "auto",
           maxWidth: "100%",
           padding: "0 20px",
+          "@screen lg2": {
+            maxWidth: "1660px",
+            padding: "0 95px",
+          },
           "@screen xl": {
             maxWidth: "1920px",
             padding: "0 95px",
@@ -103,6 +114,10 @@ module.exports = {
           marginLeft: "auto",
           maxWidth: "100%",
           padding: "0 20px",
+          "@screen lg2": {
+            maxWidth: "1660px",
+            padding: "0 100px",
+          },
           "@screen xl": {
             maxWidth: "1920px",
             padding: "0 100px",
@@ -113,6 +128,13 @@ module.exports = {
           padding: "0 20px",
           marginRight: "auto",
           marginLeft: "auto",
+          // "@screen lg": {
+          //   maxWidth: 1660
+          // }
+          "@screen lg2": {
+            maxWidth: "1660px",
+            padding: "0 195px",
+          },
           "@screen xl": {
             maxWidth: "1920px",
             padding: "0 195px",

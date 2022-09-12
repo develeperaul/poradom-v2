@@ -24,38 +24,132 @@ import "./plugins/swiper";
 import "./plugins/book";
 // import "../scss/_base.scss"
 
-//
+
 
 //для карты
+const requests = document.querySelectorAll("[data-request]");
+let activePopup = null
+let nextPupop = null
+const body = document.querySelector("body");
+const activatedPopup = function (el){
+        
+        new Promise((resolve, reject) => {
+          const openPopup = function (event) {
+            event.stopPropagation();
+            this.style.transform = "translateY(0%)";
+          };
+    
+            el.addEventListener("animationend", openPopup, { once: true });
+             
+          })
 
-const popup = document.querySelector("[data-popup]");
-if (popup) {
-  const close = document.querySelector("[data-close]");
-  const body = document.querySelector("body");
-  popup.style.transform = "translateY(-100%)";
-  const request = document.querySelector("[data-request]");
-  const openPopup = function () {
-    this.style.transform = "translateY(0%)";
-    // this.removeEventListener("animationend", openPopup);
-  };
-  const closePopup = function () {
-    this.style.transform = "translateY(-100%)";
-    popup.classList.remove("animate__fadeOutUp");
-    // this.removeEventListener("animationend", closePopup);
-  };
+      }
+requests.forEach(request=> {
   request.addEventListener("click", function (e) {
+    const popupType = request.getAttribute('data-popupType')
+    console.log(popupType);
+    const popup = document.querySelector(`[data-${popupType}]`)
+    console.log(popup);
     popup.style.display = "block";
     body.style.overflow = "hidden";
     popup.classList.add("animate__fadeInDown");
-  });
-  popup.addEventListener("animationend", openPopup);
+    if(activePopup){
+      if(activePopup !== popup){
+        nextPupop = popup
+        activePopup.querySelector("[data-close]").click()
+      }
+    }else {
+      activePopup = popup
+      nextPupop = null
+      activatedPopup(popup)
 
-  close.addEventListener("click", function (e) {
-    popup.classList.remove("animate__fadeInDown");
-    popup.classList.add("animate__fadeOutUp");
-    popup.addEventListener("animationend", closePopup);
-  });
+    }
+  })
+})
+const popups = document.querySelectorAll("[data-popup]");
+if(popups) {
+  popups.forEach(popup=>{
+    const close = popup.querySelector("[data-close]");
+    close.addEventListener("click", function (e) {
+      console.log(popups);
+      popup.classList.remove("animate__fadeInDown");
+      popup.classList.add("animate__fadeOutUp");
+      new Promise((resolve, reject) => {
+        const closePopup = function (event,el) {
+          event.stopPropagation();
+          el.style.transform = "translateY(-100%)";
+          el.classList.remove("animate__fadeOutUp");
+          body.style.overflow = "auto";
+          activePopup = null
+          // if(nextPopup){
+          //   activatedPopup(nextPupop)
+          // }
+          resolve("Animation ended");
+        };
+
+        popup.addEventListener("animationend", (e)=>closePopup(e,popup), { once: true });
+         
+      })
+    })
+  })
 }
+// const popups = document.querySelectorAll("[data-popup]");
+// let activePopup = null
+// if (popups) {
+//   popups.forEach(popup=>{
+    
+//     const close = popup.querySelector("[data-close]");
+//     const body = document.querySelector("body");
+//     popup.style.transform = "translateY(-100%)";
+//     const requests = document.querySelectorAll("[data-request]");
+//     const openPopup = function () {
+      
+//       this.style.transform = "translateY(0%)";
+//       // this.removeEventListener("animationend", openPopup);
+//     };
+//     // const closePopup = function (el) {
+//     //   el.style.transform = "translateY(-100%)";
+//     //   el.classList.remove("animate__fadeOutUp");
+//     //   body.style.overflow = "auto";
+//     //   // this.removeEventListener("animationend", closePopup);
+//     // };
+//     requests.forEach(request=> {
+//       request.addEventListener("click", function (e) {
+        
+//         if(activePopup) {
+//           activePopup.querySelector("[data-close]").click();
+//         }
+//         activePopup = popup
+//         popup.style.display = "block";
+//         body.style.overflow = "hidden";
+//         popup.classList.add("animate__fadeInDown");
+//       });
+
+//     })
+//     popup.addEventListener("animationend", openPopup);
+  
+//     close.addEventListener("click", function (e) {
+//       activePopup = null
+//       popup.classList.remove("animate__fadeInDown");
+//       popup.classList.add("animate__fadeOutUp");
+
+//       new Promise((resolve, reject) => {
+//         const closePopup = function (event,el) {
+//           event.stopPropagation();
+//           el.style.transform = "translateY(-100%)";
+//           el.classList.remove("animate__fadeOutUp");
+//           body.style.overflow = "auto";
+//           openPopup = null
+//           resolve("Animation ended");
+//         };
+
+//         popup.addEventListener("animationend", (e)=>closePopup(e,popup), { once: true });
+         
+//       })
+      
+//     });
+//   })
+// }
 
 
 //для карты
@@ -126,7 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const headerNav = document.querySelector(".nav__top_fixed");
     window.addEventListener("scroll", () => {
       if (window.pageYOffset > 200) {
-        console.log(headerNav);
+        // console.log(headerNav);
         headerNav.style.display = "block";
         setTimeout(() => {
           headerNav.classList.add("nav__top_fixed-open");

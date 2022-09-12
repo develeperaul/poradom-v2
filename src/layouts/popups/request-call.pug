@@ -1,12 +1,13 @@
-section(data-popup style="transform:translateY(-100%); display:none; z-index:10000" class="bg-dark h-screen absolute w-full animate__animated")
+section(data-call data-popup style="transform:translateY(-100%); display:none; z-index:10000" class="bg-dark h-screen fixed w-full animate__animated")
+  
   include ../base-navigation-popup.pug
   .container-95    
     div(class=" pt-15")          
-      img( src=require("../../img/icons/close.svg") alt="close", class=" cursor-pointer mx-auto mb-5.25 xl:mb-17.5" data-close )              
+      img( src=require("../../img/icons/close.svg") alt="close", class=" cursor-pointer mx-auto mb-12 xl:mb-17.5" data-close )              
       div(class='xl:flex xl:justify-between xl:items-center')
         div
-          h2.mb-10 заказать звонок
-          form(data-form='')
+          h2.mb-10(class="text-8xl xl:text-9.75xl") заказать <br class="xl:hidden"> звонок
+          form(data-form='' data-theme="Заказ звонка сайта Andersen")
             .items-end(class='xl:flex xl:gap-5')
               div(class='xl:flex xl:flex-wrap xl:gap-2.5')
                 .text-field.text-field_floating(class='mb-8.75 xl:mb-0')
@@ -15,7 +16,7 @@ section(data-popup style="transform:translateY(-100%); display:none; z-index:100
                   input.text-field__input.tel(data-type='phone' data-special-offer='' type='text' name='phone' placeholder='+7 (999) 999-99-99')
               button.button.bg-yellow.w-full(type='submit' class='xl:w-auto') &Ocy;&tcy;&pcy;&rcy;&acy;&vcy;&icy;&tcy;&softcy;
             label.checkbox-other
-              input(data-special-offer='' checked='' data-type='checkbox' type='checkbox')
+              input(data-special-offer='' checked data-type='checkbox' type='checkbox')
               p(class=" capitalize")
                 | Даю согласие на обработку 
                 a.checkbox__link(href='personal-data.pdf' target='_blank')

@@ -4,6 +4,9 @@
 .plan {
   position: relative;
   height: 60vh;
+  @include screen-lg2 {
+    height: calc(100vh - 90px);
+  }
   @include screen-xl {
     height: 100%;
   }
@@ -12,6 +15,21 @@
     height: 60vh;
     @include screen-xl {
       position: relative;
+    }
+  }
+
+  &__popup {
+    width: 250px;
+    &-wrapper {
+      &::after {
+        content: "";
+        position: absolute;
+        left: calc(50% - 10px);
+        transform: translateX(-50%);
+        bottom: -39px;
+          border: 20px solid transparent;
+            border-top: 20px solid #fff;
+      }
     }
   }
   &__map {

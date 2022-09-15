@@ -1,5 +1,5 @@
-import "../scss/main.scss";
-// import "../scss/style.scss";
+// import "../scss/main.scss";
+import "../scss/style.scss";
 import "./pages/choice-element";
 import "./pages/card";
 import "./pages/card-about";
@@ -8,6 +8,7 @@ import "../layouts/base-navigation.pug";
 import "../index.pug";
 
 //plugins
+import "./plugins/input-range";
 import toggleGroup from "./plugins/toggle-buttons";
 new toggleGroup();
 
@@ -22,6 +23,7 @@ import "./plugins/ticker";
 import "./plugins/swiper";
 
 import "./plugins/book";
+
 // import "../scss/_base.scss"
 
 
@@ -70,27 +72,30 @@ const popups = document.querySelectorAll("[data-popup]");
 if(popups) {
   popups.forEach(popup=>{
     const close = popup.querySelector("[data-close]");
-    close.addEventListener("click", function (e) {
-      console.log(popups);
-      popup.classList.remove("animate__fadeInDown");
-      popup.classList.add("animate__fadeOutUp");
-      new Promise((resolve, reject) => {
-        const closePopup = function (event,el) {
-          event.stopPropagation();
-          el.style.transform = "translateY(-100%)";
-          el.classList.remove("animate__fadeOutUp");
-          body.style.overflow = "auto";
-          activePopup = null
-          // if(nextPopup){
-          //   activatedPopup(nextPupop)
-          // }
-          resolve("Animation ended");
-        };
-
-        popup.addEventListener("animationend", (e)=>closePopup(e,popup), { once: true });
-         
+    if(close){
+      close.addEventListener("click", function (e) {
+        console.log(popups);
+        popup.classList.remove("animate__fadeInDown");
+        popup.classList.add("animate__fadeOutUp");
+        new Promise((resolve, reject) => {
+          const closePopup = function (event,el) {
+            event.stopPropagation();
+            el.style.transform = "translateY(-100%)";
+            el.classList.remove("animate__fadeOutUp");
+            body.style.overflow = "auto";
+            activePopup = null
+            // if(nextPopup){
+            //   activatedPopup(nextPupop)
+            // }
+            resolve("Animation ended");
+          };
+  
+          popup.addEventListener("animationend", (e)=>closePopup(e,popup), { once: true });
+           
+        })
       })
-    })
+
+    }
   })
 }
 // const popups = document.querySelectorAll("[data-popup]");
@@ -218,19 +223,137 @@ document.querySelectorAll(".plan-liters-home").forEach(plan=>{
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".nav");
     const headerNav = document.querySelector(".nav__top_fixed");
-    window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 200) {
-        // console.log(headerNav);
-        headerNav.style.display = "block";
-        setTimeout(() => {
-          headerNav.classList.add("nav__top_fixed-open");
-        }, 200);
-      } else {
-        headerNav.style.display = "none";
-        setTimeout(() => {
-          headerNav.classList.remove("nav__top_fixed-open");
-        }, 200);
-      }
-    });
+    if(headerNav){
+
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 200) {
+          // console.log(headerNav);
+          headerNav.style.display = "block";
+          setTimeout(() => {
+            headerNav.classList.add("nav__top_fixed-open");
+          }, 200);
+        } else {
+          headerNav.style.display = "none";
+          setTimeout(() => {
+            headerNav.classList.remove("nav__top_fixed-open");
+          }, 200);
+        }
+      });
+    }
   
 });
+
+
+//попап на карте
+document.addEventListener("DOMContentLoaded", () => {
+const ishs = document.querySelector('[data-plan-path]')
+const svg = document.querySelector("[data-svg-default]");
+console.log(svg) 
+ if(ishs){
+
+   ishs.addEventListener('click', (event)=>{ 
+    const dataPopup = document.querySelector('.plan__popup')
+    const planMapCoords = svg.getBoundingClientRect()
+    const xCoord = event.clientX - planMapCoords.left;
+    const yCoord = event.clientY - planMapCoords.top;
+    dataPopup.style.display = "block"
+    dataPopup.style.top = yCoord + "px"
+    dataPopup.style.left = xCoord + "px"
+    dataPopup.style.transform = "translate(-50%, -110%)";
+    console.log(event.clientX)
+   })
+ }
+
+})
+
+function getPayment(sum, period, rate) {
+    var i, koef, result;
+    console.log(sum + " " + period + " " + rate)
+    // ставка в месяц
+    i = rate / 12 / 100;
+
+    // коэффициент аннуитета
+    koef =
+      (i * Math.pow(1 + i, period * 12)) / (Math.pow(1 + i, period * 12) - 1);
+
+    // итог
+    result = sum * koef;
+
+    // округлим до целых
+    return result.toFixed();
+  }
+function setPrefix(input, val, end) {
+    const newvalue = val;
+    let div = document.createElement('div');
+    div.className = 'prefix'
+    div.textContent = end
+    input.parentElement.append(div)
+    input.style.setProperty('padding-right',div.offsetWidth + 10 +"px")
+    input.value = isNaN(val) ? null : newvalue;
+}
+
+const formCalc = document.querySelector("#calc-1");
+if(formCalc){
+  const inputs = formCalc.querySelectorAll("[data-calc-field]");
+  const month = formCalc.querySelector("[data-input='month']");
+  let period, rate, house, initial;
+
+  inputs.forEach((input) => {
+    console.log(input.dataset.house)
+    input.parentNode.style.setProperty("position", "relative")
+    if (input.dataset.input === "house" ) {
+      setPrefix(input, 10, "руб")
+      house = input.value.replace(/[^0-9.]/g, "")
+            .replace(/(\..*)\./g, "$1");
+    }
+
+    if ( input.dataset.input === "initial") {
+      setPrefix(input, 10, "руб")
+      initial = input.value.replace(/[^0-9.]/g, "")
+            .replace(/(\..*)\./g, "$1");
+    }
+
+    // if(input.dataset.input === 'month') setPrefix(input, 10, 'руб / мес')
+
+    if(input.dataset.input === 'period'){
+      setPrefix(input, 10, 'лет')
+      period = input.value.replace(/[^0-9.]/g, "")
+            .replace(/(\..*)\./g, "$1");
+    } 
+
+    
+    if (input.dataset.input === "rate") {
+      setPrefix(input, 10, '%')
+      rate = input.value.replace(/[^0-9.]/g, "")
+            .replace(/(\..*)\./g, "$1");
+    }
+    setPrefix(month,getPayment(house - initial, period, rate),'руб / мес')
+    input.addEventListener('input',(e)=>{
+      console.log('input2');
+      console.log('initital')
+      if (e.target.value.replace(/[^\d]/gm, "") !== "") {
+        const val = e.target.value
+            .replace(/[^0-9.]/g, "")
+            .replace(/(\..*)\./g, "$1");
+
+        if (input.dataset.input === "initial") {
+          initial = val;
+        }
+        if (input.dataset.input === "period") {
+          period = val;
+        }
+        if (input.dataset.input === "house") {
+          house = val;
+        }
+        setPrefix(month,getPayment(house - initial, period, rate),null)
+        
+      }
+    })
+    // if (input.dataset.input === "period")
+    //   input.setAttribute("data-period", "10");
+    // if (input.dataset.input === "initial")
+    //   input.setAttribute("data-minimum", button.dataset.minimum);
+  });
+  console.log(month)
+
+}

@@ -16,10 +16,10 @@
     @apply text-white uppercase font-reformagrotesk;
   }
   h1 {
-    @apply text-8xl xl:text-14.75xl;
+    @apply text-8xl lg2:text-9.75xl xl:text-14.75xl;
   }
   h2 {
-    @apply text-5.25-5xl xl:text-9.75xl;
+    @apply text-5.25-5xl lg2:text-8xl xl:text-9.75xl;
   }
   h3 {
   }

@@ -7,6 +7,8 @@
 
 @import "./core/checkbox.scss";
 @import "./core/input.scss";
+@import "./core/input-range.scss";
+
 
 @import "./components/flag.scss";
 @import "./components/advantage.scss";
@@ -28,6 +30,12 @@
 
 :root {
   --animate-duration: 3s;
+}
+
+.section {
+  &__title {
+      @apply text-5.25-5xl lg:text-8xl lg2:text-6xl xl:text-9.75xl;
+  }
 }
 
 .header-slider {

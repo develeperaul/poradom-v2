@@ -13,23 +13,23 @@ mixin card-application(title, form=true, images=false)
     - var card = "pb-40 lg:pb-5 gap-5 "
   else
     - var contentIcons = "hidden lg:block"
-    - var classIcon = "hidden xl:block"
+    - var classIcon = "hidden lg2:block"
     - var iconLeft
     - var card
-  div(class="card-application relative flex flex-col  gap-x bg-dark  px-5 py-15 xl:py-0  xl:px-24 xl:flex-row xl:justify-between lg:items-center " class=gap class=card)&attributes(attributes)
+  div(class="card-application  " class=gap class=card)&attributes(attributes)
     div(class="absolute top-0 left-1/2 transform -translate-y-1/2 -translate-x-1/2")
       +rainbow
-    div.w-full(class="xl:py-10")
-      h2(class="text-8xl xl:text-9.75xl mb-9 xl:mb-10") #{title}
+    div.w-full(class="lg2:py-10")
+      h2(class="card-application__title ") #{title}
       if form
         form(data-form)
-          .items-end(class='xl:flex xl:gap-5')
-            div(class='xl:flex xl:flex-wrap xl:gap-2.5')
-              .text-field.text-field_floating(class='mb-8.75 xl:mb-0')
+          .items-end(class='lg2:flex lg2:gap-5')
+            div(class='lg2:flex lg2:flex-wrap lg2:gap-2.5')
+              .text-field.text-field_floating(class='mb-8.75 lg2:mb-0')
                 input.text-field__input(data-type='text' data-special-offer='' type='text' name='name' placeholder='Иван Иванов')
-              .text-field.text-field_floating.mb-7(class='xl:mb-0')
+              .text-field.text-field_floating.mb-7(class='lg2:mb-0')
                 input.text-field__input.tel(data-type='phone' data-special-offer='' type='text' name='phone' placeholder='+7 (999) 999-99-99')
-            button.button.bg-yellow.w-full.text-title(type='submit' class='xl:w-auto') Отправить
+            button.button.bg-yellow.w-full.text-title(type='submit' class='lg2:w-auto') Отправить
           label.checkbox-other
             input(data-special-offer='' checked='checked' data-type='checkbox' type='checkbox')
             p.text-base.normal-case
@@ -37,10 +37,10 @@ mixin card-application(title, form=true, images=false)
               a.checkbox__link(href='personal-data.pdf' target='_blank')
                 | персональных данных
       else
-        button.button.bg-yellow.w-full.text-title(type='submit' class='xl:w-auto') выбрать
-    div(class=" xl:py-10  relative shrink-0" class=contentIcons)
+        button.button.bg-yellow.w-full.text-title(type='submit' class='lg2:w-auto') выбрать
+    div(class=" lg2:py-10  relative shrink-0" class=contentIcons)
       img(src=require("./img/images/travel-guide/01.png"), alt=""
         srcset=require("./img/images/travel-guide/01.png") + " 700w"
         sizes=" (max-width:1200px) 349px, 514px"
        class="card-application__icon absolute z-10  pb" class=iconLeft)
-      img(src=require("./img/icons/logo-gray.svg"), width="512" height="330" alt="andersen" class=" opacity-10 " class=classIcon)
+      img(src=require("./img/icons/logo-gray.svg"), width="512" height="330" alt="andersen" class="card-application__logo opacity-10 " class=classIcon)

@@ -1,7 +1,17 @@
 .navigation {
   @apply py-2.5 xl:py-3.25;
+  &__icon-poradom {
+
+    @include screen-lg2 {
+      width: 150px;
+    }
+    @include screen-xl {
+      width: 202px;
+    }
+
+  }
   &__logo {
-    @apply xl:bg-title xl:px-5 xl:-my-3.25 xl:py-3.25;
+    @apply lg2:bg-title lg2:py-2 lg2:-my-2 lg2:px-5 xl:-my-3.25 xl:py-3.25;
     &-icon {
       width: 102px;
       height: 70px;

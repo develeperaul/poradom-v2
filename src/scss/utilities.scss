@@ -30,13 +30,23 @@
   }
 
   .button {
-    @apply py-3.5 text-base;
+    @apply py-2 xl:py-3.5 lg2:text-sm  xl:text-base;
     text-align:center;
-    min-width: 200px;
+
     letter-spacing: -0.02rem;
     height: max-content;
+    min-width: 200px;
+    @include screen-lg2 {
+      min-width: 150px;
+    }
+    @include screen-xl {
+      min-width: 200px;
+    }
     &_yellow {
       @apply bg-yellow text-title;
+    }
+    &_green {
+      @apply bg-green text-white
     }
   }
   .button__group {
@@ -72,6 +82,7 @@
   }
 
   .button_none-bg {
+    @apply text-gray;
     background: transparent;
   }
 
@@ -82,6 +93,9 @@
     gap: 30px 15px;
     @include screen-lg {
       gap: 70px 30px;
+    }
+    @include screen-lg2 {
+      gap: 20px 5px
     }
     @include screen-xl {
       gap: 60px 20px;
@@ -268,4 +282,12 @@
     }
   }
 
+  .prefix {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    color: theme("colors.gray");
+    font-size: theme('fontSize.base');
+    text-transform: none;
+  }
 }

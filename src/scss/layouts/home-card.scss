@@ -7,9 +7,14 @@
 
 
 .home-card-about {
+  @include screen-lg2 {
+      display: grid;
+      grid-template-columns: 350px minmax(0, 1290px);
+      max-width: fit-content;
+    }
   @include screen-xl {
     display: grid;
-    grid-template-columns: 470px 1fr ;
+    grid-template-columns: 470px minmax(0, 1450px) ;
     max-width: fit-content;
   }
 
@@ -20,9 +25,16 @@
   }
 }
 
+.home-card-calc {
+  @include screen-xl {
+    display: grid;
+    grid-template-columns: minmax(0,470px) minmax(0, 540px) minmax(0, 1fr);
+  }
+}
+
 
 .home-card-about__slide {
-  @include screen-xl {
+  @include screen-lg2 {
     display: flex;
     height: 100%;
   }
@@ -35,6 +47,11 @@
     }
   }
   &-right {
+    @include screen-lg2 {
+        width: 350px;
+        flex-shrink: 0;
+    
+      }
     @include screen-xl {
       width: 470px;
       flex-shrink: 0;

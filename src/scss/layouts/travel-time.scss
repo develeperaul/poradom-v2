@@ -1,9 +1,13 @@
 .travel-time {
+  
   @include screen-lg {
     width: 560px;
   }
-  @include screen-xl {
+  @include screen-lg2 {
+
     width: inherit;
+  }
+  @include screen-xl {
     height: 720px;
   }
   &__car-road {
@@ -14,6 +18,16 @@
       width: 250px;
       transform: translateX(240px);
       margin-bottom: 25px;
+    }
+
+    @include screen-lg2 {
+      transform: translateX(0);
+      top: 15px;
+      position: relative;
+      left: 40px;
+      width: 250px;
+      height: 60px;
+      margin-bottom: 20px;
     }
     @include screen-xl {
       transform: translateX(0);
@@ -27,6 +41,10 @@
   }
   &__to {
     position: relative;
+    @include screen-lg2 {
+      left: 200px;
+      top: 25px;
+    }
     @include screen-xl {
       left: 350px;
       top: 40px;
@@ -40,12 +58,17 @@
       transform: translateY(-180px);
       margin-bottom: -180px;
     }
-    @include screen-xl {
+
+    @include screen-lg2 {
       position: absolute;
       bottom: 0;
-      left: -10rem;
+      width: 210px;
+      left: -5rem;
       transform: translateY(0px);
       margin-bottom: -0px;
+    }
+    @include screen-xl {
+      width: 323px;
     }
   }
 
@@ -59,9 +82,34 @@
       height: 620px;
       margin: 0;
     }
+    @include screen-lg2 {
+      width: 425px;
+      height: 360px;
+    }
     @include screen-xl {
       width: 850px;
       height: 720px;
+    }
+  }
+
+  &__path {
+    &-icon {
+      @include screen-lg2 {
+        width:379px;
+        height: 358px;
+      }
+      @include screen-xl {
+        width: 758px;
+        height: 717px;
+      }
+    }
+
+    &-maps {
+      width: 425px;
+      max-height: 300px;
+      @include screen-xl {
+        width: 850px;
+      }
     }
   }
 }

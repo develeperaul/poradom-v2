@@ -20,6 +20,12 @@
         height: 110px;
         align-self: flex-start;
       }
+      @include screen-lg2 {
+        width: 160px;
+        height: 160px;
+        margin-right: 60px;
+        order: 1;
+      }
       @include screen-xl {
         width: 320px;
         height: 320px;
@@ -28,9 +34,13 @@
       }
     }
     &-text {
-      @apply text-5.25-5xl;
+      @apply text-5.25-5xl lg2:text-3xl xl:text-5.25-5xl;
       @include screen-lg {
         order: 1;
+      }
+      @include screen-lg2 {
+        order: 3;
+        margin-right: 21px;
       }
       @include screen-xl {
         order: 3;
@@ -50,6 +60,12 @@
         height: 211px;
         transform: translate(-20px, 0);
         margin-bottom: 0;
+      }
+      @include screen-lg2 {
+        width: 217px;
+        height: 255px;
+        transform: translateY(-62.5px);
+        margin-bottom: -62.5px;
       }
       @include screen-xl {
         width: 434px;

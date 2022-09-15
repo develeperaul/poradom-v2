@@ -4,12 +4,15 @@
 
 .page {
   width: 50%;
-  height: 800px;
+  height: 670px;
   background-color: #111111;
   float: left;
   margin-bottom: 0.5em;
   background: left top no-repeat;
   background-size: cover;
+  @include screen-xl {
+    height: 800px;
+  }
 }
 
 .page:nth-child(even) {
@@ -22,11 +25,13 @@
 
 .book .pages {
   width: 100%;
-  height: 800px;
+  height: 670px;
   position: relative;
   transform-style: preserve-3d;
   backface-visibility: hidden;
-
+  @include screen-xl {
+    height: 800px;
+  }
   /*box-shadow: 0 0 0 1px #e3dfd8;*/
 }
 
@@ -45,7 +50,10 @@
   /*cursor: pointer;*/
   user-select: none;
   background-color: theme("colors.dark");
-  padding: 40px;
+  padding: 30px;
+  @include screen-xl {
+    padding: 40px;
+  }
 }
 
 .book .page:before {
@@ -137,10 +145,14 @@
   @apply flex flex-col justify-between;
   width: 100%;
   height: 100%;
-  padding: 80px;
+  padding: 35px;
+  @include screen-xl {
+    padding: 80px;
+  }
   ul {
     list-style: inherit;
     padding-left: 20px;
+    font-size: 1rem;
   }
   p,
   li {

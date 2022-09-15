@@ -17,8 +17,11 @@ block content
             img(src=require("../img/images/villages.png"), alt="villages")
             include ../components/plan-default.pug
 
-            
-
+            div(class="plan__popup absolute bg-white " style="display:none")
+              div(class="plan__popup-wrapper relative p-5 flex flex-col gap-5") 
+                h3(class="text-4xl text-title") выберите дом мечты
+                  a(href="poradom.ru" class="text-blue underline")  на poradom.ru
+                a(href='poradom.ru' class="button button_yellow") Выбрать дом
       div(class="toggle-element grow"
           data-toggle_el
           id="plan_1")
@@ -232,7 +235,7 @@ block content
               
       div(class="absolute bottom-10 w-full overflow-hidden")
         div(class="relative overflow-x-auto" style="height:60px")
-          div(data-buttons class="absolute bottom-0 xl:left-1/2 transform xl:-translate-x-1/2")
+          div(data-buttons class="absolute bottom-0 lg2:left-1/2 transform lg2:-translate-x-1/2")
             +buttons-card()
         //- div(class="absolute xl:bottom-10 right-10")
         //-   <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -268,12 +271,21 @@ block content
       { 
         document.querySelectorAll('a[data-hover]').forEach(a=>{
         const status = document.querySelector('[data-status]')
+        const btnsGr = document.querySelector('.button__group')
+        const ishPopup = document.querySelector('.plan__popup')
         a.addEventListener('click', (event)=>{ event.preventDefault()
           const button =
             document.querySelector(`[data-toggle='${a.getAttribute('data-button')}']`)
+            btnsGr.style.display = 'flex'
             status.style.display = 'none'
+            ishPopup.style.display = 'none'
           if(button === null){
+            console.log(window.screen.width )
+            if(window.screen.width < 770){
+              btnsGr.style.display = 'none'
+            }
             status.style.display = 'block'
+            //- console.log(btnsGr)
             const el = a.getAttribute('data-button')
             const parent = a.closest(`#${el.replace(/-\d+/g,'')}`)
             parent.classList.remove('toggle-element__active')
@@ -288,10 +300,12 @@ block content
       btnsGr.forEach(btn=>btn.addEventListener('click', ()=>status.style.display = 'none') )
       
       const buttonsBack = document.querySelectorAll('a[data-back]')
+      const btns = document.querySelector('.button__group')
         const status = document.querySelector('[data-status]')
         buttonsBack.forEach(el=>{
           el.addEventListener('click', function(event){
             event.preventDefault();
+            btns.style.display = 'flex'
             const id = this.getAttribute('data-back')
             const parent = document.querySelector(`#${id.replace(/-\d+/g,'')}`)
             status.style.display = 'none'

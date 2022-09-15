@@ -18,11 +18,11 @@ section(id="new")
   div(class="container-195")
     +flag-content(1, 'о поселке')
     div()
-      h2(class="text-center text-dark mb-7.5 xl:hidden") о поселке
-      div(class="hidden xl:block")
+      h2(class="text-center text-dark mb-7.5 lg2:hidden") о поселке
+      div(class="hidden lg2:block")
         +rainbow()(class="justify-center mb-25")
-      h2(class="lg:text-8xl mb-7.5  xl:mb-10") Таун-парк <br class=" lg:hidden"> андерсен — <br class="hidden lg:block xl:hidden"> mini-город <br class="lg:hidden xl:block"> с maxi-возможностями <br class="xl:hidden"> рядом с Дёмой  
-      div(class="flex flex-col gap-3.5 mb-15 lg:flex-row lg:items-center lg:justify-center xl:gap-31.25 xl:mb-20")
+      h2(class="section__title mb-7.5 lg2:mb-10 ") Таун-парк <br class=" lg:hidden"> андерсен — <br class="hidden lg:block lg2:hidden"> mini-город <br class="lg:hidden lg2:block"> с maxi-возможностями <br class="lg2:hidden"> рядом с Дёмой  
+      div(class="flex flex-col gap-3.5 mb-15 lg:flex-row lg:items-center lg:justify-center lg2:gap-31.25 lg2:mb-20")
         div(class="flex flex-col gap-5 xl:gap-15 ")
           div(class="flex gap-5") 
             +number(200)
@@ -46,32 +46,26 @@ section(id="new")
         +advantage('icon-09', advantage09, 'bg-yellow')
         +advantage('icon-10', advantage10, 'bg-bordeaux')
   div.container-100  
-    +card-application('запросить презентацию')(class="mb-30 lg:mb-0 xl:mb-40")
+    +card-application('запросить презентацию')(class="mb-30 lg:mb-0 lg2:mb-40")
   div(class="swiper mainSwiper village-slider mb-15 xl:mb-20" id="photos")
     div(class='swiper-wrapper')
       div(class="swiper-slide ") 
         div(class="village-slider__slide")
-          div.container.h-full
-            div(class="flex flex-col justify-end h-full pb-28 xl:pb-22.75")
       div(class="swiper-slide ") 
         div(class="village-slider__slide")
-          div.container.h-full
-            div(class="flex flex-col justify-end h-full pb-28 xl:pb-22.75")
       div(class="swiper-slide ") 
         div(class="village-slider__slide")
-          div.container.h-full
-            div(class="flex flex-col justify-end h-full pb-28 xl:pb-22.75")
     .swiper-prev
     .swiper-next  
     div(class="swiper-pagination")
   div.container-195
     div(class=" flex flex-wrap flex-col gap-2.5 xl:gap-3.75 lg:justify-center lg:flex-row xl:justify-center mb-30 xl:mb-40")
         div(class="card flex flex-col gap-12 ")
-          h3(class=" text-gray text-5.25-5xl") таунхаусы <br class="xl:hidden"> и дома от
+          h3(class=" text-gray text-5.25-5xl") таунхаусы <br class="lg2:hidden"> и дома от
           +number('6.5', 'с землей', 'млн', 'руб')(class="justify-between")
         div(class="card flex flex-col gap-12 ")
           h3(class=" text-gray text-5.25-5xl") в ипотеку *
           +number('28.5', 'платеж ', 'тыс', 'руб')(class="justify-between")
         div(class="card flex flex-col gap-12")
-          h3(class=" text-gray text-5.25-5xl") эскроу<br class="xl:hidden">-счета
+          h3(class=" text-gray text-5.25-5xl") эскроу<br class="lg2:hidden">-счета
           +number('100', 'гарантия', '%')(class="justify-between")

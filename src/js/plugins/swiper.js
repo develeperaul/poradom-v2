@@ -2,7 +2,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/grid";
 import "swiper/css/pagination";
-import Swiper, { Navigation, Pagination, Grid, Autoplay } from "swiper";
+import Swiper, { Navigation, Pagination,Mousewheel , Autoplay } from "swiper";
 
 new Swiper(".mainSwiper", {
   modules: [Navigation, Pagination, Autoplay],
@@ -126,3 +126,11 @@ new Swiper(".floorsSwiper", {
     },
   },
 });
+
+new Swiper(".convertSwiper", {
+  modules: [Mousewheel],
+  spaceBetween: 16,
+  rabCursor: true,
+  mousewheel: true,
+  direction: "vertical",
+})

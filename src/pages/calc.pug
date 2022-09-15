@@ -1,0 +1,92 @@
+extend ../layouts/layouts/other.pug
+
+
+block content
+  include ../components/back.pug
+  include ../components/number-mini.pug
+  include ../components/floors-slider.pug
+  include ../components/liters.pug
+  section(class="flex flex-col justify-between h-full grow ")
+    .container.grow(class="flex flex-col px-0")
+      div(class="home-card-calc h-full grow   ") 
+        div(class="bg-gray-light hidden lg2:p-10  xl:p-10 lg2:flex lg2:flex-col lg2:gap-5 ")
+          div(class="relative lg2:-left-2 xl:-left-5")
+            +back('gray')
+          div(class="flex flex-col justify-between h-full")
+            div
+              div(class="flex gap-5 lg2:flex-col mb-7.5")
+                div(class="flex")
+                  +number-mini("197 м")
+                  span(class="text-yellow font-reformagrotesk text-4xl xl:text-6xl mt-1 xl:mt-0")
+                    |2
+                div(class="flex flex-col gap-2.5  lg2:flex-row lg2:gap-3 xl:gap-6 ")
+                  h3(class="text-dark text-4xl lg2:text-5xl xl:text-5.25-5xl") ЛИТЕР 12
+                  h3(class="text-dark text-4xl lg2:text-5xl xl:text-5.25-5xl") ТАУНХАУС №4
+              div(class="grid mb-20 lg:mb-10 xl:mb-20  grid-cols-2 lg:grid-cols-4  lg2:grid-cols-2 gap-y-5") 
+                div 
+                  h3(class="text-green text-5.25-5xl") 6.78
+                  p(class=" text-dark text-base lowercase") s участка, сот
+
+                div 
+                  h3(class="text-green text-5.25-5xl") 24
+                  p(class=" text-dark text-base lowercase") гараж, м <sup>2</sup>
+
+                div 
+                  h3(class="text-green text-5.25-5xl") 3
+                  p(class=" text-dark text-base lowercase") этажа
+
+                div 
+                  h3(class="text-green text-5.25-5xl") 3
+                  p(class=" text-dark text-base lowercase") спальни
+            button(class="button button_yellow") Узнать цену    
+
+        div(class="bg-white xl:py-10 xl:px-17.5 flex flex-col")
+          div(class=" grow flex flex-col ")
+            div(class="mb-10") 
+              h3(class="text-title text-5.25-5xl xl:mb-5") Рассчитайте <br> ипотеку онлайн
+              p(class="text-title normal-case") Расчёт носит предварительный характер и ни к чему не обязывает
+            form(class="flex flex-col justify-between grow" id="calc-1")
+              div(class="flex flex-col gap-10")
+                .field.field_floating-3(class='mb-8.75 xl:mb-0')
+                    input.field__input(data-calc-field data-input="house" data-type='text' data-special-offer='' type="text" id="name" name="text" )
+                    label(class="field__label" for="name") Стоимость домовладения (участок, таунхаус, гараж) 
+                div(class="relative" data-inputs-range)
+                  .field.field_floating-3(class="mb-0")
+                      input.field__input(data-calc-field data-input="initial" data-type='text' data-special-offer='' data-range type="text" id="name" name="text" )
+                      label(class="field__label" for="name") Первоначальный взнос
+                  input(type="range" class="styled-slider slider-progress absolute" data-range)
+                .field.field_floating-3(class='mb-8.75 xl:mb-0')
+                    input.field__input(data-calc-field data-input="period" data-type='text' data-special-offer='' type="text" id="name" name="text" )
+                    label(class="field__label" for="name") Срок
+                div(class="flex gap-5")
+                  .field.field_floating-3(class='mb-8.75 xl:mb-0')
+                    input.field__input(data-calc-field data-input="month" data-type='text' data-special-offer='' type="text" id="name" name="text" )
+                    label(class="field__label" for="name") Ежемесячный платеж
+
+                  .field.field_floating-3(class='mb-8.75 xl:mb-0')
+                    input.field__input(data-calc-field data-input="rate" data-type='text' data-special-offer='' type="text" id="name" name="text" )
+                    label(class="field__label" for="name") Ставка
+              button(class="button button_green") Отправить заявку
+        div(class="bg-yellow pl-28 pr-48  flex flex-col justify-center") 
+          div(class=" mb-7.5 flex gap-10")   
+            h2(class=" text-8xl text-title") Сказочные условия <br> и безопасность <br> сделки от дом.рф
+
+            svg(width='73' height='80' viewbox='0 0 73 80' fill='none' xmlns='http://www.w3.org/2000/svg')
+              g(clip-path='url(#clip0_577_17965)')
+                path(d='M73 0H0V80H73V0Z' fill='#344650')
+                path(d='M38.2439 11.7576H25.9961V39.3535H38.2844V11.7576H38.2439ZM35.04 36.2828H29.2V14.8283H35.0805V36.2828H35.04Z' fill='white')
+                path(d='M62.7394 42.3435H10.585V45.3738H62.7394V42.3435Z' fill='white')
+                path(d='M10.585 63.7979H13.7888V60.3635H32.0389V48.4443H10.585V63.7979ZM13.7483 51.4746H28.835V57.2928H13.7483V51.4746Z' fill='white')
+                path(d='M44.5706 20.9293L50.4511 14.8283V39.3535H53.655V20.9293L59.5356 14.8283V39.3535H62.7395V11.7576H58.2378L53.655 16.5252V11.7576H49.1534L41.3667 19.798V39.3535H44.5706V20.9293Z' fill='white')
+                path(d='M35.1616 60.3635H47.2472V63.7979H50.5727V60.3635H62.7394V48.4443H35.1616V60.3635ZM50.5727 51.4746H59.5355V57.2928H50.5727V51.4746ZM38.325 51.4746H47.2066V57.2928H38.325V51.4746Z' fill='white')
+                path(d='M19.6289 39.3535H22.8327V36.2828V11.7576H18.3311L10.585 19.798V36.2828V39.3535H13.7888H19.6289ZM13.7888 20.9293L19.6694 14.8283V36.2828H13.7888V20.9293Z' fill='white')
+                path(d='M62.7394 42.3435H10.585V45.3738H62.7394V42.3435Z' fill='white')
+                path(d='M10.585 63.7979H13.7888V60.3635H32.0389V48.4443H10.585V63.7979ZM13.7483 51.4746H28.835V57.2928H13.7483V51.4746Z' fill='white')
+                path(d='M35.1616 60.3635H47.2472V63.7979H50.5727V60.3635H62.7394V48.4443H35.1616V60.3635ZM50.5727 51.4746H59.5355V57.2928H50.5727V51.4746ZM38.325 51.4746H47.2066V57.2928H38.325V51.4746Z' fill='white')
+                path(d='M38.2439 11.7576H25.9961V39.3535H38.2844V11.7576H38.2439ZM35.04 36.2828H29.2V14.8283H35.0805V36.2828H35.04Z' fill='white')
+                path(d='M44.5706 20.9293L50.4511 14.8283V39.3535H53.655V20.9293L59.5356 14.8283V39.3535H62.7395V11.7576H58.2378L53.655 16.5252V11.7576H49.1534L41.3667 19.798V39.3535H44.5706V20.9293Z' fill='white')
+                path(d='M19.6289 39.3535H22.8327V36.2828V11.7576H18.3311L10.585 19.798V36.2828V39.3535H13.7888H19.6289ZM13.7888 20.9293L19.6694 14.8283V36.2828H13.7888V20.9293Z' fill='white')
+              defs
+                clippath#clip0_577_17965
+                  rect(width='73' height='80' fill='white')
+          p(class="normal-case") Андерсен — первый в России загородный поселок с  проектным финансированием — системой, в рамках которой деньги покупателей  аккумулируются на эскроу-счетах до завершения строительства. Это гарантирует 100% сохранность ваших средств. 

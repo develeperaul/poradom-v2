@@ -1,0 +1,97 @@
+/*generated with Input range slider CSS style generator (version 20211225)
+https://toughengineer.github.io/demo/slider-styler*/
+input[type=range].styled-slider {
+  /*height: 2.2em;*/
+  -webkit-appearance: none;
+}
+
+/*progress support*/
+input[type=range].styled-slider.slider-progress {
+  --range: calc(var(--max) - var(--min));
+  --ratio: calc((var(--value) - var(--min)) / var(--range));
+  --sx: calc(0.5 * 8px + var(--ratio) * (100% - 8px));
+  width: 100%;
+}
+
+/*webkit*/
+input[type=range].styled-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 0;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgOCA4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMy45MzQzIDEuMDU0OTNMMy45OTI5OCAxLjAyMjIxTDMuOTk5MzYgMS4wMTc0M0w0LjAwNTc0IDEuMDIyMjFMNC4wNjQ0MyAxLjA1NDkzTDYuOTk4NzMgMi42OTEyM1Y3SDFWMi42OTIwM0MxLjAwMDM3IDIuNjkxODIgMS4wMDA3NCAyLjY5MTYgMS4wMDExMSAyLjY5MTM4QzEuMDM0ODcgMi42NzE1NSAxLjA2NzA0IDIuNjUzNjggMS4xMDk4IDIuNjI5OTNDMS4xMjM3MiAyLjYyMjIgMS4xMzg3NyAyLjYxMzg0IDEuMTU1MzYgMi42MDQ1OUwzLjkzNDMgMS4wNTQ5M1oiIHN0cm9rZT0iI0JGNkYwRSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxjaXJjbGUgY3g9IjQiIGN5PSI0IiByPSIzIiBmaWxsPSIjQkY2RjBFIi8+Cjwvc3ZnPgo=);
+  border: none;
+  margin-top: calc(1px * 0.5 - 8px * 0.5);
+}
+
+input[type=range].styled-slider::-webkit-slider-runnable-track {
+  height: 1px;
+  border: none;
+  border-radius: 0;
+  background: #efefef;
+  box-shadow: none;
+}
+
+input[type=range].styled-slider.slider-progress::-webkit-slider-runnable-track {
+  background: linear-gradient(#F7941D, #F7941D) 0/var(--sx) 100% no-repeat, #efefef;
+}
+
+/*mozilla*/
+input[type=range].styled-slider::-moz-range-thumb {
+  width: 8px;
+  height: 8px;
+  border-radius: 0;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgOCA4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMy45MzQzIDEuMDU0OTNMMy45OTI5OCAxLjAyMjIxTDMuOTk5MzYgMS4wMTc0M0w0LjAwNTc0IDEuMDIyMjFMNC4wNjQ0MyAxLjA1NDkzTDYuOTk4NzMgMi42OTEyM1Y3SDFWMi42OTIwM0MxLjAwMDM3IDIuNjkxODIgMS4wMDA3NCAyLjY5MTYgMS4wMDExMSAyLjY5MTM4QzEuMDM0ODcgMi42NzE1NSAxLjA2NzA0IDIuNjUzNjggMS4xMDk4IDIuNjI5OTNDMS4xMjM3MiAyLjYyMjIgMS4xMzg3NyAyLjYxMzg0IDEuMTU1MzYgMi42MDQ1OUwzLjkzNDMgMS4wNTQ5M1oiIHN0cm9rZT0iI0JGNkYwRSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxjaXJjbGUgY3g9IjQiIGN5PSI0IiByPSIzIiBmaWxsPSIjQkY2RjBFIi8+Cjwvc3ZnPgo=);
+  border: none;
+}
+
+input[type=range].styled-slider::-moz-range-track {
+  height: 1px;
+  border: none;
+  border-radius: 0;
+  background: #efefef;
+  box-shadow: none;
+}
+
+input[type=range].styled-slider.slider-progress::-moz-range-track {
+  background: linear-gradient(#F7941D, #F7941D) 0/var(--sx) 100% no-repeat, #efefef;
+}
+
+/*ms*/
+input[type=range].styled-slider::-ms-fill-upper {
+  background: transparent;
+  border-color: transparent;
+}
+
+input[type=range].styled-slider::-ms-fill-lower {
+  background: transparent;
+  border-color: transparent;
+}
+
+input[type=range].styled-slider::-ms-thumb {
+  width: 8px;
+  height: 8px;
+  border-radius: 0;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgOCA4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMy45MzQzIDEuMDU0OTNMMy45OTI5OCAxLjAyMjIxTDMuOTk5MzYgMS4wMTc0M0w0LjAwNTc0IDEuMDIyMjFMNC4wNjQ0MyAxLjA1NDkzTDYuOTk4NzMgMi42OTEyM1Y3SDFWMi42OTIwM0MxLjAwMDM3IDIuNjkxODIgMS4wMDA3NCAyLjY5MTYgMS4wMDExMSAyLjY5MTM4QzEuMDM0ODcgMi42NzE1NSAxLjA2NzA0IDIuNjUzNjggMS4xMDk4IDIuNjI5OTNDMS4xMjM3MiAyLjYyMjIgMS4xMzg3NyAyLjYxMzg0IDEuMTU1MzYgMi42MDQ1OUwzLjkzNDMgMS4wNTQ5M1oiIHN0cm9rZT0iI0JGNkYwRSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxjaXJjbGUgY3g9IjQiIGN5PSI0IiByPSIzIiBmaWxsPSIjQkY2RjBFIi8+Cjwvc3ZnPgo=);
+  border: none;
+  margin-top: 0;
+  box-sizing: border-box;
+}
+
+input[type=range].styled-slider::-ms-track {
+  height: 1px;
+  border-radius: 0;
+  background: #efefef;
+  border: none;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+input[type=range].styled-slider.slider-progress::-ms-fill-lower {
+  height: 1px;
+  border-radius: 0px 0 0 0px;
+  margin: -undefined 0 -undefined -undefined;
+  background: #F7941D;
+  border: none;
+  border-right-width: 0;
+}

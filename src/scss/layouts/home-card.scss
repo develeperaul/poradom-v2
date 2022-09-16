@@ -1,37 +1,42 @@
 .home-card {
+  @include screen-lg2 {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+  }
   @include screen-xl {
     display: grid;
     grid-template-columns: 470px 1fr;
   }
 }
 
-
 .home-card-about {
   @include screen-lg2 {
-      display: grid;
-      grid-template-columns: 350px minmax(0, 1290px);
-      max-width: fit-content;
-    }
+    display: grid;
+    grid-template-columns: 350px minmax(0, 1290px);
+    max-width: fit-content;
+  }
   @include screen-xl {
     display: grid;
-    grid-template-columns: 470px minmax(0, 1450px) ;
+    grid-template-columns: 470px minmax(0, 1450px);
     max-width: fit-content;
   }
 
   &__center {
     display: flex;
     height: 100%;
-
   }
 }
 
 .home-card-calc {
+  @include screen-lg2 {
+    display: grid;
+    grid-template-columns: minmax(0, 350px) minmax(0, 450px) minmax(0, 1fr);
+  }
   @include screen-xl {
     display: grid;
-    grid-template-columns: minmax(0,470px) minmax(0, 540px) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 470px) minmax(0, 540px) minmax(0, 1fr);
   }
 }
-
 
 .home-card-about__slide {
   @include screen-lg2 {
@@ -43,19 +48,16 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-
     }
   }
   &-right {
     @include screen-lg2 {
-        width: 350px;
-        flex-shrink: 0;
-    
-      }
+      width: 350px;
+      flex-shrink: 0;
+    }
     @include screen-xl {
       width: 470px;
       flex-shrink: 0;
-
     }
   }
 }

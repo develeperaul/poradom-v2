@@ -1,11 +1,11 @@
-section(data-thank-green data-popup style="transform:translateY(-100%); display:none; z-index:10000" class="bg-green h-screen fixed w-full animate__animated")
+section(data-thank-green data-popup style="transform:translateY(-100%); display:none; z-index:10000" class="popup-thank bg-green h-screen fixed w-full animate__animated")
 
   include ../base-navigation-popup.pug
   .container-95.flex.flex-col.grow.w-full.pt-15   
-    img( src=require("../../img/icons/close.svg") alt="close", class=" cursor-pointer mx-auto mb-20 xl:mb-17.5" data-close )              
-    div(class='flex flex-col xl:flex-row justify-between items-center')
-      div(class="self-start")
-        h2.mb-10(class="text-8xl xl:text-9.75xl") спасибо
+    img( src=require("../../img/icons/close.svg") alt="close", class=" cursor-pointer mx-auto mb-20 lg2:mb-17.5" data-close )              
+    div(class='flex flex-col lg2:flex-row justify-between items-center')
+      div(class="self-start lg2:self-auto")
+        h2.mb-10(class="text-8xl lg2:text-9.75xl") спасибо
         
             
-      img( src=require("../../img/images/travel-guide/01.png") alt="close", class="block")              
+      img( src=require("../../img/images/travel-guide/01.png") alt="close", class="popup-thank__icon block")              

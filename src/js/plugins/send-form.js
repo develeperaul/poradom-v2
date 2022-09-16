@@ -1,12 +1,10 @@
 import Validate from "./validateform";
-let suc = false;
+let suc = true;
 const forms = document.querySelectorAll("form");
 forms.forEach((form) => {
-  console.log(form);
-  form.addEventListener("submit", function (e) {
+  form.addEventListener("submit", async function (e) {
     e.preventDefault();
     const valid = new Validate(form).valid;
-    console.log(valid);
     if (valid) {
       // setTimeout(()=>{
       //   const buttonSucces = document.querySelector('[data-succes')
@@ -19,12 +17,19 @@ forms.forEach((form) => {
 
       //   buttonSucces.click()
       // }, 1000)
-      formReq(form)
+      if (suc) {
+        form
+          .querySelector("button[type='submit']")
+          .setAttribute("disabled", true);
+        console.log("hi");
+        suc = false;
+        await formReq(form);
+      }
     }
   });
 });
 
-// для запросов 
+// для запросов
 
 const formReq = async (form) => {
   const url = "https://andersen-ufa.ru/amo_lead.php";
@@ -34,7 +39,7 @@ const formReq = async (form) => {
   Array.from(fields).forEach((field) => {
     formData.append("lead_name", theme ? theme : "");
     if (field.name) {
-        formData.append(field.name, field.value);
+      formData.append(field.name, field.value);
     }
   });
 
@@ -45,15 +50,17 @@ const formReq = async (form) => {
   })
     .then((responce) => {
       if (responce.status === 200) {
-        const buttonSucces = document.querySelector('[data-succes')
-        const parent = form.closest('[data-popup]')
+        suc = true;
+        form.querySelector("button[type='submit']").removeAttribute("disabled");
+        const buttonSucces = document.querySelector("[data-succes");
+        const parent = form.closest("[data-popup]");
 
-        const parentStyle = parent?.getAttribute('data-style')
-        if(parentStyle){
-          buttonSucces.setAttribute('data-popupType', `thank-${parentStyle}`)
-        }else buttonSucces.setAttribute('data-popupType', 'thank')
+        const parentStyle = parent?.getAttribute("data-style");
+        if (parentStyle) {
+          buttonSucces.setAttribute("data-popupType", `thank-${parentStyle}`);
+        } else buttonSucces.setAttribute("data-popupType", "thank");
 
-        buttonSucces.click()
+        buttonSucces.click();
       }
     })
     .catch((e) => console.log(e));

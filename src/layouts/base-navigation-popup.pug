@@ -1,12 +1,14 @@
 div(class="navigation bg-background") 
-  div.container(class="xl:pl-0")
+  div.container(class="lg2:pl-0")
     div(class=" flex justify-between items-center")
-      div(class=' flex items-center  xl:gap-12')
+      div(class=' flex items-center  lg2:gap-12')
         div(class='navigation__logo') 
           img(src=require("../img/images/logo.png"), alt="logo" class="navigation__logo-icon")
-        a(href="#photos" class="base hidden xl:block") Фотографии таун-парка
-      a(href="#" class=" underline text-base xl:hidden") Выбрать таунхаус
-      div(class="hidden xl:flex xl:items-center xl:gap-9")
+        a(href="#photos" class="base hidden lg2:block") Фотографии таун-парка
+      div(class="flex flex-col gap-1 lg2:hidden") 
+        span(class="text-base comagic_phone") +7 (347) 225-19-20
+        a(class="underline text-base " href="/select/") Выбрать таунхаус
+      div(class="hidden lg2:flex lg2:items-center lg2:gap-9")
         a(href="#" class="button button_yellow") Выбрать таунхаус
         div(class=" flex flex-col gap-1") 
           span(class="text-base") +7 (347) 201-35-73

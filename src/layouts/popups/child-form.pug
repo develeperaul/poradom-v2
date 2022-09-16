@@ -1,27 +1,27 @@
 
-section(data-child data-popup style="transform:translateY(-100%); display:none; z-index:10000" class="bg-dark flex flex-col h-screen fixed w-full animate__animated")
+section(data-child data-popup style="transform:translateY(-100%); display:none; z-index:10000" class="popup-child bg-dark flex flex-col h-screen fixed w-full animate__animated")
   include ../base-navigation-popup.pug
   .container-95.flex.flex-col.grow.w-full.pt-15     
-    img( src=require("../../img/icons/close.svg") alt="close", class=" cursor-pointer mx-auto mb-5.25 xl:mb-17.5" data-close )              
+    img( src=require("../../img/icons/close.svg") alt="close", class=" cursor-pointer mx-auto mb-5.25 lg2:mb-17.5" data-close )              
     div(class='relative flex grow items-center')
       div.grow
-        h2.mb-10 главная ценность — это дети. <br> получите скидку, равную <br> количеству детей в вашей семье
+        h2.mb-10(class="lg2:text-7xl xl:text-9.75xl") главная ценность — это дети. <br> получите скидку, равную <br> количеству детей в вашей семье
         form(data-form='' data-theme="Узнать цену Andersen")
-          .items-end(class='xl:flex xl:gap-5')
-            div(class='xl:flex xl:flex-wrap xl:gap-2.5')
-              .text-field.text-field_floating(class='mb-8.75 xl:mb-0')
+          .items-end(class='lg2:flex lg2:gap-5')
+            div(class='lg2:flex lg2:flex-wrap lg2:gap-2.5')
+              .text-field.text-field_floating(class='mb-8.75 lg2:mb-0')
                 input.text-field__input(data-type='text' data-special-offer='' type='text' name='name' placeholder='Иван')
-              .text-field.text-field_floating.mb-7(class='xl:mb-0')
+              .text-field.text-field_floating.mb-7(class='lg2:mb-0')
                 input.text-field__input.tel(data-type='phone' data-special-offer='' type='text' name='phone' placeholder='+7 (999) 999-99-99')
-              .text-field.text-field_floating.mb-7(class='xl:mb-0')
+              .text-field.text-field_floating.mb-7(class='lg2:mb-0')
                 input.text-field__input(data-type='numeric' data-special-offer='' type='numeric' name='kol' placeholder='Количество детей')
-            button.button.bg-yellow.w-full(type='submit' class='xl:w-auto text-title') Отправить
+            button.button.bg-yellow.w-full(type='submit' class='lg2:w-auto text-title') Отправить
           label.checkbox-other
             input(data-special-offer='' checked='' data-type='checkbox' type='checkbox')
             p(class=" capitalize")
               | Даю согласие на обработку 
               a.checkbox__link(href='personal-data.pdf' target='_blank')
                 | персональных данных
-        p(class="pt-10 hidden xl:block normal-case text-gray") 1 ребенок = 1%; 2 ребенка = 2%; 3 и более детей = 3%
+        p(class="pt-10 hidden lg2:block normal-case text-gray") 1 ребенок = 1%; 2 ребенка = 2%; 3 и более детей = 3%
       //- img(src=require("./img/icons/logo-gray.svg"), width="512" height="330" alt="andersen" class=" opacity-10 " class=classIcon)
-      img( src=require("../../img//icons/logo-gray.svg") width="680" height="438" class="hidden xl:block absolute right-0 top-1/2 transform -translate-y-1/2 opacity-10 " alt="andersen", )              
+      img( src=require("../../img//icons/logo-gray.svg") width="680" height="438" class="popup-child__icon hidden lg2:block absolute right-0 top-1/2 transform -translate-y-1/2 opacity-10 " alt="andersen", )              

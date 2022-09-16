@@ -5,11 +5,12 @@
 @import "./font-styles.scss";
 @import "./stolzl-font.scss";
 
+@import "glightbox/dist/css/glightbox.css";
 @import "./core/checkbox.scss";
 @import "./core/input.scss";
 @import "./core/input-range.scss";
 
-
+@import "./components/popup.scss";
 @import "./components/flag.scss";
 @import "./components/advantage.scss";
 @import "./components/book.scss";
@@ -34,7 +35,7 @@
 
 .section {
   &__title {
-      @apply text-5.25-5xl lg:text-8xl lg2:text-6xl xl:text-9.75xl;
+    @apply text-5.25-5xl lg:text-8xl lg2:text-6xl xl:text-9.75xl;
   }
 }
 
@@ -87,6 +88,11 @@
     height: 464px;
     width: calc(500px + (42px + 50px));
   }
+  @include screen-lg {
+    height: 464px;
+    width: 510px;
+    padding-right: 68px;
+  }
   @include screen-xl {
     height: 560px;
     width: calc(520px + 1 * (42px + 50px));
@@ -101,6 +107,9 @@
 
 .fractionCardSwiper {
   width: 100%;
+  @include screen-lg2 {
+    width: 300px;
+  }
   @include screen-xl {
     width: 420px;
   }
@@ -157,5 +166,36 @@
         transform: rotate(-90deg);
       }
     }
+  }
+}
+
+.labels {
+  .label-home {
+    @include screen-lg2 {
+      width: 40px;
+      height: 41px;
+    }
+  }
+}
+
+.marquee {
+  position: relative;
+  &__direction {
+    overflow: hidden;
+    position: relative;
+  }
+  &__direction-container {
+    margin: auto 0;
+    white-space: nowrap;
+  }
+  &__direction-right:first-child {
+    position: absolute;
+    transform: translateX(-100%);
+    top: 0;
+  }
+  &__direction-left:last-child {
+    position: absolute;
+    transform: translateX(100%);
+    top: 0;
   }
 }

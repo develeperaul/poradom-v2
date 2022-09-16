@@ -109,17 +109,28 @@ section(id="20min" class="location")
   .container-100
     +card-application('заказать звонок')(class="mb-30 xl:mb-40")
   div(class="container px-0")
-    div(class="mb-15 xl:mb-30 relative marquee")
-      marquee(scrolldelay=60 scrollamount=7 behavior='scroll') 
-        span(class=" text-8xl xl:text-14.75xl font-reformagrotesk") Первый Первый Первый Первый Первый Первый Первый Первый Первый Первый 
-      marquee(scrolldelay=60 scrollamount=7 behavior='scroll' direction="right") 
-        span(class=" text-8xl xl:text-14.75xl font-reformagrotesk text-border") загородный загородный загородный загородный загородный загородный 
-      marquee(scrolldelay=60 scrollamount=7 behavior='scroll') 
-        span(class=" text-8xl xl:text-14.75xl font-reformagrotesk") дизайн-поселок дизайн-поселок дизайн-поселок дизайн-поселок дизайн-поселок дизайн-поселок
-      marquee(scrolldelay=60 scrollamount=7 behavior='scroll' direction="right") 
-        span(class=" text-8xl xl:text-14.75xl font-reformagrotesk text-border") в башикирии в башикирии в башикирии в башикирии в башикирии в башикирии 
+    div(class="mb-15 xl:mb-30  marquee")
+      div(class="marquee__direction")
+        .marquee__direction-container
+          span(class="marquee__direction-right text-8xl xl:text-14.75xl font-reformagrotesk") Первый Первый Первый Первый Первый Первый Первый Первый &nbsp;
+          span(class="marquee__direction-right text-8xl xl:text-14.75xl font-reformagrotesk") Первый Первый Первый Первый Первый Первый Первый Первый &nbsp;
+      div(class="marquee__direction")
+      
+        .marquee__direction-container.left
+          span(class="marquee__direction-left text-8xl xl:text-14.75xl font-reformagrotesk text-border") загородный загородный загородный загородный загородный загородный &nbsp;
+          span(class="marquee__direction-left text-8xl xl:text-14.75xl font-reformagrotesk text-border") загородный загородный загородный загородный загородный загородный &nbsp;
 
-      img(src=require("./img/images/rooster.png"), alt="" class=" absolute top-0 w-full h-full object-cover")
-      p(class="label label-01  animate__animated animate__fadeIn animate__fadeOut animate__infinite animate__slower animate__delay-1s") Беззаборная среда
-      p(class="label label-02  animate__animated animate__fadeIn animate__fadeOut animate__infinite animate__slower animate__delay-3s") Единый дизайн-код
-      p(class="label label-03 animate__animated animate__fadeIn animate__fadeOut animate__infinite animate__slower animate__delay-5s") Променад
+      div(class="marquee__direction")
+        .marquee__direction-container
+          span(class="marquee__direction-right text-8xl xl:text-14.75xl font-reformagrotesk") дизайн-поселок дизайн-поселок дизайн-поселок дизайн-поселок дизайн-поселок дизайн-поселок &nbsp;
+          span(class="marquee__direction-right text-8xl xl:text-14.75xl font-reformagrotesk") дизайн-поселок дизайн-поселок дизайн-поселок дизайн-поселок дизайн-поселок дизайн-поселок &nbsp;
+      
+      div(class="marquee__direction")
+        .marquee__direction-container.left
+          span(class="marquee__direction-left text-8xl xl:text-14.75xl font-reformagrotesk text-border") в башикирии в башикирии в башикирии в башикирии в башикирии в башикирии &nbsp;
+          span(class="marquee__direction-left text-8xl xl:text-14.75xl font-reformagrotesk text-border") в башикирии в башикирии в башикирии в башикирии в башикирии в башикирии &nbsp;
+
+      img(src=require("./img/images/rooster.png"), alt="" class=" absolute top-0 w-full h-full object-cover lg:object-contain")
+      p(class="label label-01  animate__animated  animate__slower animate__delay-1s" style="opacity:0") Беззаборная среда
+      p(class="label label-02  animate__animated  animate__slower animate__delay-3s" style="opacity:0") Единый дизайн-код
+      p(class="label label-03 animate__animated  animate__slower animate__delay-5s" style="opacity:0") Променад

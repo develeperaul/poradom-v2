@@ -1,10 +1,8 @@
 .travel-time {
-  
   @include screen-lg {
     width: 560px;
   }
   @include screen-lg2 {
-
     width: inherit;
   }
   @include screen-xl {
@@ -95,7 +93,7 @@
   &__path {
     &-icon {
       @include screen-lg2 {
-        width:379px;
+        width: 379px;
         height: 358px;
       }
       @include screen-xl {
@@ -106,7 +104,7 @@
 
     &-maps {
       width: 425px;
-      max-height: 300px;
+      max-height: 200px;
       @include screen-xl {
         width: 850px;
       }

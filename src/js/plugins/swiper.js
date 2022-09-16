@@ -2,13 +2,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/grid";
 import "swiper/css/pagination";
-import Swiper, { Navigation, Pagination,Mousewheel , Autoplay } from "swiper";
+import Swiper, { Navigation, Pagination, Mousewheel, Autoplay } from "swiper";
 
 new Swiper(".mainSwiper", {
   modules: [Navigation, Pagination, Autoplay],
   loop: true,
   pagination: {
-    dynamicBullets: true,
     el: ".swiper-pagination",
     bulletActiveClass: "dot-active",
     bulletClass: "dot",
@@ -128,9 +127,12 @@ new Swiper(".floorsSwiper", {
 });
 
 new Swiper(".convertSwiper", {
-  modules: [Mousewheel],
+  modules: [Mousewheel, Autoplay],
   spaceBetween: 16,
-  rabCursor: true,
-  mousewheel: true,
+  // rabCursor: true,
+  // mousewheel: true,
   direction: "vertical",
-})
+  loop: true,
+  autoplay: true,
+  delay: 2000,
+});

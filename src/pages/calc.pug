@@ -1,6 +1,7 @@
 extend ../layouts/layouts/other.pug
 
 
+
 block content
   include ../components/back.pug
   include ../components/number-mini.pug
@@ -40,38 +41,42 @@ block content
                   p(class=" text-dark text-base lowercase") спальни
             button(class="button button_yellow") Узнать цену    
 
-        div(class="bg-white xl:py-10 xl:px-17.5 flex flex-col")
+        div(class="bg-white px-5 pt-10 pb-15 lg2:px-12 lg2:py-10 xl:px-17.5 flex flex-col")
+          div(class="lg2:hidden relative lg2:-left-2 xl:-left-5")
+              +back('gray')
           div(class=" grow flex flex-col ")
             div(class="mb-10") 
-              h3(class="text-title text-5.25-5xl xl:mb-5") Рассчитайте <br> ипотеку онлайн
+              h3(class="text-title text-5.25-5xl mb-2.5 xl:mb-5") Рассчитайте <br class="hidden lg2:block"> ипотеку онлайн
               p(class="text-title normal-case") Расчёт носит предварительный характер и ни к чему не обязывает
             form(class="flex flex-col justify-between grow" id="calc-1")
               div(class="flex flex-col gap-10")
-                .field.field_floating-3(class='mb-8.75 xl:mb-0')
-                    input.field__input(data-calc-field data-input="house" data-type='text' data-special-offer='' type="text" id="name" name="text" )
-                    label(class="field__label" for="name") Стоимость домовладения (участок, таунхаус, гараж) 
                 div(class="relative" data-inputs-range)
                   .field.field_floating-3(class="mb-0")
-                      input.field__input(data-calc-field data-input="initial" data-type='text' data-special-offer='' data-range type="text" id="name" name="text" )
-                      label(class="field__label" for="name") Первоначальный взнос
-                  input(type="range" class="styled-slider slider-progress absolute" data-range)
+                    input.field__input(data-calc-field data-input="house" data-type='text' data-special-offer='' data-range type="text" id="name" name="text" )
+                    label(class="field__label" for="name") Стоимость домовладения (участок, таунхаус, гараж) 
+                  input(type="range" class="styled-slider slider-progress absolute" data-range min="0" max="500000")
+                div(class="relative" data-inputs-range)
+                  .field.field_floating-3(class="mb-0")
+                    input.field__input(data-calc-field data-input="initial" data-type='text' data-special-offer='' data-range type="text" id="name" name="text" )
+                    label(class="field__label" for="name") Первоначальный взнос
+                  input(type="range" class="styled-slider slider-progress absolute" data-range min="0" max="500000")
                 .field.field_floating-3(class='mb-8.75 xl:mb-0')
                     input.field__input(data-calc-field data-input="period" data-type='text' data-special-offer='' type="text" id="name" name="text" )
                     label(class="field__label" for="name") Срок
                 div(class="flex gap-5")
-                  .field.field_floating-3(class='mb-8.75 xl:mb-0')
+                  .field.field_floating-3(class=' w-1/2 mb-8.75 xl:mb-0')
                     input.field__input(data-calc-field data-input="month" data-type='text' data-special-offer='' type="text" id="name" name="text" )
                     label(class="field__label" for="name") Ежемесячный платеж
 
-                  .field.field_floating-3(class='mb-8.75 xl:mb-0')
+                  .field.field_floating-3(class=' w-1/2 mb-8.75 xl:mb-0')
                     input.field__input(data-calc-field data-input="rate" data-type='text' data-special-offer='' type="text" id="name" name="text" )
                     label(class="field__label" for="name") Ставка
               button(class="button button_green") Отправить заявку
-        div(class="bg-yellow pl-28 pr-48  flex flex-col justify-center") 
-          div(class=" mb-7.5 flex gap-10")   
-            h2(class=" text-8xl text-title") Сказочные условия <br> и безопасность <br> сделки от дом.рф
+        div(class="bg-yellow px-5 pt-20 pb-4 lg2:pl-15 lg2:pr-15 xl:pl-28 xl:pr-48 hidden lg:flex lg:flex-col lg:justify-center") 
+          div(class=" mb-7.5 flex justify-between lg2:justify-start gap-10")   
+            h2(class=" text-5.25-5xl  xl:text-8xl text-title") Сказочные условия <br class="hidden lg2:block"> и безопасность <br> сделки от дом.рф
 
-            svg(width='73' height='80' viewbox='0 0 73 80' fill='none' xmlns='http://www.w3.org/2000/svg')
+            svg(width='73' height='80' viewbox='0 0 73 80' fill='none' xmlns='http://www.w3.org/2000/svg' class="shrink-0")
               g(clip-path='url(#clip0_577_17965)')
                 path(d='M73 0H0V80H73V0Z' fill='#344650')
                 path(d='M38.2439 11.7576H25.9961V39.3535H38.2844V11.7576H38.2439ZM35.04 36.2828H29.2V14.8283H35.0805V36.2828H35.04Z' fill='white')
@@ -90,3 +95,17 @@ block content
                 clippath#clip0_577_17965
                   rect(width='73' height='80' fill='white')
           p(class="normal-case") Андерсен — первый в России загородный поселок с  проектным финансированием — системой, в рамках которой деньги покупателей  аккумулируются на эскроу-счетах до завершения строительства. Это гарантирует 100% сохранность ваших средств. 
+
+  
+
+    .container.px-0(class="block") 
+      div(class="font-reformagrotesk text-center flex flex-wrap divide-x")
+        div.flex.w-full
+          div(class="bg-gray p-2.75 w-full ")
+            a(href="#new") про ипотеку
+          div(class="bg-dark p-2.75 w-full ")
+            a(href="#20min") Комплектация таунхауса
+          div(class="bg-green p-2.75 w-full hidden lg2:block")
+            a(href="#") забронировать таунхаус
+        div(class="bg-green p-2.75 w-full lg2:hidden")
+          a(href="#") забронировать таунхаус

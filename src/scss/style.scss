@@ -840,12 +840,20 @@ p,
   bottom: 2.5rem;
 }
 
-.right-10{
-  right: 2.5rem;
+.bottom-5{
+  bottom: 1.25rem;
 }
 
-.bottom-14{
-  bottom: 3.5rem;
+.bottom-4{
+  bottom: 1rem;
+}
+
+.bottom-3{
+  bottom: 0.75rem;
+}
+
+.top-25{
+  top: 6.25rem;
 }
 
 .z-10{
@@ -1166,10 +1174,6 @@ p,
   gap: 5rem;
 }
 
-.gap-14{
-  gap: 3.5rem;
-}
-
 .gap-y-5{
   row-gap: 1.25rem;
 }
@@ -1186,6 +1190,10 @@ p,
 
 .self-end{
   align-self: flex-end;
+}
+
+.justify-self-center{
+  justify-self: center;
 }
 
 .overflow-hidden{
@@ -1403,6 +1411,10 @@ p,
   padding-top: 3.75rem;
 }
 
+.pl-5{
+  padding-left: 1.25rem;
+}
+
 .text-center{
   text-align: center;
 }
@@ -1585,18 +1597,23 @@ p,
   }
 }
 
-.button__group {
-  display: flex;
-  gap: 10px;
-}
-
 .button__round{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  padding-top: 0.875rem;
-  padding-bottom: 0.875rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   --tw-text-opacity: 1;
   color: rgb(152 153 157 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1660px){
+  .button__round{
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
+  }
+}
+
+.button__round {
   border-radius: 8px;
   border: 1px solid #98999D;
   min-width: 190px;
@@ -1613,6 +1630,13 @@ p,
   }
   &_disabled{
     opacity: 0.3;
+  }
+}
+
+.button__group {
+  display: flex;
+  gap: 10px;
+  .button__round {
   }
 }
 
@@ -9106,6 +9130,10 @@ input[type=range].styled-slider.slider-progress::-ms-fill-lower {
     bottom: 0px;
   }
 
+  .lg\:top-20{
+    top: 5rem;
+  }
+
   .lg\:mb-30{
     margin-bottom: 7.5rem;
   }
@@ -9232,6 +9260,14 @@ input[type=range].styled-slider.slider-progress::-ms-fill-lower {
     left: 50%;
   }
 
+  .lg2\:bottom-10{
+    bottom: 2.5rem;
+  }
+
+  .lg2\:top-25{
+    top: 6.25rem;
+  }
+
   .lg2\:order-2{
     order: 2;
   }
@@ -9283,6 +9319,10 @@ input[type=range].styled-slider.slider-progress::-ms-fill-lower {
 
   .lg2\:mb-17\.5{
     margin-bottom: 4.375rem;
+  }
+
+  .lg2\:mr-72{
+    margin-right: 18rem;
   }
 
   .lg2\:block{
@@ -9337,6 +9377,10 @@ input[type=range].styled-slider.slider-progress::-ms-fill-lower {
 
   .lg2\:justify-start{
     justify-content: flex-start;
+  }
+
+  .lg2\:justify-center{
+    justify-content: center;
   }
 
   .lg2\:justify-between{
@@ -9506,6 +9550,14 @@ input[type=range].styled-slider.slider-progress::-ms-fill-lower {
     bottom: 2.5rem;
   }
 
+  .xl\:col-span-2{
+    grid-column: span 2 / span 2;
+  }
+
+  .xl\:col-span-8{
+    grid-column: span 8 / span 8;
+  }
+
   .xl\:mx-0{
     margin-left: 0px;
     margin-right: 0px;
@@ -9571,6 +9623,10 @@ input[type=range].styled-slider.slider-progress::-ms-fill-lower {
     display: flex;
   }
 
+  .xl\:grid{
+    display: grid;
+  }
+
   .xl\:hidden{
     display: none;
   }
@@ -9585,6 +9641,18 @@ input[type=range].styled-slider.slider-progress::-ms-fill-lower {
 
   .xl\:w-15{
     width: 3.75rem;
+  }
+
+  .xl\:w-auto{
+    width: auto;
+  }
+
+  .xl\:grid-cols-12{
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .xl\:flex-row{
+    flex-direction: row;
   }
 
   .xl\:justify-center{
@@ -9619,9 +9687,21 @@ input[type=range].styled-slider.slider-progress::-ms-fill-lower {
     gap: 3rem;
   }
 
+  .xl\:gap-14{
+    gap: 3.5rem;
+  }
+
   .xl\:gap-x-24{
     -webkit-column-gap: 6rem;
             column-gap: 6rem;
+  }
+
+  .xl\:self-auto{
+    align-self: auto;
+  }
+
+  .xl\:justify-self-end{
+    justify-self: end;
   }
 
   .xl\:p-2\.75{

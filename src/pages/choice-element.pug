@@ -7,13 +7,14 @@ block content
     include ../components/buttons.pug
 
     
-    div(class=" relative flex flex-col grow" )
-      div(class="toggle-element grow"
+    div(class="container px-0 relative flex flex-col grow" )
+      div(class="toggle-element toggle-element__active grow"
           data-toggle_el
           id="plan_0")
         div.plan
           .plan__map
-            div
+            
+            h2(class=" absolute top-25 lg:top-20 lg2:top-25 left-5") выберите Очередь
             img(src=require("../img/images/villages.png"), alt="villages")
             include ../components/plan-default.pug
 
@@ -27,20 +28,21 @@ block content
           id="plan_1")
         div.plan
           .plan__map.plan-liters
+            h2(class=" absolute top-25 lg:top-20 lg2:top-25 left-5") выберите литер
             img(src=require("../img/images/letter.png"), alt="villages")
             include ../components/plan-1.pug
-      div(class="toggle-element  toggle-element__active  h-full bg-purple  pt-10 grow"
+      div(class="toggle-element    h-full bg-purple  pt-10 grow"
             data-toggle_el
             id="plan_1-1")
-        .container
+        .px-5
           div(class="flex items-center mb-9 gap-5 cursor-pointer ")
             <svg width="30" height="6" viewBox="0 0 30 6" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0 3L5 5.88675L5 0.113249L0 3ZM4.5 3.5L30 3.5L30 2.5L4.5 2.5L4.5 3.5Z" fill="white"/>
             </svg>
             a(data-back="plan_1-1" class=" block underline ") Назад к выбору
-          div(class="flex justify-between mr-72 mb-14")
+          div(class="lg2:flex lg2:justify-between lg2:mr-72 mb-7.5  lg2:mb-14")
             h2 выберите таунхаус
-            h2(class="text-gray") Литер 37 - 38
+            h2(class="text-gray hidden lg2:block") Литер 36 - 37
         div.plan
           .plan__map.plan-liters-home
             img(src=require("../img/images/36-37.jpg"), alt="homes")
@@ -86,15 +88,15 @@ block content
       div(class="toggle-element   h-full bg-purple  pt-10 grow"
             data-toggle_el
             id="plan_1-2")
-        .container
+        .px-5
           div(class="flex items-center mb-9 gap-5 cursor-pointer ")
             <svg width="30" height="6" viewBox="0 0 30 6" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0 3L5 5.88675L5 0.113249L0 3ZM4.5 3.5L30 3.5L30 2.5L4.5 2.5L4.5 3.5Z" fill="white"/>
             </svg>
             a(data-back="plan_1-2" class=" block underline ") Назад к выбору
-          div(class="flex justify-between mr-72 mb-14")
+          div(class="lg2:flex lg2:justify-between lg2:mr-72 mb-7.5  lg2:mb-14")
             h2 выберите таунхаус
-            h2(class="text-gray") Литер 38
+            h2(class="text-gray hidden lg2:block") Литер 38
         div.plan
           .plan__map.plan-liters-home 
             img(src=require("../img/images/38.jpg"), alt="homes")
@@ -119,15 +121,15 @@ block content
       div(class="toggle-element   h-full bg-purple  pt-10 grow"
             data-toggle_el
             id="plan_1-3")
-        .container
+        .px-5
           div(class="flex items-center mb-9 gap-5 cursor-pointer ")
             <svg width="30" height="6" viewBox="0 0 30 6" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0 3L5 5.88675L5 0.113249L0 3ZM4.5 3.5L30 3.5L30 2.5L4.5 2.5L4.5 3.5Z" fill="white"/>
             </svg>
             a(data-back="plan_1-3" class=" block underline ") Назад к выбору
-          div(class="flex justify-between mr-72 mb-14")
+          div(class="lg2:flex lg2:justify-between lg2:mr-72 mb-7.5  lg2:mb-14")
             h2 выберите таунхаус
-            h2(class="text-gray") Литер 39
+            h2(class="text-gray hidden lg2:block") Литер 39
         div.plan
           .plan__map.plan-liters-home 
             img(src=require("../img/images/39.jpg"), alt="homes")
@@ -145,15 +147,15 @@ block content
       div(class="toggle-element   h-full bg-purple  pt-10 grow"
             data-toggle_el
             id="plan_1-4")
-        .container
+        .px-5
           div(class="flex items-center mb-9 gap-5 cursor-pointer ")
             <svg width="30" height="6" viewBox="0 0 30 6" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0 3L5 5.88675L5 0.113249L0 3ZM4.5 3.5L30 3.5L30 2.5L4.5 2.5L4.5 3.5Z" fill="white"/>
             </svg>
             a(data-back="plan_1-4" class=" block underline ") Назад к выбору
-          div(class="flex justify-between mr-72 mb-14")
+          div(class="lg2:flex lg2:justify-between lg2:mr-72 mb-7.5  lg2:mb-14")
             h2 выберите таунхаус
-            h2(class="text-gray") Литер 40
+            h2(class="text-gray hidden lg2:block") Литер 38
         div.plan
           .plan__map.plan-liters-home 
             img(src=require("../img/images/40.jpg"), alt="homes")
@@ -190,15 +192,15 @@ block content
       div(class="toggle-element   h-full bg-purple  pt-10 grow"
             data-toggle_el
             id="plan_1-5")
-        .container
+        .px-5
           div(class="flex items-center mb-9 gap-5 cursor-pointer ")
             <svg width="30" height="6" viewBox="0 0 30 6" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0 3L5 5.88675L5 0.113249L0 3ZM4.5 3.5L30 3.5L30 2.5L4.5 2.5L4.5 3.5Z" fill="white"/>
             </svg>
             a(data-back="plan_1-5" class=" block underline ") Назад к выбору
-          div(class="flex justify-between mr-72 mb-14")
+          div(class="lg2:flex lg2:justify-between lg2:mr-72 mb-7.5  lg2:mb-14")
             h2 выберите таунхаус
-            h2(class="text-gray") Литер 41
+            h2(class="text-gray hidden lg2:block") Литер 41
         div.plan
           .plan__map.plan-liters-home 
             img(src=require("../img/images/41.jpg"), alt="homes")
@@ -232,46 +234,67 @@ block content
                 d="M2062.5 88L2089.5 86.5V93.5L2134 89.5L2177 193.5V201.5H2183.5L2186.5 316.5L2431 299.5L2429.5 180H2448V174L2388 26L2349 29V10.5L2335.5 1L2319.5 4L2321 31L2165.5 43L2164 33.5L2155 26L2139.5 28.5V46H2118L2062.5 81.5V88Z"
                 class="fill-green"
               )
-              
-      div(class="absolute bottom-10 w-full overflow-hidden")
-        div(class="relative overflow-x-auto" style="height:60px")
-          div(data-buttons class="absolute bottom-0 lg2:left-1/2 transform lg2:-translate-x-1/2")
-            +buttons-card()
-        //- div(class="absolute xl:bottom-10 right-10")
-        //-   <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-        //-     <circle cx="30" cy="30" r="29" stroke="white" stroke-width="2"/>
-        //-     <g>
-        //-       <line x1="47.0457" y1="17.5749" x2="30.4707" y2="30.4695" stroke="#A61C20" stroke-width="2"/>
-        //-       <path d="M47.0449 17.575C44.4294 19.6097 40.6597 19.1389 38.625 16.5234" stroke="#A61C20" stroke-width="2"/>
-        //-       <path d="M45.9934 25.9951C43.9587 23.3796 44.4295 19.6099 47.0449 17.5752" stroke="#A61C20" stroke-width="2"/>
-        //-       <line x1="13.8948" y1="43.364" x2="30.4698" y2="30.4695" stroke="white" stroke-width="2"/>
-        //-       <path d="M13.8956 43.364C16.511 41.3293 20.2807 41.8001 22.3154 44.4155" stroke="white" stroke-width="2"/>
-        //-       <path d="M14.9471 34.9439C16.9818 37.5594 16.511 41.3291 13.8955 43.3638" stroke="white" stroke-width="2"/>
-        //-       <line x1="43.365" y1="47.0442" x2="30.4705" y2="30.4692" stroke="white" stroke-width="2"/>
-        //-       <path d="M43.3645 47.0444C41.3298 44.4289 41.8006 40.6592 44.416 38.6245" stroke="white" stroke-width="2"/>
-        //-       <path d="M34.9454 45.9929C37.5608 43.9582 41.3305 44.429 43.3652 47.0444" stroke="white" stroke-width="2"/>
-        //-       <line x1="17.5754" y1="13.8948" x2="30.47" y2="30.4698" stroke="white" stroke-width="2"/>
-        //-       <path d="M17.576 13.8946C19.6107 16.51 19.1399 20.2798 16.5244 22.3145" stroke="white" stroke-width="2"/>
-        //-       <path d="M25.9951 14.9461C23.3796 16.9808 19.6099 16.51 17.5752 13.8945" stroke="white" stroke-width="2"/>
-        //-       <circle r="3.5" transform="matrix(-1 0 0 1 30.5 30.5)" fill="white"/>
-        //-       <circle cx="53.5" cy="10.5" r="6.5" fill="#A61C20"/>
-        //-       <path d="M56.4395 11.6895C56.3665 12.0267 56.2503 12.3411 56.0908 12.6328C55.9313 12.9199 55.7285 13.1706 55.4824 13.3848C55.2409 13.599 54.9629 13.7676 54.6484 13.8906C54.3385 14.0091 54.0013 14.0684 53.6367 14.0684C53.2174 14.0684 52.8255 13.9909 52.4609 13.8359C52.0964 13.6764 51.7751 13.4554 51.4971 13.1729C51.2236 12.8857 51.0094 12.5462 50.8545 12.1543C50.7041 11.7624 50.6289 11.3271 50.6289 10.8486C50.6289 10.3747 50.7041 9.94173 50.8545 9.5498C51.0094 9.15788 51.2236 8.82064 51.4971 8.53809C51.7751 8.25098 52.0964 8.02767 52.4609 7.86816C52.8255 7.70866 53.2174 7.62891 53.6367 7.62891C54.0013 7.62891 54.3385 7.69043 54.6484 7.81348C54.9629 7.93197 55.2409 8.10059 55.4824 8.31934C55.7285 8.53353 55.929 8.78646 56.084 9.07812C56.2435 9.36523 56.362 9.67513 56.4395 10.0078H55.1064C55.0016 9.65234 54.8285 9.36523 54.5869 9.14648C54.3454 8.92773 54.0286 8.81836 53.6367 8.81836C53.4134 8.81836 53.1947 8.86849 52.9805 8.96875C52.7663 9.06445 52.5794 9.20345 52.4199 9.38574C52.2604 9.56803 52.1305 9.78451 52.0303 10.0352C51.9346 10.2812 51.8867 10.5524 51.8867 10.8486C51.8867 11.1494 51.9346 11.4229 52.0303 11.6689C52.1305 11.915 52.2604 12.1292 52.4199 12.3115C52.5794 12.4938 52.7663 12.6351 52.9805 12.7354C53.1947 12.8311 53.4134 12.8789 53.6367 12.8789C54.0286 12.8789 54.3454 12.7695 54.5869 12.5508C54.833 12.332 55.0062 12.0449 55.1064 11.6895H56.4395Z" fill="white"/>
-        //-     </g>
-        //-   </svg>
-        //- div(style="display:none" data-status class="absolute bottom-14")
-        //-   div(  class="flex gap-14 items-center capitalize ") 
-        //-     div(class="flex gap-2.5 items-center")
-        //-       div(class="rounded-full w-2.5 h-2.5 bg-green")
-        //-       span свободные
-        //-     div(class="flex gap-2.5 items-center") 
-        //-       div(class="rounded-full w-2.5 h-2.5 bg-red")
-        //-       span проданные
+      
+           
+      div(class="absolute bottom-3 lg2:bottom-10 w-full overflow-hidden flex flex-col  justify-between items-center xl:grid xl:grid-cols-12 ")
+        div(class=" self-end xl:self-auto flex justify-between items-center w-full xl:w-auto xl:col-span-2")
+          div
+            div(style="display:none" data-status-labels)
+              div(  class="flex flex-col xl:flex-row xl:gap-14 items-center capitalize pl-5") 
+                div(class="flex gap-2.5 items-center")
+                  div(class="rounded-full w-2.5 h-2.5 bg-green")
+                  span свободные
+                div(class="flex gap-2.5 items-center") 
+                  div(class="rounded-full w-2.5 h-2.5 bg-red")
+                  span проданные
+          div(class="xl:hidden")
+            svg(width='85' height='85' viewbox='0 0 85 85' fill='none' xmlns='http://www.w3.org/2000/svg')
+              circle(cx='42.2831' cy='42.283' r='29' transform='rotate(-52.2866 42.2831 42.283)' stroke='white' stroke-width='2')
+              g(transform="rotate(0,42.5,42.5)")
+                line(x1='42.8802' y1='21.1992' x2='42.9417' y2='42.1991' stroke='#A61C20' stroke-width='2')
+                path(d='M42.8802 21.1993C42.8899 24.5129 40.2115 27.2071 36.8978 27.2168' stroke='#A61C20' stroke-width='2')
+                path(d='M48.8978 27.1816C45.5841 27.1913 42.89 24.5129 42.8802 21.1992' stroke='#A61C20' stroke-width='2')
+                line(x1='43.0033' y1='63.1992' x2='42.9418' y2='42.1993' stroke='white' stroke-width='2')
+                path(d='M43.0033 63.1992C42.9936 59.8855 45.672 57.1913 48.9857 57.1816' stroke='white' stroke-width='2')
+                path(d='M36.9858 57.2168C40.2994 57.2071 42.9936 59.8855 43.0033 63.1992' stroke='white' stroke-width='2')
+                line(x1='63.9416' y1='42.1377' x2='42.9417' y2='42.1992' stroke='white' stroke-width='2')
+                path(d='M63.9416 42.1377C60.6279 42.1474 57.9338 39.469 57.9241 36.1553' stroke='white' stroke-width='2')
+                path(d='M57.9592 48.1552C57.9495 44.8415 60.628 42.1474 63.9417 42.1377' stroke='white' stroke-width='2')
+                line(x1='21.9419' y1='42.2607' x2='42.9418' y2='42.1992' stroke='white' stroke-width='2')
+                path(d='M21.9419 42.2608C25.2556 42.2511 27.9498 44.9295 27.9595 48.2432' stroke='white' stroke-width='2')
+                path(d='M27.9243 36.2432C27.934 39.5569 25.2556 42.251 21.9419 42.2607' stroke='white' stroke-width='2')
+                circle(r='3.5' transform='matrix(-0.611712 0.791081 0.791081 0.611712 42.9845 42.1935)' fill='white')
+              circle(cx='42.5254' cy='12.5253' r='6.5' transform='rotate(0.223642 42.5254 12.5253)' fill='#A61C20')
+              path(d='M45.4602 13.7262C45.3859 14.0632 45.2685 14.3772 45.1078 14.6682C44.9472 14.9547 44.7434 15.2046 44.4965 15.4178C44.2541 15.631 43.9755 15.7986 43.6606 15.9204C43.3502 16.0377 43.0127 16.0956 42.6482 16.0942C42.2289 16.0925 41.8373 16.0135 41.4733 15.8572C41.1093 15.6962 40.7889 15.474 40.512 15.1903C40.2397 14.9022 40.0268 14.5618 39.8734 14.1693C39.7246 13.7768 39.6511 13.3412 39.6529 12.8627C39.6548 12.3888 39.7317 11.9561 39.8836 11.5648C40.0401 11.1735 40.2556 10.8371 40.5301 10.5556C40.8092 10.2696 41.1314 10.0475 41.4966 9.88944C41.8618 9.73136 42.254 9.65314 42.6733 9.65478C43.0379 9.6562 43.3749 9.71904 43.6843 9.84329C43.9983 9.96301 44.2756 10.1327 44.5163 10.3524C44.7615 10.5676 44.9611 10.8213 45.1149 11.1135C45.2733 11.4013 45.3905 11.7116 45.4667 12.0446L44.1337 12.0394C44.0303 11.6835 43.8582 11.3957 43.6176 11.1761C43.3769 10.9564 43.0606 10.8457 42.6686 10.8442C42.4453 10.8433 42.2264 10.8926 42.0118 10.992C41.7972 11.0869 41.6099 11.2252 41.4496 11.4068C41.2894 11.5885 41.1587 11.8045 41.0575 12.0547C40.9608 12.3005 40.9119 12.5714 40.9107 12.8676C40.9096 13.1684 40.9563 13.442 41.0511 13.6885C41.1504 13.935 41.2794 14.1497 41.4382 14.3326C41.597 14.5155 41.7833 14.6575 41.9971 14.7586C42.2109 14.8552 42.4295 14.9039 42.6528 14.9047C43.0447 14.9063 43.3619 14.7981 43.6043 14.5803C43.8512 14.3625 44.0255 14.0761 44.1272 13.721L45.4602 13.7262Z' fill='white')
+        div(class="relative overflow-x-auto w-full xl:col-span-8 lg2:flex lg2:justify-center"  id='reviews-btns')
+          +buttons-card()(class="justify-self-center")
+        div(class="hidden xl:block xl:col-span-2 xl:justify-self-end")
+            svg(width='85' height='85' viewbox='0 0 85 85' fill='none' xmlns='http://www.w3.org/2000/svg')
+              circle(cx='42.2831' cy='42.283' r='29' transform='rotate(-52.2866 42.2831 42.283)' stroke='white' stroke-width='2')
+              g(transform="rotate(0,42.5,42.5)")
+                line(x1='42.8802' y1='21.1992' x2='42.9417' y2='42.1991' stroke='#A61C20' stroke-width='2')
+                path(d='M42.8802 21.1993C42.8899 24.5129 40.2115 27.2071 36.8978 27.2168' stroke='#A61C20' stroke-width='2')
+                path(d='M48.8978 27.1816C45.5841 27.1913 42.89 24.5129 42.8802 21.1992' stroke='#A61C20' stroke-width='2')
+                line(x1='43.0033' y1='63.1992' x2='42.9418' y2='42.1993' stroke='white' stroke-width='2')
+                path(d='M43.0033 63.1992C42.9936 59.8855 45.672 57.1913 48.9857 57.1816' stroke='white' stroke-width='2')
+                path(d='M36.9858 57.2168C40.2994 57.2071 42.9936 59.8855 43.0033 63.1992' stroke='white' stroke-width='2')
+                line(x1='63.9416' y1='42.1377' x2='42.9417' y2='42.1992' stroke='white' stroke-width='2')
+                path(d='M63.9416 42.1377C60.6279 42.1474 57.9338 39.469 57.9241 36.1553' stroke='white' stroke-width='2')
+                path(d='M57.9592 48.1552C57.9495 44.8415 60.628 42.1474 63.9417 42.1377' stroke='white' stroke-width='2')
+                line(x1='21.9419' y1='42.2607' x2='42.9418' y2='42.1992' stroke='white' stroke-width='2')
+                path(d='M21.9419 42.2608C25.2556 42.2511 27.9498 44.9295 27.9595 48.2432' stroke='white' stroke-width='2')
+                path(d='M27.9243 36.2432C27.934 39.5569 25.2556 42.251 21.9419 42.2607' stroke='white' stroke-width='2')
+                circle(r='3.5' transform='matrix(-0.611712 0.791081 0.791081 0.611712 42.9845 42.1935)' fill='white')
+              circle(cx='42.5254' cy='12.5253' r='6.5' transform='rotate(0.223642 42.5254 12.5253)' fill='#A61C20')
+              path(d='M45.4602 13.7262C45.3859 14.0632 45.2685 14.3772 45.1078 14.6682C44.9472 14.9547 44.7434 15.2046 44.4965 15.4178C44.2541 15.631 43.9755 15.7986 43.6606 15.9204C43.3502 16.0377 43.0127 16.0956 42.6482 16.0942C42.2289 16.0925 41.8373 16.0135 41.4733 15.8572C41.1093 15.6962 40.7889 15.474 40.512 15.1903C40.2397 14.9022 40.0268 14.5618 39.8734 14.1693C39.7246 13.7768 39.6511 13.3412 39.6529 12.8627C39.6548 12.3888 39.7317 11.9561 39.8836 11.5648C40.0401 11.1735 40.2556 10.8371 40.5301 10.5556C40.8092 10.2696 41.1314 10.0475 41.4966 9.88944C41.8618 9.73136 42.254 9.65314 42.6733 9.65478C43.0379 9.6562 43.3749 9.71904 43.6843 9.84329C43.9983 9.96301 44.2756 10.1327 44.5163 10.3524C44.7615 10.5676 44.9611 10.8213 45.1149 11.1135C45.2733 11.4013 45.3905 11.7116 45.4667 12.0446L44.1337 12.0394C44.0303 11.6835 43.8582 11.3957 43.6176 11.1761C43.3769 10.9564 43.0606 10.8457 42.6686 10.8442C42.4453 10.8433 42.2264 10.8926 42.0118 10.992C41.7972 11.0869 41.6099 11.2252 41.4496 11.4068C41.2894 11.5885 41.1587 11.8045 41.0575 12.0547C40.9608 12.3005 40.9119 12.5714 40.9107 12.8676C40.9096 13.1684 40.9563 13.442 41.0511 13.6885C41.1504 13.935 41.2794 14.1497 41.4382 14.3326C41.597 14.5155 41.7833 14.6575 41.9971 14.7586C42.2109 14.8552 42.4295 14.9039 42.6528 14.9047C43.0447 14.9063 43.3619 14.7981 43.6043 14.5803C43.8512 14.3625 44.0255 14.0761 44.1272 13.721L45.4602 13.7262Z' fill='white')
+
+          
     script.
       // <![CDATA[ window.addEventListener('DOMContentLoaded', () =>
       { 
         document.querySelectorAll('a[data-hover]').forEach(a=>{
-        const status = document.querySelector('[data-status]')
-        const btnsGr = document.querySelector('.button__group')
+        const status = document.querySelector('[data-status-labels]')
+        const btnsGr = document.querySelector('#reviews-btns')
         const ishPopup = document.querySelector('.plan__popup')
         a.addEventListener('click', (event)=>{ event.preventDefault()
           const button =
@@ -296,7 +319,7 @@ block content
         }) 
       })
       
-      const btnsGr = document.querySelectorAll('.button__group')
+      const btnsGr = document.querySelectorAll('#reviews-btns')
       btnsGr.forEach(btn=>btn.addEventListener('click', ()=>status.style.display = 'none') )
       
       const buttonsBack = document.querySelectorAll('a[data-back]')

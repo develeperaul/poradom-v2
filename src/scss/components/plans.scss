@@ -5,15 +5,12 @@
   position: relative;
   height: 60vh;
   @include screen-lg2 {
-    height: calc(100vh - 90px);
-  }
-  @include screen-xl {
     height: 100%;
   }
   &-wrapper {
     position: absolute;
     height: 60vh;
-    @include screen-xl {
+    @include screen-lg2 {
       position: relative;
     }
   }
@@ -27,8 +24,8 @@
         left: calc(50% - 10px);
         transform: translateX(-50%);
         bottom: -39px;
-          border: 20px solid transparent;
-            border-top: 20px solid #fff;
+        border: 20px solid transparent;
+        border-top: 20px solid #fff;
       }
     }
   }
@@ -49,7 +46,7 @@
       height: 100%;
       max-width: initial;
       width: auto;
-      @include screen-xl {
+      @include screen-lg2 {
         max-width: inherit !important;
         width: 100%;
       }

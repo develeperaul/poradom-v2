@@ -29,4 +29,8 @@
     @apply text-base xl:text-lg text-white;
     letter-spacing: -0.02em;
   }
+
+  button {
+    text-transform: inherit;
+  }
 }

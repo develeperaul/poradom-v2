@@ -129,6 +129,18 @@
     color: theme("colors.white");
   }
 }
+
+.fractionSwiper {
+  ul {
+    list-style: disc;
+    padding-left: 20px;
+    font-size: 1rem;
+  }
+  p,
+  li {
+    text-transform: none;
+  }
+}
 .swiper-fraction {
   color: theme("colors.gray");
   font-size: theme("fontSize.4xl");

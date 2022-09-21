@@ -631,6 +631,10 @@ p,
   letter-spacing: -0.02em;
 }
 
+button {
+  text-transform: inherit;
+}
+
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -784,6 +788,10 @@ p,
   position: relative;
 }
 
+.top-0{
+  top: 0px;
+}
+
 .left-1\/2{
   left: 50%;
 }
@@ -802,10 +810,6 @@ p,
 
 .-bottom-40{
   bottom: -10rem;
-}
-
-.top-0{
-  top: 0px;
 }
 
 .-right-1\/2{
@@ -836,24 +840,12 @@ p,
   left: -1.5rem;
 }
 
-.bottom-10{
-  bottom: 2.5rem;
-}
-
-.bottom-5{
-  bottom: 1.25rem;
-}
-
-.bottom-4{
-  bottom: 1rem;
+.top-25{
+  top: 6.25rem;
 }
 
 .bottom-3{
   bottom: 0.75rem;
-}
-
-.top-25{
-  top: 6.25rem;
 }
 
 .z-10{
@@ -944,14 +936,6 @@ p,
 
 .mb-0{
   margin-bottom: 0px;
-}
-
-.mr-72{
-  margin-right: 18rem;
-}
-
-.mb-14{
-  margin-bottom: 3.5rem;
 }
 
 .mt-2\.5{
@@ -1286,6 +1270,11 @@ p,
   background-color: rgb(47 113 68 / var(--tw-bg-opacity));
 }
 
+.bg-gray-dark{
+  --tw-bg-opacity: 1;
+  background-color: rgb(105 106 108 / var(--tw-bg-opacity));
+}
+
 .bg-purple{
   --tw-bg-opacity: 1;
   background-color: rgb(79 77 91 / var(--tw-bg-opacity));
@@ -1403,16 +1392,16 @@ p,
   padding-bottom: 1rem;
 }
 
+.pl-5{
+  padding-left: 1.25rem;
+}
+
 .pl-0{
   padding-left: 0px;
 }
 
 .pt-15{
   padding-top: 3.75rem;
-}
-
-.pl-5{
-  padding-left: 1.25rem;
 }
 
 .text-center{
@@ -1544,6 +1533,56 @@ p,
       }
     }
   }
+}
+
+.wrapper{
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 770px){
+  .wrapper{
+    max-width: 770px;
+  }
+}
+
+@media (min-width: 1024px){
+  .wrapper{
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1660px){
+  .wrapper{
+    max-width: 1660px;
+  }
+}
+
+.wrapper{
+  max-width: 100%;
+  padding: 0 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 1024px){
+  .wrapper{
+    max-width: 1660px;
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 1660px){
+  .wrapper{
+    max-width: 1920px;
+    padding: 0 40px;
+  }
+}
+
+.wrapper{
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .button{
@@ -3668,7 +3707,7 @@ input[type=range].styled-slider.slider-progress::-ms-fill-lower {
   }
   p,
   li {
-    text-transform: capitalize;
+    text-transform: none;
   }
 }
 
@@ -3785,15 +3824,12 @@ input[type=range].styled-slider.slider-progress::-ms-fill-lower {
   position: relative;
   height: 60vh;
   @include screen-lg2 {
-    height: calc(100vh - 90px);
-  }
-  @include screen-xl {
     height: 100%;
   }
   &-wrapper {
     position: absolute;
     height: 60vh;
-    @include screen-xl {
+    @include screen-lg2 {
       position: relative;
     }
   }
@@ -3826,7 +3862,7 @@ input[type=range].styled-slider.slider-progress::-ms-fill-lower {
       height: 100%;
       max-width: initial;
       width: auto;
-      @include screen-xl {
+      @include screen-lg2 {
         max-width: inherit !important;
 
         width: 100%;
@@ -9046,6 +9082,18 @@ input[type=range].styled-slider.slider-progress::-ms-fill-lower {
   }
 }
 
+.fractionSwiper {
+  ul {
+    list-style: disc;
+    padding-left: 20px;
+    font-size: 1rem;
+  }
+  p,
+  li {
+    text-transform: none;
+  }
+}
+
 .swiper-fraction {
   color: #98999D;
   font-size: 2.25rem;
@@ -9256,16 +9304,12 @@ input[type=range].styled-slider.slider-progress::-ms-fill-lower {
     top: 50%;
   }
 
-  .lg2\:left-1\/2{
-    left: 50%;
+  .lg2\:top-25{
+    top: 6.25rem;
   }
 
   .lg2\:bottom-10{
     bottom: 2.5rem;
-  }
-
-  .lg2\:top-25{
-    top: 6.25rem;
   }
 
   .lg2\:order-2{
@@ -9317,12 +9361,12 @@ input[type=range].styled-slider.slider-progress::-ms-fill-lower {
     margin-bottom: 11rem;
   }
 
-  .lg2\:mb-17\.5{
-    margin-bottom: 4.375rem;
-  }
-
   .lg2\:mr-72{
     margin-right: 18rem;
+  }
+
+  .lg2\:mb-17\.5{
+    margin-bottom: 4.375rem;
   }
 
   .lg2\:block{
@@ -9343,12 +9387,6 @@ input[type=range].styled-slider.slider-progress::-ms-fill-lower {
 
   .lg2\:w-25{
     width: 6.25rem;
-  }
-
-  .lg2\:-translate-x-1\/2{
-    --tw-translate-x: -50%;
-    -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .lg2\:grid-cols-2{
@@ -9544,10 +9582,6 @@ input[type=range].styled-slider.slider-progress::-ms-fill-lower {
 
   .xl\:-left-5{
     left: -1.25rem;
-  }
-
-  .xl\:bottom-10{
-    bottom: 2.5rem;
   }
 
   .xl\:col-span-2{
@@ -9771,14 +9805,14 @@ input[type=range].styled-slider.slider-progress::-ms-fill-lower {
     padding-bottom: 3rem;
   }
 
-  .xl\:text-14\.75xl{
-    font-size: 13.75rem;
-    line-height: 90%;
-  }
-
   .xl\:text-base{
     font-size: 1rem;
     line-height: 140%;
+  }
+
+  .xl\:text-14\.75xl{
+    font-size: 13.75rem;
+    line-height: 90%;
   }
 
   .xl\:text-8xl{

@@ -1,12 +1,7 @@
 let pages = document.getElementsByClassName("page");
 if (pages) {
   let countPage = 0;
-  Array.from(pages)
-    .reverse()
-    .forEach((page, index, arr) => {
-      if (index < arr.length - 3) console.log(page);
-    });
-  console.log(Array.from(pages).reverse());
+
   for (let i = 0; i < pages.length; i++) {
     let page = pages[i];
     pages[0].classList.add("flipped");
@@ -17,7 +12,6 @@ if (pages) {
     if (i % 2 === 0) {
       page.style.zIndex = pages.length - i;
     }
-    console.log(countPage);
   }
 
   document.addEventListener("DOMContentLoaded", function () {

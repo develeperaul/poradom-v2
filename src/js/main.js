@@ -196,24 +196,23 @@ document.querySelectorAll(".plan-liters-home").forEach((plan) => {
   let activePath = null;
   paths.forEach((path) => {
     const status = path.getAttribute("data-status");
-    console.log(status);
     if (status === "free") {
       path.setAttribute("opacity", 0);
     }
 
     path.onclick = function (e) {
-      if (activePath && activePath !== this) {
-        console.log(activePath);
-        activePath.setAttribute("opacity", 0);
-        activePath.removeAttribute("data-active");
-      }
-      if (this.getAttribute("data-active") === "active") {
-        const location = this.getAttribute("data-location");
-        if (location) window.location.href = location;
-      }
-      this.setAttribute("opacity", 1);
-      this.setAttribute("data-active", "active");
-      activePath = this;
+      const location = this.getAttribute("data-location");
+      if (location) window.location.href = location;
+      // if (activePath && activePath !== this) {
+      //   console.log(activePath);
+      //   activePath.setAttribute("opacity", 0);
+      //   activePath.removeAttribute("data-active");
+      // }
+      // if (this.getAttribute("data-active") === "active") {
+      // }
+      // this.setAttribute("opacity", 1);
+      // this.setAttribute("data-active", "active");
+      // activePath = this;
     };
     path.onmouseover = function (e) {
       this.setAttribute("opacity", 1);

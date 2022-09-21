@@ -20,3 +20,13 @@ if (path) {
     }
   }
 }
+
+const wrapper = document.querySelector("[data-wrapper]");
+if (wrapper) {
+  wrapper.onclick = function () {
+    this.style.display = "none";
+    const activeToggleEl = document.querySelector(".toggle-element__active");
+    const map = activeToggleEl.querySelector(".plan__map");
+    map.scrollTo(100, 0);
+  };
+}

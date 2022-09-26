@@ -1,21 +1,20 @@
 @tailwind utilities;
 @layer utilities {
-  .nav {
-    &__top {
-      &_fixed {
-        position: fixed;
-        top: 0;
-        z-index: 99 !important;
-        width: 100%;
-        opacity: 0;
-        transition: opacity 0.2s ease;
-
-        &-open {
-          opacity: 1;
-        }
-      }
-    }
+  footer {
+    text-transform: none;
   }
+  .nav__top_fixed {
+    position: fixed;
+    top: 0;
+    z-index: 99 !important;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  .nav__top_fixed-open {
+    opacity: 1;
+  }
+
   .w-850 {
     width: 850px;
   }
@@ -28,7 +27,7 @@
   }
 
   .button {
-    @apply py-2 xl:py-3.5 lg2:text-sm  xl:text-base;
+    @apply py-2 xl:py-3.5 lg2:text-sm  xl:text-base normal-case;
     text-align: center;
 
     letter-spacing: -0.02rem;
@@ -112,7 +111,7 @@
   }
 
   .label {
-    @apply text-base xl:text-lg capitalize;
+    @apply text-base xl:text-lg normal-case;
     border: 5px solid #ffffff;
     border-radius: 6px;
     padding: 10px;
@@ -226,7 +225,7 @@
             fill: theme("colors.blue-light");
           }
           &--energy {
-            fill: theme("colors.green");
+            fill: theme("colors.green-light");
           }
 
           &--fence {
@@ -249,8 +248,11 @@
     @include screen-lg {
       width: 360px;
     }
-    @include screen-xl {
+    @include screen-lg2 {
       width: 500px;
+    }
+    &_yellow {
+      @apply bg-yellow;
     }
     &__static {
       min-height: 230px;
@@ -288,5 +290,10 @@
     color: theme("colors.gray");
     font-size: theme("fontSize.base");
     text-transform: none;
+  }
+
+  .magnifier {
+    width: 60px !important;
+    height: 60px !important;
   }
 }

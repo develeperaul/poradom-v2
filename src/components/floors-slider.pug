@@ -2,6 +2,8 @@ mixin floors-slider ()
   div(class="swiper floorsSwiper")&attributes(attributes)
     .swiper-wrapper
       .swiper-slide
+        a(href="#" class="glightbox glightbox__center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2") 
+          img(src=require("../img/icons/magnifier.svg"), alt="" width="60" height="60" class="magnifier ")
         img(src=require("../img/images/home-plan.png"), alt="floor")
       .swiper-slide
         img(src=require("../img/images/home-plan.png"), alt="floor")

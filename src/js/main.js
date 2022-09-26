@@ -25,6 +25,8 @@ import "./plugins/swiper";
 
 import "./plugins/book";
 
+import "./plugins/scroll";
+
 // import "../scss/_base.scss"
 
 //для карты
@@ -224,8 +226,9 @@ document.querySelectorAll(".plan-liters-home").forEach((plan) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const header = document.querySelector(".nav");
+  const header = document.querySelector("header");
   const headerNav = document.querySelector(".nav__top_fixed");
+  const menu = document.querySelector(".menu");
   if (headerNav) {
     window.addEventListener("scroll", () => {
       if (window.pageYOffset > 200) {
@@ -239,6 +242,16 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
           headerNav.classList.remove("nav__top_fixed-open");
         }, 200);
+      }
+    });
+  }
+
+  if (menu) {
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > header.offsetHeight) {
+        menu.style.display = "block";
+      } else {
+        menu.style.display = "none";
       }
     });
   }
@@ -300,12 +313,12 @@ if (formCalc) {
     console.log(input.dataset.house);
     input.parentNode.style.setProperty("position", "relative");
     if (input.dataset.input === "house") {
-      setPrefix(input, 5000000, "руб");
+      setPrefix(input, 12500000, "руб");
       house = input.value.replace(/[^0-9.]/g, "").replace(/(\..*)\./g, "$1");
     }
 
     if (input.dataset.input === "initial") {
-      setPrefix(input, 500000, "руб");
+      setPrefix(input, 5000000, "руб");
       initial = input.value.replace(/[^0-9.]/g, "").replace(/(\..*)\./g, "$1");
     }
 
@@ -335,6 +348,9 @@ if (formCalc) {
         }
         if (input.dataset.input === "house") {
           house = val;
+        }
+        if (input.dataset.input === "rate") {
+          rate = val;
         }
         setPrefix(month, getPayment(house - initial, period, rate), null);
       }

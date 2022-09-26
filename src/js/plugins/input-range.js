@@ -22,7 +22,7 @@ parents.forEach((parent) => {
       );
       if (input.getAttribute("type") === "range") {
         inputPrev.value = input.value;
-        inputPrev.blur();
+        // inputPrev.blur();
         let event = new Event("input", {
           bubbles: true,
           cancelable: true,

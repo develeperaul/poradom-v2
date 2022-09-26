@@ -21,7 +21,6 @@ forms.forEach((form) => {
         form
           .querySelector("button[type='submit']")
           .setAttribute("disabled", true);
-        console.log("hi");
         suc = false;
         await formReq(form);
       }

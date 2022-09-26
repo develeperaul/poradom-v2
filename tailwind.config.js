@@ -25,6 +25,7 @@ module.exports = {
         reformagrotesk: "ReformaGrotesk",
       },
       fontSize: {
+        xs: ["0.625rem", "0.875rem"],
         base: ["1rem", "140%"],
         lg: ["1.125rem", "140%"],
         "2xl-90": ["1.5rem", "90%"],
@@ -35,6 +36,9 @@ module.exports = {
         "9.75xl": ["8.75rem", "90%"],
         "14.75xl": ["13.75rem", "90%"],
       },
+      letterSpacing: {
+        4.5: "0.045em",
+      },
     },
     colors: {
       white: "#ffffff",
@@ -42,6 +46,7 @@ module.exports = {
       "yellow-darken": "#BF6F0E",
       title: "#231F20",
       dark: "#3F3F3F",
+      "dark-light": "#808285",
       background: "#292929",
       gray: "#98999D",
       "gray-light": "#EDEDEE",
@@ -52,6 +57,7 @@ module.exports = {
       blue: "#20609F",
       "blue-light": "#3978B8",
       green: "#2F7144",
+      "green-light": "#4A8D45",
       "green-dark": "#575B41",
       brown: "#5A3814",
       purple: "#4F4D5B",

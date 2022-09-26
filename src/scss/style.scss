@@ -788,10 +788,6 @@ button {
   position: relative;
 }
 
-.top-0{
-  top: 0px;
-}
-
 .left-1\/2{
   left: 50%;
 }
@@ -812,6 +808,10 @@ button {
   bottom: -10rem;
 }
 
+.top-0{
+  top: 0px;
+}
+
 .-right-1\/2{
   right: -50%;
 }
@@ -824,12 +824,12 @@ button {
   top: 1.5rem;
 }
 
-.right-0{
-  right: 0px;
-}
-
 .top-1\/2{
   top: 50%;
+}
+
+.right-0{
+  right: 0px;
 }
 
 .right-6{
@@ -840,8 +840,28 @@ button {
   left: -1.5rem;
 }
 
+.bottom-2\.5{
+  bottom: 0.625rem;
+}
+
+.right-2\.5{
+  right: 0.625rem;
+}
+
+.bottom-2{
+  bottom: 0.5rem;
+}
+
+.right-2{
+  right: 0.5rem;
+}
+
 .top-25{
   top: 6.25rem;
+}
+
+.right-10{
+  right: 2.5rem;
 }
 
 .bottom-3{
@@ -850,6 +870,10 @@ button {
 
 .z-10{
   z-index: 10;
+}
+
+.z-50{
+  z-index: 50;
 }
 
 .-mx-5{
@@ -1270,6 +1294,11 @@ button {
   background-color: rgb(47 113 68 / var(--tw-bg-opacity));
 }
 
+.bg-green-light{
+  --tw-bg-opacity: 1;
+  background-color: rgb(74 141 69 / var(--tw-bg-opacity));
+}
+
 .bg-gray-dark{
   --tw-bg-opacity: 1;
   background-color: rgb(105 106 108 / var(--tw-bg-opacity));
@@ -1443,8 +1472,8 @@ button {
 }
 
 .text-xs{
-  font-size: 0.75rem;
-  line-height: 1rem;
+  font-size: 0.625rem;
+  line-height: 0.875rem;
 }
 
 .text-8xl{
@@ -1474,6 +1503,10 @@ button {
   text-transform: none;
 }
 
+.tracking-4\.5{
+  letter-spacing: 0.045em;
+}
+
 .text-title{
   --tw-text-opacity: 1;
   color: rgb(35 31 32 / var(--tw-text-opacity));
@@ -1492,6 +1525,16 @@ button {
 .text-gray{
   --tw-text-opacity: 1;
   color: rgb(152 153 157 / var(--tw-text-opacity));
+}
+
+.text-dark-light{
+  --tw-text-opacity: 1;
+  color: rgb(128 130 133 / var(--tw-text-opacity));
+}
+
+.text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .text-green{
@@ -1519,20 +1562,21 @@ button {
           filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.nav {
-  &__top {
-    &_fixed {
-      position: fixed;
-      top: 0;
-      z-index: 99 !important;
-      width: 100%;
-      opacity: 0;
-      transition: opacity 0.2s ease;
-      &-open {
-        opacity: 1;
-      }
-    }
-  }
+footer {
+  text-transform: none;
+}
+
+.nav__top_fixed {
+  position: fixed;
+  top: 0;
+  z-index: 99 !important;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.nav__top_fixed-open {
+  opacity: 1;
 }
 
 .wrapper{
@@ -1588,6 +1632,7 @@ button {
 .button{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  text-transform: none;
 }
 
 @media (min-width: 1024px){
@@ -1734,7 +1779,7 @@ button {
 .label{
   font-size: 1rem;
   line-height: 140%;
-  text-transform: capitalize;
+  text-transform: none;
 }
 
 @media (min-width: 1660px){
@@ -1906,7 +1951,7 @@ button {
           fill: #3978B8;
         }
         &--energy {
-          fill: #2F7144;
+          fill: #4A8D45;
         }
         &--fence {
           fill: #696a6c;
@@ -1929,8 +1974,12 @@ button {
   @include screen-lg {
     width: 360px;
   }
-  @include screen-xl {
+  @include screen-lg2 {
     width: 500px;
+  }
+  &_yellow{
+    --tw-bg-opacity: 1;
+    background-color: rgb(247 148 29 / var(--tw-bg-opacity));
   }
   &__static {
     min-height: 230px;
@@ -1972,6 +2021,11 @@ button {
   color: #98999D;
   font-size: 1rem;
   text-transform: none;
+}
+
+.magnifier {
+  width: 60px !important;
+  height: 60px !important;
 }
 
 @mixin reformagrotesk {
@@ -3904,6 +3958,7 @@ input[type=range].styled-slider.slider-progress::-ms-fill-lower {
 .navigation{
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
+  text-transform: none;
 }
 
 @media (min-width: 1660px){
@@ -3926,12 +3981,6 @@ input[type=range].styled-slider.slider-progress::-ms-fill-lower {
     &__logo{
       margin-top: -0.5rem;
       margin-bottom: -0.5rem;
-    }
-  }
-  @media (min-width: 1024px){
-    &__logo{
-      --tw-bg-opacity: 1;
-      background-color: rgb(35 31 32 / var(--tw-bg-opacity));
     }
   }
   @media (min-width: 1024px){
@@ -8956,7 +9005,7 @@ input[type=range].styled-slider.slider-progress::-ms-fill-lower {
 }
 
 :root {
-  --animate-duration: 3s;
+  --animate-duration: 1.3s;
 }
 
 .section {
@@ -9559,6 +9608,11 @@ input[type=range].styled-slider.slider-progress::-ms-fill-lower {
     padding-right: 1.25rem;
   }
 
+  .lg2\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+
   .lg2\:text-9\.75xl{
     font-size: 8.75rem;
     line-height: 90%;
@@ -9803,11 +9857,6 @@ input[type=range].styled-slider.slider-progress::-ms-fill-lower {
 
   .xl\:pb-12{
     padding-bottom: 3rem;
-  }
-
-  .xl\:text-base{
-    font-size: 1rem;
-    line-height: 140%;
   }
 
   .xl\:text-14\.75xl{

@@ -54,12 +54,12 @@ block content
                   .field.field_floating-3(class="mb-0")
                     input.field__input(data-calc-field data-input="house" data-type='text' data-special-offer='' data-range type="text" id="name" name="text" )
                     label(class="field__label" for="name") Стоимость домовладения (участок, таунхаус, гараж) 
-                  input(type="range" class="styled-slider slider-progress absolute" data-range min="0" max="500000")
+                  input(type="range" class="styled-slider slider-progress absolute" data-range min="0" max="25000000")
                 div(class="relative" data-inputs-range)
                   .field.field_floating-3(class="mb-0")
                     input.field__input(data-calc-field data-input="initial" data-type='text' data-special-offer='' data-range type="text" id="name" name="text" )
                     label(class="field__label" for="name") Первоначальный взнос
-                  input(type="range" class="styled-slider slider-progress absolute" data-range min="0" max="500000")
+                  input(type="range" class="styled-slider slider-progress absolute" data-range min="0" max="10000000")
                 .field.field_floating-3(class='mb-8.75 xl:mb-0')
                     input.field__input(data-calc-field data-input="period" data-type='text' data-special-offer='' type="text" id="name" name="text" )
                     label(class="field__label" for="name") Срок
@@ -101,11 +101,11 @@ block content
     .container.px-0(class="block") 
       div(class="font-reformagrotesk text-center flex flex-wrap divide-x")
         div.flex.w-full
-          div(class="bg-gray p-2.75 w-full ")
+          div(class="bg-gray p-2.75 w-full lg2:text-2xl")
             a(href="#new") про ипотеку
-          div(class="bg-dark p-2.75 w-full ")
+          div(class="bg-dark p-2.75 w-full lg2:text-2xl")
             a(href="#20min") Комплектация таунхауса
-          div(class="bg-green p-2.75 w-full hidden lg2:block")
+          div(class="bg-green p-2.75 w-full lg2:text-2xl hidden lg2:block")
             a(href="#") забронировать таунхаус
-        div(class="bg-green p-2.75 w-full lg2:hidden")
+        div(class="bg-green p-2.75 w-full lg2:text-2xl lg2:hidden")
           a(href="#") забронировать таунхаус

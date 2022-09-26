@@ -7,6 +7,8 @@ import Swiper, { Navigation, Pagination, Mousewheel, Autoplay } from "swiper";
 new Swiper(".mainSwiper", {
   modules: [Navigation, Pagination, Autoplay],
   loop: true,
+  autoplay: true,
+  delay: 2000,
   pagination: {
     el: ".swiper-pagination",
     bulletActiveClass: "dot-active",

@@ -22,31 +22,41 @@ section(id="20min" class="location")
           img(src=require("./img/map.gif"), alt="" )
        
     div(class="lg2:flex justify-between mb-32 travel-time__path")
-      div(class="lg:hidden lg2:block shrink-0 mb-12 xl:-ml-40")
-        img(src=require("./img/images/travel-guide/20minuts.png"), alt="20minuts" width="758" height="717" class="travel-time__path-icon" )
-      div(class="hidden lg2:block")
-        div(class="travel-time__path-maps swiper mr-0 convertSwiper cursor-pointer" )
-          .swiper-wrapper
-            .swiper-slide
-              div(class="flex justify-between")
-                h4(class=" text-5.25-5xl text-gray") от Монумента Дружбы <br> через Дёмское шоссе
-                +number(21,null,'км')
-            .swiper-slide
-              div(class="flex justify-between")
-                h4(class=" text-5.25-5xl text-gray") От Затонского моста
-                +number(22,null,'км')
-            .swiper-slide
-              div(class="flex justify-between")
-                h4(class=" text-5.25-5xl text-gray") от дЁмы
-                +number(10,null,'км')
-            .swiper-slide
-              div(class="flex justify-between")
-                h4(class=" text-5.25-5xl text-gray") до школы
-                +number(8,null,'км')
-            .swiper-slide
-              div(class="flex justify-between")
-                h4(class=" text-5.25-5xl text-gray") до нового дома
-                +number(1,null,'км')
+
+      div(class="card card_yellow flex flex-col gap-12 justify-between ")
+        h3(class=" text-title text-5.25-5xl") от Монумента Дружбы 
+        +number('21', 'через дему', 'км')(class="justify-between text-white")
+      div(class="card card_yellow flex flex-col gap-12 justify-between ")
+        h3(class=" text-title text-5.25-5xl") От Затонского моста
+        +number('22', 'через затон', 'км')(class="justify-between text-white")
+      div(class="card card_yellow flex flex-col gap-12 justify-between ")
+        h3(class=" text-title text-5.25-5xl") От демы
+        +number('10', 'все рядом', 'км')(class="justify-between text-white")
+      //- div(class="lg:hidden lg2:block shrink-0 mb-12 xl:-ml-40")
+      //-   img(src=require("./img/images/travel-guide/20minuts.png"), alt="20minuts" width="758" height="717" class="travel-time__path-icon" )
+      //- div(class="hidden lg2:block")
+      //-   div(class="travel-time__path-maps swiper mr-0 convertSwiper cursor-pointer" )
+      //-     .swiper-wrapper
+      //-       .swiper-slide
+      //-         div(class="flex justify-between")
+      //-           h4(class=" text-5.25-5xl text-gray") от Монумента Дружбы <br> через Дёмское шоссе
+      //-           +number(21,null,'км')
+      //-       .swiper-slide
+      //-         div(class="flex justify-between")
+      //-           h4(class=" text-5.25-5xl text-gray") От Затонского моста
+      //-           +number(22,null,'км')
+      //-       .swiper-slide
+      //-         div(class="flex justify-between")
+      //-           h4(class=" text-5.25-5xl text-gray") от дЁмы
+      //-           +number(10,null,'км')
+      //-       .swiper-slide
+      //-         div(class="flex justify-between")
+      //-           h4(class=" text-5.25-5xl text-gray") до школы
+      //-           +number(8,null,'км')
+      //-       .swiper-slide
+      //-         div(class="flex justify-between")
+      //-           h4(class=" text-5.25-5xl text-gray") до нового дома
+      //-           +number(1,null,'км')
 
       div(class="swiper fraction fractionSwiper lg:hidden mb-20")
         .swiper-wrapper.mb-5

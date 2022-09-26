@@ -72,12 +72,13 @@ section(id="new")
     div(class="swiper-pagination")
   div.container-195
     div(class=" flex flex-wrap flex-col gap-2.5 xl:gap-3.75 lg:justify-center lg:flex-row xl:justify-center mb-30 xl:mb-40")
-        div(class="card flex flex-col gap-12 ")
-          h3(class=" text-gray text-5.25-5xl") таунхаусы <br class="lg2:hidden"> и дома от
-          +number('6.5', 'с землей', 'млн', 'руб')(class="justify-between")
-        div(class="card flex flex-col gap-12 ")
+        
+        div(class="card flex flex-col gap-12 justify-between")
+          h3(class=" text-gray text-5.25-5xl") таунхаусы и дома с землёй по цене квартиры
+          +number('87', 'за кв.м', 'тыс', 'руб')(class="justify-between")
+        div(class="card flex flex-col gap-12 justify-between")
           h3(class=" text-gray text-5.25-5xl") в ипотеку *
           +number('28.5', 'платеж ', 'тыс', 'руб')(class="justify-between")
-        div(class="card flex flex-col gap-12")
+        div(class="card flex flex-col gap-12 justify-between")
           h3(class=" text-gray text-5.25-5xl") эскроу<br class="lg2:hidden">-счета
           +number('100', 'гарантия', '%')(class="justify-between")

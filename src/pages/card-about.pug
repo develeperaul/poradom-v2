@@ -42,7 +42,7 @@ block content
               button(class="button button_yellow") Узнать цену      
 
           //- div(class="bg-yellow -mx-5 px-5 py-15 lg:pt-20 xl:mx-0 xl:pl-32 xl:pt-30 xl:pr-10 xl:pb-12")
-          div(class="bg-gray-light py-10 px-5 lg2:px-0 lg2:py-0")
+          div(class="bg-gray-light py-10 px-5 lg2:px-0 lg2:py-0 w-full")
             div(class="lg2:hidden") 
               +back('gray')(class="lg2:hidden")
               div(class="flex gap-2.5 mb-7.5 lg2:mb-0")
@@ -285,8 +285,8 @@ block content
           //-     p(class="text-gray normal-case") Улучшенная штукатурка цементными
           //-       | (в санузлах, бойлерной, гараже, кладовой) и гипсовыми (в остальных помещениях) смесями. Местами применение обшивки и коробов из ГКЛ   
                 
-      .container.px-0(class="hidden xl:block") 
-        div(class="font-reformagrotesk text-center hidden xl:flex divide-x")
+      .container.px-0(class=" fixed bottom-0 z-10 lg2:bottom-auto lg2:static") 
+        div(class="font-reformagrotesk text-center  flex divide-x")
             div(class="bg-dark p-2.75 w-full lg2:text-2xl ")
               a(href="#new") про ипотеку
             div(class="bg-gray p-2.75 w-full lg2:text-2xl ")

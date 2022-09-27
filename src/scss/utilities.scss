@@ -45,10 +45,15 @@
     &_green {
       @apply bg-green text-white;
     }
+
+    &_border-yellow {
+      @apply border-yellow border text-title;
+      background-color: transparent;
+    }
   }
 
   .button__round {
-    @apply bg-white text-gray py-2 xl:py-3.5;
+    @apply bg-white text-gray py-2 xl:py-3.5 text-base;
     border-radius: 8px;
     border: 1px solid theme("colors.gray");
     min-width: 190px;

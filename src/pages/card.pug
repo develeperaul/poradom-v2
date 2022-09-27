@@ -10,7 +10,7 @@ block content
     section(class="flex flex-col justify-between h-full grow ")
       .container.grow(class="flex flex-col lg2:px-0")
         div(class="home-card h-full grow") 
-          div(class="bg-gray-light hidden lg2:p-10  xl:p-10 lg2:flex lg2:flex-col lg2:gap-5 ")
+          div(class="bg-gray-light -mx-5 px-5 py-10 lg2:mx-0 lg2:p-10  xl:p-10 lg2:flex lg2:flex-col lg2:gap-5 ")
             div(class="relative lg2:-left-2 xl:-left-5")
               +back('gray')
             div(class="flex flex-col justify-between h-full")
@@ -39,7 +39,9 @@ block content
                   div 
                     h3(class="text-green text-5.25-5xl") 3
                     p(class=" text-dark text-base lowercase") спальни
-              button(class="button button_yellow") Узнать цену     
+              div(class="flex flex-col gap-2.5") 
+                a(href="#" class="button button_border-yellow") Скачать планировку     
+                button(class="button button_yellow") Узнать цену     
 
           div(class="bg-yellow -mx-5 px-5 py-15 lg:pt-20 lg2:mx-0 lg2:pl-10 lg2:pt-14 lg2:pr-5 xl:pl-32 xl:pt-30 xl:pb-12")
             div(class="lg2:flex lg2:justify-between h-full")
@@ -193,8 +195,8 @@ block content
                         .swiper-prev
                         .swiper-next 
                       div(class="swiper-fraction ")    
-      .container.px-0(class="hidden lg2:block") 
-        div(class="font-reformagrotesk text-center hidden lg2:flex divide-x")
+      .container.px-0(class=" fixed bottom-0 z-10 lg2:bottom-auto lg2:static") 
+        div(class="font-reformagrotesk text-center  flex divide-x")
             div(class="bg-dark p-2.75 w-full lg2:text-2xl ")
               a(href="#new") про ипотеку
             div(class="bg-dark p-2.75 w-full lg2:text-2xl ")

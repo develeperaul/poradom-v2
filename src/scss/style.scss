@@ -1679,6 +1679,20 @@ footer {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
+  &_border-yellow{
+    border-width: 1px;
+  }
+  &_border-yellow{
+    --tw-border-opacity: 1;
+    border-color: rgb(247 148 29 / var(--tw-border-opacity));
+  }
+  &_border-yellow{
+    --tw-text-opacity: 1;
+    color: rgb(35 31 32 / var(--tw-text-opacity));
+  }
+  &_border-yellow {
+    background-color: transparent;
+  }
 }
 
 .button__round{
@@ -1686,6 +1700,8 @@ footer {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  font-size: 1rem;
+  line-height: 140%;
   --tw-text-opacity: 1;
   color: rgb(152 153 157 / var(--tw-text-opacity));
 }
@@ -9337,6 +9353,10 @@ input[type=range].styled-slider.slider-progress::-ms-fill-lower {
 }
 
 @media (min-width: 1024px){
+  .lg2\:static{
+    position: static;
+  }
+
   .lg2\:absolute{
     position: absolute;
   }
@@ -9359,6 +9379,10 @@ input[type=range].styled-slider.slider-progress::-ms-fill-lower {
 
   .lg2\:bottom-10{
     bottom: 2.5rem;
+  }
+
+  .lg2\:bottom-auto{
+    bottom: auto;
   }
 
   .lg2\:order-2{

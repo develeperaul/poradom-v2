@@ -29,7 +29,7 @@
   .button {
     @apply py-2 xl:py-3.5 lg2:text-sm  xl:text-base normal-case;
     text-align: center;
-
+    -webkit-appearance: none;
     letter-spacing: -0.02rem;
     height: max-content;
     min-width: 200px;
@@ -51,7 +51,9 @@
       background-color: transparent;
     }
   }
-
+  a.button {
+    @apply block lg2:inline-block;
+  }
   .button__round {
     @apply bg-white text-gray py-2 xl:py-3.5 text-base;
     border-radius: 8px;

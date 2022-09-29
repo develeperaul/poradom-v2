@@ -27,6 +27,6 @@ if (wrapper) {
     this.style.display = "none";
     const activeToggleEl = document.querySelector(".toggle-element__active");
     const map = activeToggleEl.querySelector(".plan__map");
-    map.scrollTo(100, 0);
+    // map.scrollTo(100, 0);
   };
 }

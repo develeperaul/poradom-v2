@@ -1,5 +1,5 @@
 import "../../pages/choice-element.pug";
-
+import { choiceWrapper } from "../plugins/wrappers";
 const path = window.location.search;
 
 if (path) {
@@ -20,13 +20,39 @@ if (path) {
     }
   }
 }
+const toggleEl = document.querySelector("[data-toggle_els]");
+console.log(document.querySelector("[data-toggle_els]"));
+let choiceEL = [];
+const observer = new MutationObserver((mutationRecords) => {
+  mutationRecords.forEach((item) => {
+    if (item.target.classList.contains("toggle-element__active")) {
+      if (!choiceEL.includes(item.target)) choiceEL.push(item.target);
+      if (
+        item.target.getAttribute("data-open-wrapper") !== "first" &&
+        item.target.getAttribute("data-open-wrapper") !== "false"
+      )
+        item.target.setAttribute("data-open-wrapper", "open");
+    }
+    if (item.target.getAttribute("data-open-wrapper")) {
+      // const indexChoice = choiceEL.indexOf(item.target);
+      // if (indexChoice !== -1) {
+      // console.log(choiceEL[indexChoice]);
+      //   choiceEL[indexChoice].removeAttribute("data-open-wrapper");
+      // }
 
-const wrapper = document.querySelector("[data-wrapper]");
-if (wrapper) {
-  wrapper.onclick = function () {
-    this.style.display = "none";
-    const activeToggleEl = document.querySelector(".toggle-element__active");
-    const map = activeToggleEl.querySelector(".plan__map");
-    // map.scrollTo(100, 0);
-  };
-}
+      console.log(item.target.getAttribute("data-open-wrapper"));
+      if (item.target.getAttribute("data-open-wrapper") !== "false")
+        new choiceWrapper().openWrapper();
+      item.target.setAttribute("data-open-wrapper", "false");
+    }
+  });
+});
+if (toggleEl)
+  observer.observe(toggleEl, {
+    childList: true,
+    subtree: true,
+    attributes: true,
+    attributeFilter: ["class"],
+  });
+
+new choiceWrapper();

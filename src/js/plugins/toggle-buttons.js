@@ -12,6 +12,7 @@ export default class toggleGroup {
 
           const toggleElParent =
             toggleEl.parentNode.querySelectorAll("[data-toggle_el]");
+
           if (
             toggleEl &&
             !toggleEl.classList.contains("toggle-element__active") &&

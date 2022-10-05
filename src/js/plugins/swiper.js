@@ -4,7 +4,7 @@ import "swiper/css/grid";
 import "swiper/css/pagination";
 import Swiper, { Navigation, Pagination, Mousewheel, Autoplay } from "swiper";
 
-new Swiper(".mainSwiper", {
+export const mainSwiper = new Swiper(".mainSwiper", {
   modules: [Navigation, Pagination, Autoplay],
   loop: true,
   autoplay: true,
@@ -20,6 +20,7 @@ new Swiper(".mainSwiper", {
     },
   },
   navigation: {
+    lockClass: "lock",
     nextEl: ".swiper-next",
     prevEl: ".swiper-prev",
   },

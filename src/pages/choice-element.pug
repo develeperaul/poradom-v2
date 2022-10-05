@@ -7,9 +7,10 @@ block content
     include ../components/buttons.pug
 
     
-    div(class="container px-0 relative flex flex-col grow" )
+    div(class="container px-0 relative flex flex-col grow" data-toggle_els)
       div(class="toggle-element toggle-element__active grow"
           data-toggle_el
+          data-open-wrapper="first"
           id="plan_0")
         div.plan
           .plan__map

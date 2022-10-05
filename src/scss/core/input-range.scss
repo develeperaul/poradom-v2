@@ -25,6 +25,7 @@ input[type="range"].styled-slider::-webkit-slider-thumb {
   background-size: contain;
   background-repeat: no-repeat;
   margin-top: calc(1px * 0.5 - 8px);
+  box-shadow: none !important;
 }
 
 input[type="range"].styled-slider::-webkit-slider-runnable-track {
@@ -51,6 +52,7 @@ input[type="range"].styled-slider::-moz-range-thumb {
   background-size: contain;
   background-repeat: no-repeat;
   margin-top: calc(1px * 0.5 - 8px);
+  box-shadow: none !important;
 }
 
 input[type="range"].styled-slider::-moz-range-track {
@@ -89,6 +91,7 @@ input[type="range"].styled-slider::-ms-thumb {
   margin-top: 0;
   box-sizing: border-box;
   margin-top: calc(1px * 0.5 - 8px);
+  box-shadow: none !important;
 }
 
 input[type="range"].styled-slider::-ms-track {

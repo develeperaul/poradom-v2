@@ -7,7 +7,7 @@ import Swiper, { Navigation, Pagination, Mousewheel, Autoplay } from "swiper";
 export const mainSwiper = new Swiper(".mainSwiper", {
   modules: [Navigation, Pagination, Autoplay],
   loop: true,
-  autoplay: true,
+  // autoplay: true,
   delay: 2000,
   pagination: {
     el: ".swiper-pagination",
@@ -118,7 +118,6 @@ new Swiper(".floorsSwiper", {
       let spaceBottom = index !== 0 ? "mt-2.5 xl:mt-5" : "";
       return (
         '<span class="' +
-        spaceBottom +
         " " +
         className +
         '"> <span>' +

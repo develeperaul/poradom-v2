@@ -54,6 +54,31 @@
   }
 }
 
+.floor-swiper {
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  @include screen-lg2 {
+    width: 100%;
+  }
+  &__navigate {
+    @include screen-lg2 {
+      position: absolute;
+      right: 250px;
+      top: 0;
+      height: 100%;
+    }
+    & > .compas {
+      width: 40px;
+      height: 40px;
+      @include screen-lg2 {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}
+
 .village-slider {
   height: 260px;
   @include screen-lg {
@@ -91,12 +116,10 @@
   @include screen-lg {
     height: 464px;
     width: 510px;
-    padding-right: 68px;
   }
   @include screen-xl {
     height: 560px;
     width: calc(520px + 1 * (42px + 50px));
-    padding-right: calc(42px + 50px);
   }
   & .swiper-slide > img {
     width: 100%;

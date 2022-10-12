@@ -285,12 +285,15 @@ block content
         //-     p(class="text-gray normal-case") Улучшенная штукатурка цементными
         //-       | (в санузлах, бойлерной, гараже, кладовой) и гипсовыми (в остальных помещениях) смесями. Местами применение обшивки и коробов из ГКЛ   
                 
-      .container.px-0(class=" fixed bottom-0 z-10 lg2:bottom-auto lg2:static") 
-        div(class="font-reformagrotesk text-center  flex divide-x")
-            div(class="bg-dark p-2.75 w-full lg2:text-2xl ")
+      .container.px-0(class="block") 
+        div(class="font-reformagrotesk text-center flex flex-wrap divide-x " )
+          div.flex.w-full.divide-x
+            div(class="bg-gray p-2.75 w-full lg2:text-2xl")
               a(href="#new") про ипотеку
-            div(class="bg-gray p-2.75 w-full lg2:text-2xl ")
+            div(class="bg-dark p-2.75 w-full lg2:text-2xl")
               a(href="#20min") Комплектация таунхауса
-            div(class="bg-green p-2.75 w-full lg2:text-2xl")
+            div(class="bg-green p-2.75 w-full lg2:text-2xl hidden lg2:block")
               a(href="#") забронировать таунхаус
+          div(class="bg-green p-2.75 w-full lg2:text-2xl lg2:hidden  border-t border-white border-solid")
+            a(href="#") забронировать таунхаус
     

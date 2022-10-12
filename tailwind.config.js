@@ -38,6 +38,8 @@ module.exports = {
       },
       letterSpacing: {
         4.5: "0.045em",
+        1: "0.01em",
+        2: "0.02em",
       },
     },
     colors: {
@@ -50,6 +52,7 @@ module.exports = {
       background: "#292929",
       gray: "#98999D",
       "gray-light": "#EDEDEE",
+      "gray-light-75": " #C0C0C0",
       "gray-dark": "#696A6C",
       red: "#A61C20",
       "red-light": "#A61C20",

@@ -7,7 +7,7 @@ export const choiceWrapper = class WrapperChoice {
   }
 
   openWrapper() {
-    this.wrapper.style.display = "block";
+    if (window.screen.width < 1200) this.wrapper.style.display = "block";
   }
   closeWrapper() {
     this.style.display = "none";

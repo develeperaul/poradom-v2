@@ -274,7 +274,7 @@
     transform: rotate(180deg);
   }
 
-  .letters {
+  .letters-hks {
     & > svg,
     & > a > svg {
       width: 32px;
@@ -298,7 +298,7 @@
       fill: #c0c0c0;
     }
   }
-  .letter {
+  .letter-hks {
     &-text {
       fill: #fff;
       font: normal 18px theme("fontFamily.reformagrotesk");

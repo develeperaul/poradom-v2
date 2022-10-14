@@ -54,7 +54,7 @@
   }
 }
 
-.floor-swiper {
+.floor-swiper-hks {
   width: 320px;
   margin-left: auto;
   margin-right: auto;
@@ -106,7 +106,8 @@
   }
 }
 
-.floorsSwiper {
+.floorsSwiper,
+.floorsSwiper-hks {
   height: 360px;
   width: 320px;
   @include screen-lg {

@@ -844,10 +844,6 @@ button {
   z-index: 50;
 }
 
-.order-2{
-  order: 2;
-}
-
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -1100,20 +1096,20 @@ button {
   gap: 1.25rem;
 }
 
-.gap-1\.5{
-  gap: 0.375rem;
-}
-
-.gap-1{
-  gap: 0.25rem;
-}
-
 .gap-2\.5{
   gap: 0.625rem;
 }
 
 .gap-2{
   gap: 0.5rem;
+}
+
+.gap-1\.5{
+  gap: 0.375rem;
+}
+
+.gap-1{
+  gap: 0.25rem;
 }
 
 .gap-3\.5{
@@ -2007,7 +2003,7 @@ a.button{
           transform: rotate(180deg);
 }
 
-.letters {
+.letters-hks {
   & > svg,
     & > a > svg {
     width: 32px;
@@ -2033,7 +2029,7 @@ a.button{
   }
 }
 
-.letter {
+.letter-hks {
   &-text {
     fill: #fff;
     font: normal 18px ReformaGrotesk;
@@ -4492,7 +4488,7 @@ input[type="range"].styled-slider.slider-progress::-ms-fill-lower {
   }
 }
 
-.home-card {
+.home-card-hks {
   @include screen-lg2 {
     display: grid;
 
@@ -4508,14 +4504,6 @@ input[type="range"].styled-slider.slider-progress::-ms-fill-lower {
     height: 100%;
   }
   &__slide {
-    /*
-    // background-image: url(../img/images/card-about/fundament.jpg);
-    // background-repeat: no-repeat;
-    // background-position: center;
-    // background-size: cover;
-    // object-fit: cover;
-    // min-height: 210px;
-    */
     & > img {
       @include screen-lg2 {
         max-height: 800px;
@@ -9195,7 +9183,7 @@ input[type="range"].styled-slider.slider-progress::-ms-fill-lower {
   }
 }
 
-.floor-swiper {
+.floor-swiper-hks {
   width: 320px;
   margin-left: auto;
   margin-right: auto;
@@ -9252,7 +9240,8 @@ input[type="range"].styled-slider.slider-progress::-ms-fill-lower {
   }
 }
 
-.floorsSwiper {
+.floorsSwiper,
+.floorsSwiper-hks {
   height: 360px;
   width: 320px;
   @include screen-lg {

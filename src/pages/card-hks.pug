@@ -2,17 +2,17 @@ extend ../layouts/layouts/other.pug
 
 
 block content
-    include ../components/back.pug
+    include ../components/back-hks.pug
     include ../components/number-mini.pug
-    include ../components/floors-slider.pug
-    include ../components/liters.pug
+    include ../components/floors-slider-hks.pug
+    include ../components/liters-hks.pug
 
     section(class="")
       .container.grow(class="flex flex-col lg2:px-0")
-        div(class="home-card ") 
+        div(class="home-card-hks ") 
           div(class="bg-gray-light -mx-5 px-5 py-10 lg2:mx-0 lg2:p-10 lg2:pb-8 ")
             div(class="relative lg2:-left-2 xl:-left-0")
-              +back('gray')(class=" mb-7")
+              +back-hks('gray')(class=" mb-7")
             
               div 
                 h2(class="text-yellow text-7xl mb-4 ") ДОМ <br> ред ЛАЙТ 125 
@@ -46,11 +46,11 @@ block content
                 p(class="text-dark font-reformagrotesk text-5.25-5xl tracking-1 font-medium") 11 222 595 руб
                 p(class=" text-gray text-base normal-case ") стоимость дома с участком
 
-                +liters(class="mx-auto  ")
+                +liters-hks(class="mx-auto  ")
           
-          div(class="swiper mainSwiper home-card__slider  -mx-5 lg2:mx-0 " id="what")
+          div(class="swiper mainSwiper home-card-hks__slider  -mx-5 lg2:mx-0 " id="what")
             div(class='swiper-wrapper')
-              div(class="swiper-slide home-card__slide" ) 
+              div(class="swiper-slide home-card-hks__slide" ) 
                 
                 img(src=require("../img/images/card-about/fundament.jpg"), alt="fundament")
             .swiper-prev
@@ -70,7 +70,7 @@ block content
       .container 
         div(class="bg-yellow -mx-5 py-15 lg2:-mx-10 lg2:py-20 ")
           div(class="flex flex-col items-center gap-10") 
-            +floors-slider
+            +floors-slider-hks
             div(class="px-5 lg2:px-0 w-full lg2:w-[380px]") 
               a(href="#" target="_blank" class="border border-white py-3.5 text-center block  normal-case text-title text-base  lg2:px-3.5") Скачать карточку дома 
       .container

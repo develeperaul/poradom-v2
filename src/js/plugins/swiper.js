@@ -100,7 +100,7 @@ new Swiper(".fractionCardSwiper", {
   },
 });
 
-new Swiper(".floorsSwiper", {
+new Swiper(".floorsSwiper-hks", {
   modules: [Navigation, Pagination, Autoplay],
   spaceBetween: 16,
   loop: true,

@@ -1,4 +1,4 @@
-.home-card {
+.home-card-hks {
   @include screen-lg2 {
     display: grid;
     grid-template-columns: 350px 1fr;
@@ -12,14 +12,6 @@
     height: 100%;
   }
   &__slide {
-    /*
-    // background-image: url(../img/images/card-about/fundament.jpg);
-    // background-repeat: no-repeat;
-    // background-position: center;
-    // background-size: cover;
-    // object-fit: cover;
-    // min-height: 210px;
-    */
     & > img {
       @include screen-lg2 {
         max-height: 800px;

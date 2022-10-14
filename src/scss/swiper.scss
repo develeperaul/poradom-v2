@@ -1,0 +1,107 @@
+.dot {
+  background-image: url(../img/icons/dot.svg);
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin: 0 2px;
+}
+
+.dot-active,
+.dot-active.dot-active-main {
+  background-image: url(../img/icons/dot-active.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  transform: translateY(10%);
+}
+
+.swiper-next,
+.swiper-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;
+  background-color: transparent;
+  border: 1px solid theme("colors.white");
+  background-image: url("../img/icons/left-arrow-white.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  cursor: pointer;
+  @include screen-xl {
+    width: 40px;
+    height: 40px;
+  }
+}
+.swiper-next {
+  right: 20px;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.swiper-prev {
+  left: 20px;
+}
+.swiper-pagination-floor {
+  display: flex;
+  gap: 10px;
+  width: 100% !important;
+  bottom: 0;
+  left: 0;
+  top: auto !important;
+  right: auto !important;
+  transform: rotate(0) !important;
+  padding-bottom: 0;
+  @include screen-lg2 {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    width: 46px !important;
+    transform: rotate(180deg) !important;
+
+    right: 0 !important;
+    left: auto;
+    bottom: auto;
+    top: 0 !important;
+    z-index: 10;
+  }
+}
+.floor {
+  @apply font-reformagrotesk text-2xl;
+  cursor: pointer;
+  width: 36px;
+  height: 40px;
+  background-image: url(../img/icons/label-paginate.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding-bottom: 5px;
+  color: #bf6f0e;
+  display: inline-block;
+  @include screen-lg2 {
+    transform: rotate(180deg) !important;
+    width: 56px;
+    height: 60px;
+  }
+  & > span {
+    @apply font-reformagrotesk font-medium;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+    font-size: 24px;
+    line-height: 25px;
+    @include screen-lg2 {
+      font-size: 36px;
+      line-height: 40px;
+    }
+  }
+  &-active {
+    background-image: url(../img/icons/label-paginate-active.svg);
+    color: #fff;
+  }
+}

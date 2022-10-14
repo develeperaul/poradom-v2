@@ -1,0 +1,25 @@
+.card-application {
+  @apply relative flex flex-col gap-x bg-dark px-5 py-15 lg2:py-0 lg2:px-12 xl:px-24 lg:flex-row lg2:justify-between lg:items-center;
+  &__icon {
+    @include screen-lg {
+      width: 349px;
+    }
+    @include screen-xl {
+      width: 460px;
+    }
+  }
+  &__logo {
+    @include screen-lg {
+      width: 256px;
+      height: 165px;
+    }
+
+    @include screen-xl {
+      width: 512px;
+      height: 330px;
+    }
+  }
+  &__title {
+    @apply text-8xl xl:text-9.75xl mb-9 lg2:mb-10;
+  }
+}

@@ -64,6 +64,12 @@ export default class Validate {
       case 'email':
       this.inputIsvalid(input, EMAIL_REGEXP.test(input.value))
       break
+      case 'checkbox':
+      this.inputIsvalid(input, input.checked);
+      break
+      case 'numeric':
+      this.inputIsvalid(input, input.value);
+      break
       default :
           this.inputIsvalid(input, input.value.length > 3);
       }
@@ -86,6 +92,7 @@ export default class Validate {
   }
 
   get valid() {
+    console.log(this._validate);
     return !this._validate.includes(false)
   }
   success() {

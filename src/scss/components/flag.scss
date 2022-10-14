@@ -1,0 +1,11 @@
+.flag {
+  @apply relative;
+  &__content {
+    @apply lg2:w-25 lg2:absolute lg2:-left-14 lg2:transform lg2:-translate-x-full lg2:flex lg2:flex-col lg2:items-center lg2:gap-6 xl:gap-15;
+    &-title {
+      @apply hidden lg2:block text-center text-dark text-8xl;
+      transform: rotate(180deg);
+      writing-mode: vertical-lr;
+    }
+  }
+}

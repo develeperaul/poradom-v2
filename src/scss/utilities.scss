@@ -1,8 +1,358 @@
 @tailwind utilities;
-
 @layer utilities {
-    button {
-        @apply py-3.5 px-7;
-        min-width: 200px;
+  footer {
+    text-transform: none;
+  }
+  .nav__top_fixed {
+    position: fixed;
+    top: 0;
+    z-index: 99 !important;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  .nav__top_fixed-open {
+    opacity: 1;
+  }
+
+  .w-850 {
+    width: 850px;
+  }
+  .wrapper {
+    @apply container px-0;
+  }
+
+  .wrapper-container {
+    @apply container -mx-5 xl:mx-0;
+  }
+
+  .button {
+    @apply py-2 xl:py-3.5 lg2:text-sm  xl:text-base normal-case;
+    text-align: center;
+    -webkit-appearance: none;
+    letter-spacing: -0.02rem;
+    height: max-content;
+    min-width: 200px;
+    @include screen-lg2 {
+      min-width: 150px;
     }
+    @include screen-xl {
+      min-width: 200px;
+    }
+    &_yellow {
+      @apply bg-yellow text-title;
+    }
+    &_green {
+      @apply bg-green text-white;
+    }
+
+    &_border-yellow {
+      @apply border-yellow border text-title;
+      background-color: transparent;
+    }
+  }
+  a.button {
+    @apply block lg2:inline-block;
+  }
+  .button__round {
+    @apply bg-white text-gray py-2 xl:py-3.5 text-base;
+    border-radius: 8px;
+    border: 1px solid theme("colors.gray");
+    min-width: 190px;
+    &_active {
+      @apply bg-yellow text-white;
+      border-color: theme("colors.blue");
+    }
+    &_disabled {
+      @apply opacity-30;
+    }
+  }
+  .button__group {
+    display: flex;
+    gap: 10px;
+    .button__round {
+    }
+  }
+  .button_rounded {
+    border-radius: 8px;
+  }
+
+  .button__blue {
+    @apply bg-blue text-white;
+    border-color: theme("colors.blue");
+  }
+
+  .button_none-minw {
+    min-width: auto;
+  }
+
+  .button_none-bg {
+    @apply text-gray;
+    background: transparent;
+  }
+
+  .advantages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px 15px;
+    @include screen-lg {
+      gap: 70px 30px;
+    }
+    @include screen-lg2 {
+      gap: 20px 5px;
+    }
+    @include screen-xl {
+      gap: 60px 20px;
+    }
+  }
+
+  .gap-x {
+    @apply -mx-5 xl:mx-0;
+  }
+
+  .text-border {
+    color: theme("colors.background") !important;
+    text-shadow: 2px 0 2px theme("colors.dark"), 0 2px 2px theme("colors.dark"),
+      -2px 0 2px theme("colors.dark"), 0 -2px 2px theme("colors.dark");
+  }
+
+  .label {
+    @apply text-base xl:text-lg normal-case;
+    border: 5px solid #ffffff;
+    border-radius: 6px;
+    padding: 10px;
+    @include screen-xl {
+      padding: 18px;
+    }
+    &-mini {
+      padding: 8px 10px;
+      border: 3px solid #ffffff;
+    }
+    &-01 {
+      @apply bg-yellow absolute left-3 top-1/2;
+      transform: rotate(-15deg);
+      @include screen-xl {
+        left: 10%;
+      }
+    }
+
+    &-02 {
+      @apply bg-green absolute right-3 top-30;
+      transform: rotate(7.85deg);
+      @include screen-xl {
+        right: 15%;
+      }
+    }
+    &-03 {
+      @apply bg-red absolute right-3 top-3/4 transform -rotate-6;
+      transform: rotate(-15deg);
+      @include screen-xl {
+        right: 28%;
+      }
+    }
+
+    &__icon {
+      &-figure {
+        &--garage,
+        &--roof,
+        &--height-ceiling,
+        &--backyard {
+          fill: theme("colors.yellow-darken");
+        }
+
+        &--energy,
+        &--fence {
+          stroke: theme("colors.yellow-darken");
+        }
+        &--energy-text {
+          fill: theme("colors.yellow-darken");
+        }
+      }
+      &-contour {
+        &--energy,
+        &--garage,
+        &--fence,
+        &--roof,
+        &--height-ceiling,
+        &--backyard {
+          fill: none;
+          stroke: theme("colors.yellow-darken");
+        }
+      }
+    }
+    &__content {
+      @apply whitespace-nowrap overflow-hidden;
+      transition: all 0.2s ease;
+      max-width: 0vw;
+      box-shadow: 0px 124px 50px rgba(0, 0, 0, 0.01),
+        0px 70px 42px rgba(0, 0, 0, 0.05), 0px 31px 31px rgba(0, 0, 0, 0.09),
+        0px 8px 17px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    }
+    &-active {
+      & .label__content {
+        max-width: 100vw;
+      }
+
+      & .label__icon {
+        &-figure {
+          &--garage {
+            fill: theme("colors.blue");
+          }
+          &--energy {
+            stroke: #245b20;
+          }
+          &--energy-text {
+            fill: #245b20;
+          }
+          &--fence {
+            stroke: #414141;
+          }
+          &--roof {
+            fill: #750b0e;
+          }
+          &--height-ceiling {
+            fill: #30312c;
+          }
+
+          &--backyard {
+            fill: #9b5602;
+          }
+        }
+        &-contour {
+          &--energy,
+          &--garage,
+          &--fence,
+          &--roof,
+          &--height-ceiling,
+          &--backyard {
+            stroke: theme("colors.white");
+          }
+          &--garage {
+            fill: theme("colors.blue-light");
+          }
+          &--energy {
+            fill: theme("colors.green-light");
+          }
+
+          &--fence {
+            fill: #696a6c;
+          }
+          &--roof {
+            fill: #a61c20;
+          }
+
+          &--height-ceiling {
+            fill: #575b41;
+          }
+        }
+      }
+    }
+  }
+
+  .card {
+    @apply bg-dark p-5;
+    @include screen-lg {
+      width: 360px;
+    }
+    @include screen-lg2 {
+      width: 500px;
+    }
+    &_yellow {
+      @apply bg-yellow;
+    }
+    &__static {
+      min-height: 230px;
+      position: relative;
+      @include screen-xl {
+        min-height: 300px;
+      }
+    }
+  }
+  .vetical {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+  }
+
+  .letters-hks {
+    & > svg,
+    & > a > svg {
+      width: 32px;
+      height: 34px;
+      @include screen-lg2 {
+        width: 34px;
+        height: 36px;
+      }
+    }
+    & > a > svg > path,
+    & > a > svg > .letter-text {
+      transition: all 0.6s ease;
+    }
+    & > a > svg:hover > path {
+      fill: #c0c0c0;
+    }
+    & > a > svg:hover > .letter-text {
+      fill: #fff;
+    }
+    & > a > svg > .letter-text {
+      fill: #c0c0c0;
+    }
+  }
+  .letter-hks {
+    &-text {
+      fill: #fff;
+      font: normal 18px theme("fontFamily.reformagrotesk");
+      &_big {
+        fill: #fff;
+        font: normal 48px theme("fontFamily.reformagrotesk");
+      }
+    }
+  }
+
+  .prefix {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    color: theme("colors.gray");
+    font-size: theme("fontSize.base");
+    text-transform: none;
+  }
+
+  .magnifier {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .other-card {
+    height: 190px;
+    width: 335px;
+    object-fit: cover;
+    position: relative;
+    @include screen-lg2 {
+      width: 600px;
+      height: 330px;
+    }
+    & > img {
+      width: 100%;
+      height: 100%;
+    }
+    &__text {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 30px;
+      background: theme("colors.dark/79");
+      opacity: 0.79;
+      font-size: 18px;
+      line-height: 140%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      letter-spacing: -0.02em;
+      @include screen-lg2 {
+        height: 50px;
+      }
+    }
+  }
 }

@@ -1,91 +1,207 @@
-        /* text field */
+/* text field */
 
-        .text-field__input {
-            @apply text-gray;
-            display: block;
-            width: 100%;
-            height: 2.5rem;
-            font-family: inherit;
-            font-size: 1rem;
-            font-weight: 400;
-            line-height: 1.5;
-            background-color: transparent;
-            background-clip: padding-box;
-            border: 1px solid theme('colors.white');
-            border-radius: 0.25rem;
-            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-        }
+.text-field__input {
+  @apply text-gray;
+  display: block;
+  width: 100%;
+  font-family: inherit;
+  font-weight: 400;
+  background-color: transparent;
+  background-clip: padding-box;
+  border: 1px solid theme("colors.white");
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  line-height: 1.5;
+  font-size: 1rem;
+  height: 2.5rem;
+}
 
-        .text-field__input[type="search"]::-webkit-search-decoration,
-        .text-field__input[type="search"]::-webkit-search-cancel-button,
-        .text-field__input[type="search"]::-webkit-search-results-button,
-        .text-field__input[type="search"]::-webkit-search-results-decoration {
-            -webkit-appearance: none;
-        }
+.text-field__input[type="search"]::-webkit-search-decoration,
+.text-field__input[type="search"]::-webkit-search-cancel-button,
+.text-field__input[type="search"]::-webkit-search-results-button,
+.text-field__input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
 
-        .text-field__input::placeholder {
-            color: #212529;
-            opacity: 0.5;
-        }
+.text-field__input::placeholder {
+  color: #212529;
+  opacity: 0.5;
+}
 
-        .text-field__input:focus {
-            background-color: transparent;
-            border-color: theme('colors.gray');
-            outline: 0;
-            box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
-        }
+.text-field__input:focus {
+  background-color: transparent;
+  border-color: theme("colors.gray");
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+}
 
-        .text-field__input:disabled,
-        .text-field__input[readonly] {
-            background-color: transparent;
-            opacity: 1;
-        }
+.text-field__input:disabled,
+.text-field__input[readonly] {
+  background-color: transparent;
+  opacity: 1;
+}
 
-        .text-field_floating .text-field__input {
-            border: none;
-            border-bottom: 1px solid theme('colors.white');
-            border-radius: 0;
-            border-top-left-radius: 0.25rem;
-            border-top-right-radius: 0.25rem;
-            height: 2.5rem;
-            line-height: 1.25;
-            background-color: transparent;
-        }
+.text-field_floating .text-field__input {
+  border: none;
+  border-bottom: 1px solid theme("colors.white");
+  border-radius: 0;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  height: 2.5rem;
+  line-height: 1.25;
+  background-color: transparent;
+}
 
-        .text-field_floating .text-field__input:focus {
-            outline: 0;
-            border-bottom: 1px solid theme('colors.gray');
-            box-shadow: none;
-            background-color: transparent;
-        }
+.text-field_floating .text-field__input:focus {
+  outline: 0;
+  border-bottom: 1px solid theme("colors.gray");
+  box-shadow: none;
+  background-color: transparent;
+}
 
-        .text-field_floating .text-field__input::-moz-placeholder {
-            color: transparent;
-        }
+.text-field_floating .text-field__input::-moz-placeholder {
+  color: transparent;
+}
 
-        .text-field_floating .text-field__input::placeholder {
-            @apply text-gray;
-        }
+.text-field_floating .text-field__input::placeholder {
+  @apply text-gray;
+}
 
-        .text-field_floating .text-field__input_invalid,
-        .text-field_floating .text-field__input_valid {
-            border-color: #dc3545;
-            padding-right: 2.25rem;
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
-            background-repeat: no-repeat;
-            background-position: right 0.5625rem center;
-            background-size: 1.125rem 1.125rem;
-        }
+.text-field_floating .text-field__input_invalid,
+.text-field_floating .text-field__input_valid {
+  border-color: #dc3545;
+  padding-right: 2.25rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='6' cy='6' r='6' fill='%23A61C20'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.81145 3.01726C5.49845 3.07428 5.24447 3.25972 5.10488 3.53317C5.02898 3.68185 5.00047 3.79661 5 3.95533C4.99966 4.0715 5.02339 4.21493 5.23869 5.39768C5.37016 6.12003 5.4864 6.73743 5.49697 6.76967C5.5408 6.90337 5.63859 7.00858 5.77833 7.07239C5.8555 7.10764 5.86799 7.10974 5.99999 7.10974C6.13199 7.10974 6.14448 7.10764 6.22164 7.07239C6.36062 7.00892 6.4581 6.90392 6.50267 6.76967C6.51337 6.73743 6.62974 6.12003 6.76126 5.39768C6.97674 4.21427 7.00036 4.07157 7 3.95533C6.9995 3.79659 6.97097 3.68182 6.8951 3.53317C6.69754 3.14616 6.25649 2.93619 5.81145 3.01726ZM5.80959 7.5493C5.47102 7.63487 5.23369 7.92755 5.23369 8.25952C5.23369 8.45019 5.30646 8.63555 5.43249 8.76589C5.52899 8.86569 5.61973 8.92174 5.753 8.96385C5.89749 9.0095 6.09113 9.01216 6.23109 8.97042C6.56932 8.86952 6.78102 8.57272 6.76325 8.22432C6.73965 7.76179 6.27374 7.43201 5.80959 7.5493Z' fill='white'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: right 0.5625rem center;
+  background-size: 1.125rem 1.125rem;
+}
 
-        .text-field_floating .text-field__input_invalid:focus,
-        .text-field_floating .text-field__input_invalid::-moz-placeholder {
-            color: #dc3545;
-        }
+.text-field_floating .text-field__input_invalid:focus,
+.text-field_floating .text-field__input_invalid::-moz-placeholder {
+  color: #dc3545;
+}
 
-        .text-field_floating .text-field__input:focus,
-        .text-field_floating .text-field__input:not(:placeholder-shown) {
-            border-bottom: 1px solid theme('colors.gray');
-        }
+.text-field_floating .text-field__input:focus,
+.text-field_floating .text-field__input:not(:placeholder-shown) {
+  border-bottom: 1px solid theme("colors.gray");
+}
+
+
+
+/* text field */
+
+.field__label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 12px;
+  text-transform: none;
+}
+
+.field__input {
+  display: block;
+  width: 100%;
+  height: calc(2.25rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #bdbdbd;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.field__input[type="search"]::-webkit-search-decoration,
+.field__input[type="search"]::-webkit-search-cancel-button,
+.field__input[type="search"]::-webkit-search-results-button,
+.field__input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+.field__input::placeholder {
+  color: #212529;
+  opacity: 0.4;
+}
+
+.field__input:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #bdbdbd;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+}
+
+.field__input:disabled,
+.field__input[readonly] {
+  background-color: transparent;
+  opacity: 1;
+}
+
+/* with floating label */
+.field_floating-3 {
+  position: relative;
+}
+
+.field_floating-3 .field__input {
+  border: none;
+  border-bottom: 1px solid #bdbdbd;
+  border-radius: 0;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  height: calc(3.5rem + 2px);
+  line-height: 1.25;
+  padding:  1rem 0.75rem;
+  padding-left: 0;
+  background-color: transparent;
+}
+
+.field_floating-3 .field__input:focus {
+  outline: 0;
+  border-bottom: 1px solid #03a9f4;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.field_floating-3 .field__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 1rem .75rem;
+  padding-left: 0;
+  pointer-events: none;
+  border: 1px solid transparent;
+  transform-origin: 0 0;
+  transition: color .15s ease-in-out, transform .15s ease-in-out;
+}
+
+.field_floating-3 .field__input::-moz-placeholder {
+  color: transparent;
+}
+
+.field_floating-3 .field__input::placeholder {
+  color: transparent;
+}
+
+.field_floating-3 .field__input:focus,
+.field_floating-3 .field__input:not(:placeholder-shown) {
+  padding-top: 1.625rem;
+  padding-bottom: .625rem;
+  border-bottom: 1px solid #98999D;
+}
+
+.field_floating-3 .field__input:focus~.field__label,
+.field_floating-3 .field__input:not(:placeholder-shown)~.field__label {
+  transform: scale(.85) translateY(-.75rem) translateX(.15rem);
+  color: #98999D;
+}

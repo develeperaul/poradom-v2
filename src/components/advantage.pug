@@ -1,0 +1,5 @@
+mixin advantage(src,text,color)
+  div(class="advantage")
+    div( class="advantage__logo inline-block" class=color)
+      img(src=require("./img/icons/"+src+".svg"), alt="src")
+    p(class="advantage__text normal-case")= text

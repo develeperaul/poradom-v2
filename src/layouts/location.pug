@@ -1,0 +1,146 @@
+include ../components/flag-content.pug
+include ../components/number.pug
+include ../components/card-application.pug
+section(id="20min" class="location")
+  div(class="container-195 lg2:pr-25")
+    +flag-content(2, 'локация')
+    div(class="lg2:hidden") 
+      h2(class="text-center text-dark") локация
+      h3(class="text-center text-4xl text-gray mb-7.5") 54.756604, 55.745656
+    div(class="relative travel-time mb-7.5 xl:mb-44 flex flex-col gap-10 lg2:gap-0 lg2:flex-row justify-between")
+      div(class="flex flex-col w-full lg2:block")
+        div(class="section__title font-reformagrotesk") 20 минут
+        img(src=require("./img/icons/road-car_m.svg"), alt="road-car_m" class="travel-time__car-road lg2:hidden")
+        img(src=require("./img/icons/road-car.svg"), alt="road-car" class="travel-time__car-road hidden lg2:block")
+        div(class="travel-time__to self-end") 
+          div(class="section__title font-reformagrotesk text-gray mb-5  xl:mb-7.5") от уфы
+          p(class="capitalize") Местонахождение: <br> деревня Начапкино <br> на юго-западе Уфы
+        img(src=require("./img/images/travel-guide/20minuts.png"), alt="20minuts" class="travel-time__icon")
+      div(class="lg2:flex lg2:items-end lg2:gap-5")
+        h3(class="hidden lg2:block text-center text-5.25-5xl text-dark vetical ") 54.756604, 55.745656
+        div(class="travel-time__map shrink-0")
+          img(src=require("./img/map.gif"), alt="" )
+       
+    div(class="lg2:flex justify-between mb-32 travel-time__path")
+
+      div(class="card card_yellow flex flex-col gap-12 justify-between ")
+        h3(class=" text-title text-5.25-5xl") от Монумента Дружбы 
+        +number('21', 'через дему', 'км')(class="justify-between text-white")
+      div(class="card card_yellow flex flex-col gap-12 justify-between ")
+        h3(class=" text-title text-5.25-5xl") От Затонского моста
+        +number('22', 'через затон', 'км')(class="justify-between text-white")
+      div(class="card card_yellow flex flex-col gap-12 justify-between ")
+        h3(class=" text-title text-5.25-5xl") От демы
+        +number('10', 'все рядом', 'км')(class="justify-between text-white")
+      //- div(class="lg:hidden lg2:block shrink-0 mb-12 xl:-ml-40")
+      //-   img(src=require("./img/images/travel-guide/20minuts.png"), alt="20minuts" width="758" height="717" class="travel-time__path-icon" )
+      //- div(class="hidden lg2:block")
+      //-   div(class="travel-time__path-maps swiper mr-0 convertSwiper cursor-pointer" )
+      //-     .swiper-wrapper
+      //-       .swiper-slide
+      //-         div(class="flex justify-between")
+      //-           h4(class=" text-5.25-5xl text-gray") от Монумента Дружбы <br> через Дёмское шоссе
+      //-           +number(21,null,'км')
+      //-       .swiper-slide
+      //-         div(class="flex justify-between")
+      //-           h4(class=" text-5.25-5xl text-gray") От Затонского моста
+      //-           +number(22,null,'км')
+      //-       .swiper-slide
+      //-         div(class="flex justify-between")
+      //-           h4(class=" text-5.25-5xl text-gray") от дЁмы
+      //-           +number(10,null,'км')
+      //-       .swiper-slide
+      //-         div(class="flex justify-between")
+      //-           h4(class=" text-5.25-5xl text-gray") до школы
+      //-           +number(8,null,'км')
+      //-       .swiper-slide
+      //-         div(class="flex justify-between")
+      //-           h4(class=" text-5.25-5xl text-gray") до нового дома
+      //-           +number(1,null,'км')
+
+      div(class="swiper fraction fractionSwiper lg:hidden mb-20")
+        .swiper-wrapper.mb-5
+          div(class="card card__static swiper-slide")
+            h3(class=" text-gray text-5.25-5xl") От Затонского моста
+            div(class="absolute right-6 bottom-0")
+              +number(21,null,'км')
+
+          div(class="card card__static swiper-slide")
+            h3(class=" text-gray text-5.25-5xl") от дЁмы
+            div(class="absolute right-6 bottom-0")
+              +number(10,null,'мин')
+          div(class="card card__static swiper-slide")
+            h3(class=" text-gray text-5.25-5xl") до школы
+            div(class="absolute right-6 bottom-0")
+              +number(8,null,'км')
+          div(class="card card__static swiper-slide") 
+            h3(class=" text-gray text-5.25-5xl") от миловки
+            div(class="absolute right-6 bottom-0")
+              +number(12,null,'км')
+          div(class="card card__static swiper-slide")
+            h3(class=" text-gray text-5.25-5xl") до нового <br> дома
+            div(class="absolute right-6 bottom-0")
+              +number(1,null,'км')
+          div(class="card card__static swiper-slide ")
+            h3(class=" text-gray text-5.25-5xl") от Монумента <br> Дружбы через <br> Дёмское <br> шоссе
+            div(class="absolute right-6 bottom-0")
+              +number(21,null,'км')
+        div(class="fraction__content")
+          div.fraction__content-navigation
+            .swiper-prev
+            .swiper-next 
+          div(class="swiper-fraction ")
+
+      div(class="hidden lg:flex flex-wrap lg:gap-2.5 lg2:hidden")
+        div(class="card card__static")
+          h3(class=" text-gray text-5.25-5xl") От Затонского моста
+          div(class="absolute right-6 bottom-0")
+            +number(21,null,'км')
+        div(class="card card__static")
+          h3(class=" text-gray text-5.25-5xl") от дЁмы
+          div(class="absolute right-6 bottom-0")
+            +number(10,null,'мин')
+        div(class="card card__static")
+          h3(class=" text-gray text-5.25-5xl") до школы
+          div(class="absolute right-6 bottom-0")
+            +number(8,null,'км')
+        div(class="card card__static") 
+          h3(class=" text-gray text-5.25-5xl") от миловки
+          div(class="absolute right-6 bottom-0")
+            +number(12,null,'км')
+        div(class="card card__static")
+          h3(class=" text-gray text-5.25-5xl") до нового <br> дома
+          div(class="absolute right-6 bottom-0")
+            +number(1,null,'км')
+        div(class="card card__static ")
+          h3(class=" text-gray text-5.25-5xl") от Монумента <br> Дружбы через <br> Дёмское <br> шоссе
+          div(class="absolute right-6 bottom-0")
+            +number(21,null,'км')
+  .container-100
+    +card-application('заказать звонок')(class="mb-30 xl:mb-40")
+  div(class="container px-0")
+    div(class="mb-15 xl:mb-30  marquee")
+      div(class="marquee__direction")
+        .marquee__direction-container
+          span(class="marquee__direction-right text-8xl xl:text-14.75xl font-reformagrotesk") Первый Первый Первый Первый Первый Первый Первый Первый &nbsp;
+          span(class="marquee__direction-right text-8xl xl:text-14.75xl font-reformagrotesk") Первый Первый Первый Первый Первый Первый Первый Первый &nbsp;
+      div(class="marquee__direction")
+      
+        .marquee__direction-container.left
+          span(class="marquee__direction-left text-8xl xl:text-14.75xl font-reformagrotesk text-border") загородный загородный загородный загородный загородный загородный &nbsp;
+          span(class="marquee__direction-left text-8xl xl:text-14.75xl font-reformagrotesk text-border") загородный загородный загородный загородный загородный загородный &nbsp;
+
+      div(class="marquee__direction")
+        .marquee__direction-container
+          span(class="marquee__direction-right text-8xl xl:text-14.75xl font-reformagrotesk") дизайн-поселок дизайн-поселок дизайн-поселок дизайн-поселок дизайн-поселок дизайн-поселок &nbsp;
+          span(class="marquee__direction-right text-8xl xl:text-14.75xl font-reformagrotesk") дизайн-поселок дизайн-поселок дизайн-поселок дизайн-поселок дизайн-поселок дизайн-поселок &nbsp;
+      
+      div(class="marquee__direction")
+        .marquee__direction-container.left
+          span(class="marquee__direction-left text-8xl xl:text-14.75xl font-reformagrotesk text-border") в башикирии в башикирии в башикирии в башикирии в башикирии в башикирии &nbsp;
+          span(class="marquee__direction-left text-8xl xl:text-14.75xl font-reformagrotesk text-border") в башикирии в башикирии в башикирии в башикирии в башикирии в башикирии &nbsp;
+
+      img(src=require("./img/images/rooster.png"), alt="" class=" absolute top-0 w-full h-full object-cover lg:object-contain")
+      p(class="label label-01  animate__animated  animate__slower animate__delay-1s" style="opacity:0") Беззаборная среда
+      p(class="label label-02  animate__animated  animate__slower animate__delay-3s" style="opacity:0") Единый дизайн-код
+      p(class="label label-03 animate__animated  animate__slower animate__delay-5s" style="opacity:0") Променад

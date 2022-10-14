@@ -1,0 +1,12 @@
+.toggle {
+  &-element {
+    display: none;
+    &__active {
+      display: block;
+    }
+  }
+
+  &-element__active.contacts__top {
+    display: block;
+  }
+}

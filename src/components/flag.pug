@@ -1,0 +1,17 @@
+mixin flag(numb)
+  div(class="gap-x")&attributes(attributes)
+    div(class=" relative w-full lg2:w-25")
+      div(class=" absolute w-full") 
+        div(class="bg-red h-5") 
+        div(class="bg-yellow h-2.5")
+        div(class="bg-dark h-7.5")
+      div(class="relative inline-block -right-1/2 transform -translate-x-1/2")
+        svg(width='62' height='100' viewbox='0 0 62 100' fill='none' xmlns='http://www.w3.org/2000/svg')
+          path(d='M55.8 0H6.2C4.55566 0 2.97867 0.658447 1.81594 1.83049C0.653216 3.00254 1.9782e-06 4.59217 1.9782e-06 6.24969V93.5266C-0.000979423 94.7653 0.36322 95.9763 1.04636 97.006C1.72949 98.0356 2.70076 98.8374 3.83682 99.3095C4.97289 99.7816 6.22252 99.9028 7.42704 99.6577C8.63157 99.4125 9.73666 98.8121 10.602 97.9326L30.876 77.5587L51.429 98.1826C52.2978 99.0532 53.4031 99.6449 54.6052 99.8829C55.8073 100.121 57.0525 99.9945 58.1834 99.5198C59.3144 99.045 60.2804 98.2432 60.9597 97.2155C61.639 96.1878 62.001 94.9803 62 93.7454V6.24969C62 4.59217 61.3468 3.00254 60.1841 1.83049C59.0213 0.658447 57.4443 0 55.8 0Z' fill='white')
+        if numb
+          div(class=" text-title font-reformagrotesk absolute top-2 flex flex-col items-center  left-1/2 transform -translate-x-1/2")
+            span(class="text-2xl-90") глава
+            span(class="text-5.25-5xl")= numb
+        else 
+          div(class=" text-title font-reformagrotesk absolute top-6 flex flex-col items-center  left-1/2 transform -translate-x-1/2")
+            span(class="text-4xl") live

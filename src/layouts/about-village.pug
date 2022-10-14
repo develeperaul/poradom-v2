@@ -1,0 +1,84 @@
+include ../components/flag-content.pug
+include ../components/number.pug
+include ../components/advantage.pug
+include ../components/rainbow.pug
+include ../components/card-application.pug
+- var advantage01 = 'Фельдшерско-акушерский пункт ';
+- var advantage02 = '2000 м2 детских пространств';
+- var advantage03 = 'Закрытый периметр посёлка, шлагбаумы';
+- var advantage04 = 'Центральные коммуникации, артезианская вода';
+- var advantage05 = 'До школы 6 минут на школьном автобусе';
+- var advantage06 = 'Торговый центр, пункты выдачи маркетплейсов';
+- var advantage07 = 'Кафе, пекарни, фермерские продукты';
+- var advantage08 = 'Единая дизайн-среда, променад';
+- var advantage09 = 'Более 100 камер и полная безопасность';
+- var advantage10 = 'Спортивное звено, скейт-парк, беговая дорожка';
+section(id="new") 
+  
+  div(class="container-195")
+    +flag-content(1, 'о поселке')
+    div()
+      h2(class="text-center text-dark mb-7.5 lg2:hidden") о поселке
+      div(class="hidden lg2:block")
+        +rainbow()(class="justify-center mb-25")
+      h2(class="section__title mb-7.5 lg2:mb-10 ") Таун-парк <br class=" lg:hidden"> андерсен — <br class="hidden lg:block lg2:hidden"> mini-город <br class="lg:hidden lg2:block"> с maxi-возможностями <br class="lg2:hidden"> рядом с Дёмой  
+      div(class="flex flex-col gap-3.5 mb-15 lg:flex-row lg:items-center lg:justify-center lg2:gap-31.25 lg2:mb-20")
+        div(class="flex flex-col gap-5 xl:gap-15 ")
+          div(class="flex gap-5") 
+            +number(200)
+            span(class="text-4xl xl:text-5.25-5xl font-reformagrotesk") таунхаусов
+          div(class="flex gap-5") 
+            +number(100)
+            span(class="text-4xl xl:text-5.25-5xl font-reformagrotesk") индивидуальных <br> жилых домов
+        div
+          img(src=require("./img/images/travel-guide/tuk-tuk.png"), alt=""
+            srcset=require("./img/images/travel-guide/tuk-tuk.png") + " 514w"
+          sizes=" (max-width:1200px) 359px, 514px")
+      div(class="advantages mb-15 lg:mb-30 xl:mb-40")
+        +advantage('icon-01', advantage01, 'bg-blue')
+        +advantage('icon-02', advantage02, 'bg-yellow')
+        +advantage('icon-03', advantage03, 'bg-green-dark')
+        +advantage('icon-04', advantage04, 'bg-red')
+        +advantage('icon-05', advantage05, 'bg-red')
+        +advantage('icon-06', advantage06, 'bg-brown')
+        +advantage('icon-07', advantage07, 'bg-green-dark')
+        +advantage('icon-08', advantage08, 'bg-blue')
+        +advantage('icon-09', advantage09, 'bg-yellow')
+        +advantage('icon-10', advantage10, 'bg-bordeaux')
+  div.container-100  
+    +card-application('запросить презентацию')(class="mb-30 lg:mb-0 lg2:mb-40")
+  div(class="swiper mainSwiper village-slider mb-15 xl:mb-20" id="photos")
+    div(class='swiper-wrapper')
+      div(class="swiper-slide ") 
+        div(class="village-slider__slide")
+      div(class="swiper-slide ") 
+        div(class="village-slider__slide")
+      div(class="swiper-slide ") 
+        div(class="village-slider__slide")
+      div(class="swiper-slide ") 
+        div(class="village-slider__slide")
+      div(class="swiper-slide ") 
+        div(class="village-slider__slide")
+      div(class="swiper-slide ") 
+        div(class="village-slider__slide")
+      div(class="swiper-slide ") 
+        div(class="village-slider__slide")
+      div(class="swiper-slide ") 
+        div(class="village-slider__slide")
+      div(class="swiper-slide ") 
+        div(class="village-slider__slide")
+    .swiper-prev
+    .swiper-next  
+    div(class="swiper-pagination")
+  div.container-195
+    div(class=" flex flex-wrap flex-col gap-2.5 xl:gap-3.75 lg:justify-center lg:flex-row xl:justify-center mb-30 xl:mb-40")
+        
+        div(class="card flex flex-col gap-12 justify-between")
+          h3(class=" text-gray text-5.25-5xl") таунхаусы и дома с землёй по цене квартиры
+          +number('87', 'за кв.м', 'тыс', 'руб')(class="justify-between")
+        div(class="card flex flex-col gap-12 justify-between")
+          h3(class=" text-gray text-5.25-5xl") в ипотеку *
+          +number('28.5', 'платеж ', 'тыс', 'руб')(class="justify-between")
+        div(class="card flex flex-col gap-12 justify-between")
+          h3(class=" text-gray text-5.25-5xl") эскроу<br class="lg2:hidden">-счета
+          +number('100', 'гарантия', '%')(class="justify-between")

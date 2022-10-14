@@ -1,0 +1,85 @@
+extend ../layouts/layouts/other.pug
+
+
+block content
+    include ../components/back-hks.pug
+    include ../components/number-mini.pug
+    include ../components/floors-slider-hks.pug
+    include ../components/liters-hks.pug
+
+    section(class="")
+      .container.grow(class="flex flex-col lg2:px-0")
+        div(class="home-card-hks ") 
+          div(class="bg-gray-light -mx-5 px-5 py-10 lg2:mx-0 lg2:p-10 lg2:pb-8 ")
+            div(class="relative lg2:-left-2 xl:-left-0")
+              +back-hks('gray')(class=" mb-7")
+            
+              div 
+                h2(class="text-yellow text-7xl mb-4 ") ДОМ <br> ред ЛАЙТ 125 
+                p(class="text-dark font-reformagrotesk text-4xl font-medium lg2:text-5xl mb-2.5") на участке / ул. пушкина, 4
+                div(class=" border rounded border-[#c0c0c0] px-1.5 text-center py-1 text-gray normal-case text-sm mb-7.5") кадастровый номер 47:14:1203001:814
+                  
+                div(class="grid mb-7.5 lg2:mb-10   grid-cols-3 lg:grid-cols-6  lg2:grid-cols-3 gap-y-5") 
+                  div 
+                    h3(class="text-green text-5.25-5xl") 125
+                    p(class=" text-dark text-base lowercase") гараж, м <sup>2</sup>
+
+                  div 
+                    h3(class="text-green text-5.25-5xl") 24
+                    p(class=" text-dark text-base lowercase") спальни
+
+                  div 
+                    h3(class="text-green text-5.25-5xl") 2
+                    p(class=" text-dark text-base lowercase") этажа
+
+                  div 
+                    h3(class="text-green text-5.25-5xl") 6.78
+                    p(class=" text-dark text-base lowercase") s участка, <br>сот
+
+                  div 
+                    h3(class="text-green text-5.25-5xl") 3
+                    p(class=" text-dark text-base lowercase") длина <br> участка, м
+
+                  div 
+                    h3(class="text-green text-5.25-5xl") 3
+                    p(class=" text-dark text-base lowercase") ширина <br> участка, м
+                p(class="text-dark font-reformagrotesk text-5.25-5xl tracking-1 font-medium") 11 222 595 руб
+                p(class=" text-gray text-base normal-case ") стоимость дома с участком
+
+                +liters-hks(class="mx-auto  ")
+          
+          div(class="swiper mainSwiper home-card-hks__slider  -mx-5 lg2:mx-0 " id="what")
+            div(class='swiper-wrapper')
+              div(class="swiper-slide home-card-hks__slide" ) 
+                
+                img(src=require("../img/images/card-about/fundament.jpg"), alt="fundament")
+            .swiper-prev
+            .swiper-next
+          
+      .container.px-0(class="block") 
+        div(class="font-reformagrotesk text-center flex flex-wrap divide-x " )
+          div.flex.w-full.divide-x
+            div(class="bg-gray p-2.75 w-full lg2:text-2xl")
+              a(href="#new") про ипотеку
+            div(class="bg-dark p-2.75 w-full lg2:text-2xl")
+              a(href="#20min") Комплектация таунхауса
+            div(class="bg-green p-2.75 w-full lg2:text-2xl hidden lg2:block")
+              a(href="#") забронировать таунхаус
+          div(class="bg-green p-2.75 w-full lg2:text-2xl lg2:hidden  border-t border-white border-solid")
+            a(href="#") забронировать таунхаус
+      .container 
+        div(class="bg-yellow -mx-5 py-15 lg2:-mx-10 lg2:py-20 ")
+          div(class="flex flex-col items-center gap-10") 
+            +floors-slider-hks
+            div(class="px-5 lg2:px-0 w-full lg2:w-[380px]") 
+              a(href="#" target="_blank" class="border border-white py-3.5 text-center block  normal-case text-title text-base  lg2:px-3.5") Скачать карточку дома 
+      .container
+        div(class=" py-5 lg2:py-30")
+          h2(class="text-5.25-5xl lg2:text-8xl mb-10 lg2:mb-15") другие проекты домов для этого участка
+          div(class=" flex flex-wrap gap-2.5 lg2:gap-5")
+            a.other-card(href="#")
+              img(src=require("../img/images/card-about/fundament.jpg"), alt="fundament")
+              div.other-card__text  МД КБ — 120 
+            a.other-card(href="#")
+              img(src=require("../img/images/card-about/fundament.jpg"), alt="fundament")
+              div.other-card__text  МД КБ — 120 

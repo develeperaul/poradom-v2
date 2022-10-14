@@ -1,0 +1,22 @@
+.popup {
+  &-child,
+  &-book {
+    &__icon {
+      @include screen-lg2 {
+        width: 450px;
+      }
+    }
+  }
+  &-call,
+  &-thank {
+    &__icon {
+      @include screen-lg2 {
+        width: 350px;
+      }
+
+      @include screen-xl {
+        width: 630px;
+      }
+    }
+  }
+}

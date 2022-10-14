@@ -9,7 +9,6 @@ const TerserWebpackPlugin = require("terser-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const { extendDefaultPlugins } = require("svgo");
 
-
 const isDev = process.env.NODE_ENV === "development";
 const idProd = !isDev;
 
@@ -34,13 +33,13 @@ const PATHSPAGE = {
 const PAGES_DIR = PATHS.src;
 const PAGES = fs
   .readdirSync("./src/pages")
-  .filter((fileName) => fileName.endsWith(".html"));
+  .filter((fileName) => fileName.endsWith(".pug"));
 // const PAGES_DIR = `${PATHS.src}/pug/pages/`;
 // const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'));
 
 let p = {};
 PAGES.forEach((page) => {
-  const name = page.replace(".html", "");
+  const name = page.replace(" ", "");
   console.log({ [name]: `./js/pages/${name}.js` });
   p = { [name]: `./js/pages/${name}.js`, ...p };
 });
@@ -104,31 +103,38 @@ module.exports = {
     filename: `./js/${fileName("js")}`,
     path: path.resolve(__dirname, "dist"),
     publicPath: "",
-    assetModuleFilename: "src/assets/images/[name].[ext]",
+    assetModuleFilename: "src/assets/images/[name][ext]",
   },
   devServer: {
     historyApiFallback: true,
     open: true,
     compress: true,
     hot: true,
-    port: 3000,
+    port: 3100,
   },
   optimization: optimization(),
   plugins: [
-    new HTMLWebpackPlugin({
-      filename: "index.html",
-      template: path.resolve(__dirname, "src/index.html"),
-      minify: { collapseWhitespace: false },
-      chunks: ["main", "index"],
-    }),
-    // ...PAGES.map((page) => {
-    //   return new HTMLWebpackPlugin({
-    //     template: path.resolve(__dirname, `src/pages/${page}`),
-    //     filename: page,
-    //     minify: { collapseWhitespace: false },
-    //     chunks: ["main", page.replace(".html", "")],
-    //   });
+    // new HTMLWebpackPlugin({
+    //   filename: "index.pug",
+    //   template: path.resolve(__dirname, "src/index.pug"),
+    //   minify: { collapseWhitespace: false },
+    //   chunks: ["main", "index"],
     // }),
+    // new HTMLWebpackPlugin({
+    //   filename: "index.html",
+    //   template: path.resolve(__dirname, "src/index.pug"),
+    //   minify: { collapseWhitespace: false },
+    //   chunks: ["main", "index"],
+    // }),
+    ...PAGES.map((page) => {
+      console.log(page);
+      return new HTMLWebpackPlugin({
+        template: path.resolve(__dirname, `src/pages/${page}`),
+        filename: page.replace(".pug", ".html"),
+        minify: { collapseWhitespace: false },
+        chunks: ["main", page.replace(".pug", "")],
+      });
+    }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: `./css/${fileName("css")}`,
@@ -146,12 +152,20 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.html$/i,
-        loader: "html-loader",
-        options: {
-          minimize: false,
-        },
+        test: /\.pug$/,
+        use: [
+          {
+            loader: "pug-loader",
+          },
+        ],
       },
+      // {
+      //   test: /\.pug$/i,
+      //   loader: "html-loader",
+      //   options: {
+      //     minimize: false,
+      //   },
+      // },
       {
         test: /\.css$/i,
         use: [
@@ -174,16 +188,15 @@ module.exports = {
               publicPath: (resourcePath, context) => {
                 return path.relative(path.dirname(resourcePath), context) + "/";
               },
-              
             },
           },
           "css-loader",
-          
+
           {
             loader: "sass-loader",
             options: {
               implementation: require("sass"),
-            }
+            },
           },
           "postcss-loader",
         ],

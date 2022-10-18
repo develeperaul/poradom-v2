@@ -120,12 +120,12 @@ module.exports = {
     //   minify: { collapseWhitespace: false },
     //   chunks: ["main", "index"],
     // }),
-    // new HTMLWebpackPlugin({
-    //   filename: "index.html",
-    //   template: path.resolve(__dirname, "src/index.pug"),
-    //   minify: { collapseWhitespace: false },
-    //   chunks: ["main", "index"],
-    // }),
+    new HTMLWebpackPlugin({
+      filename: "index.html",
+      template: path.resolve(__dirname, "src/index.pug"),
+      minify: { collapseWhitespace: false },
+      chunks: ["main", "index"],
+    }),
     ...PAGES.map((page) => {
       console.log(page);
       return new HTMLWebpackPlugin({

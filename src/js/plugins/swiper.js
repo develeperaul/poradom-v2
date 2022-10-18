@@ -7,7 +7,7 @@ import Swiper, { Navigation, Pagination, Mousewheel, Autoplay } from "swiper";
 export const mainSwiper = new Swiper(".mainSwiper", {
   modules: [Navigation, Pagination, Autoplay],
   loop: true,
-  // autoplay: true,
+  autoplay: false,
   delay: 2000,
   pagination: {
     el: ".swiper-pagination",
@@ -63,6 +63,34 @@ new Swiper(".fractionSwiper", {
   },
 });
 
+new Swiper(".floorsSwiper-hks", {
+  modules: [Navigation, Pagination, Autoplay],
+  spaceBetween: 16,
+  loop: true,
+  direction: "vertical",
+  simulateTouch: false,
+  allowTouchMove: false,
+  pagination: {
+    el: ".swiper-pagination-floor-adaptive",
+    progressbarOpposite: true,
+    bulletActiveClass: "floor-active",
+    bulletClass: "floor",
+    type: "bullets",
+    clickable: true,
+    renderBullet: function (index, className) {
+      let spaceBottom = index !== 0 ? "mt-2.5 xl:mt-5" : "";
+      return (
+        '<span class="' +
+        " " +
+        className +
+        '"> <span>' +
+        (index + 1) +
+        "</span> </span>"
+      );
+    },
+  },
+});
+
 new Swiper(".fractionCardSwiper", {
   modules: [Navigation, Pagination, Autoplay],
   // loop: true,
@@ -100,7 +128,7 @@ new Swiper(".fractionCardSwiper", {
   },
 });
 
-new Swiper(".floorsSwiper-hks", {
+new Swiper(".floorsSwiper", {
   modules: [Navigation, Pagination, Autoplay],
   spaceBetween: 16,
   loop: true,
@@ -118,6 +146,7 @@ new Swiper(".floorsSwiper-hks", {
       let spaceBottom = index !== 0 ? "mt-2.5 xl:mt-5" : "";
       return (
         '<span class="' +
+        spaceBottom +
         " " +
         className +
         '"> <span>' +

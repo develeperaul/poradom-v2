@@ -23,19 +23,19 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   border-radius: 9999px;
-  background-color: transparent;
-  border: 1px solid theme("colors.white");
-  background-image: url("../img/icons/left-arrow-white.svg");
+  background-color: #fff;
+  border: 2px solid theme("colors.gray");
+  background-image: url("../img/icons/left-arrow.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
   cursor: pointer;
   @include screen-xl {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
   }
 }
 .swiper-next {
@@ -47,6 +47,43 @@
   left: 20px;
 }
 .swiper-pagination-floor {
+  padding-bottom: 50px;
+  width: 46px !important;
+  transform: rotate(180deg) !important;
+  position: absolute;
+  right: 0 !important;
+  top: 0 !important;
+  z-index: 10;
+  @include screen-lg {
+    padding-bottom: 0;
+  }
+  .floor {
+    @apply font-reformagrotesk text-2xl;
+    transform: rotate(180deg) !important;
+    cursor: pointer;
+    width: 42px;
+    height: 46px;
+    background-image: url(../img/icons/label-paginate.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding-bottom: 5px;
+    color: #bf6f0e;
+    display: inline-block;
+    & > span {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      height: 100%;
+    }
+    &-active {
+      background-image: url(../img/icons/label-paginate-active.svg);
+      color: #fff;
+    }
+  }
+}
+
+.swiper-pagination-floor-adaptive {
   display: flex;
   gap: 10px;
   width: 100% !important;
@@ -69,39 +106,39 @@
     top: 0 !important;
     z-index: 10;
   }
-}
-.floor {
-  @apply font-reformagrotesk text-2xl;
-  cursor: pointer;
-  width: 36px;
-  height: 40px;
-  background-image: url(../img/icons/label-paginate.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  padding-bottom: 5px;
-  color: #bf6f0e;
-  display: inline-block;
-  @include screen-lg2 {
-    transform: rotate(180deg) !important;
-    width: 56px;
-    height: 60px;
-  }
-  & > span {
-    @apply font-reformagrotesk font-medium;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 100%;
-    font-size: 24px;
-    line-height: 25px;
+  .floor {
+    @apply font-reformagrotesk text-2xl;
+    cursor: pointer;
+    width: 36px;
+    height: 40px;
+    background-image: url(../img/icons/label-paginate.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding-bottom: 5px;
+    color: #bf6f0e;
+    display: inline-block;
     @include screen-lg2 {
-      font-size: 36px;
-      line-height: 40px;
+      transform: rotate(180deg) !important;
+      width: 56px;
+      height: 60px;
     }
-  }
-  &-active {
-    background-image: url(../img/icons/label-paginate-active.svg);
-    color: #fff;
+    & > span {
+      @apply font-reformagrotesk font-medium;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      height: 100%;
+      font-size: 24px;
+      line-height: 25px;
+      @include screen-lg2 {
+        font-size: 36px;
+        line-height: 40px;
+      }
+    }
+    &-active {
+      background-image: url(../img/icons/label-paginate-active.svg);
+      color: #fff;
+    }
   }
 }

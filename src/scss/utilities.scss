@@ -261,6 +261,9 @@
     &_yellow {
       @apply bg-yellow;
     }
+    &_red {
+      @apply bg-red;
+    }
     &__static {
       min-height: 230px;
       position: relative;
@@ -272,6 +275,22 @@
   .vetical {
     writing-mode: vertical-lr;
     transform: rotate(180deg);
+  }
+
+  .letters {
+    & > *:not(:first-child) {
+      margin-left: -4px;
+    }
+  }
+  .letter {
+    &-text {
+      fill: #f7941d;
+      font: normal 24px theme("fontFamily.reformagrotesk");
+      &_big {
+        fill: #fff;
+        font: normal 48px theme("fontFamily.reformagrotesk");
+      }
+    }
   }
 
   .letters-hks {

@@ -1,0 +1,64 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+  body
+    include ./layouts/popups/request-call.pug
+    include ./layouts/popups/request-book.pug
+    include ./layouts/popups/child-form.pug
+    include ./layouts/popups/thank.pug
+    include ./layouts/popups/thank-green.pug
+    header 
+      include ./layouts/base-navigation.pug
+      
+      div(class="container px-0")
+        div(class="swiper mainSwiper header-slider")
+          div(class="swiper-wrapper")
+            div(class="swiper-slide ") 
+              div(class="header-slider__slide")
+                div.container.h-full
+                  div(class="flex flex-col justify-end h-full pb-28 xl:pb-22.75")
+                    h2(class=" lg:text-9.75xl xl:text-14.75xl") добро <br> пожаловать <br> в андерсен
+            div(class="swiper-slide ") 
+              div(class="header-slider__slide")
+                div.container.h-full
+                  div(class="flex flex-col justify-end h-full pb-28 xl:pb-22.75")
+                    h2(class=" lg:text-9.75xl xl:text-14.75xl") добро <br> пожаловать <br> в андерсен
+            div(class="swiper-slide ") 
+              div(class="header-slider__slide")
+                div.container.h-full
+                  div(class="flex flex-col justify-end h-full pb-28 xl:pb-22.75")
+                    h2(class=" lg:text-9.75xl xl:text-14.75xl") добро <br> пожаловать <br> в андерсен
+          div(class="swiper-pagination")
+        div(class="font-reformagrotesk text-center hidden lg2:flex divide-x ")
+          div(class="bg-dark lg2:p-1 xl:p-2.75 w-full text-sm lg2:text-2xl tracking-4.5")
+            a(href="#new") новый уникальный посёлок 
+          div(class="bg-dark lg2:p-1 xl:p-2.75 w-full text-sm lg2:text-2xl tracking-4.5")
+            a(href="#20min") 20 минут от уфы
+          div(class="bg-dark lg2:p-1 xl:p-2.75 w-full text-sm lg2:text-2xl tracking-4.5")
+            a(href="#") фотоальбом
+          div(class="bg-dark lg2:p-1 xl:p-2.75 w-full text-sm lg2:text-2xl tracking-4.5")
+            a(href="#why") почему andersen
+          div(class="bg-dark lg2:p-1 xl:p-2.75 w-full text-sm lg2:text-2xl tracking-4.5")
+            a(href="#development") о застройщике
+          div(class="bg-dark lg2:p-1 xl:p-2.75 w-full text-sm lg2:text-2xl tracking-4.5")
+            a(href="#history") история строительства
+          div(class="bg-dark lg2:p-1 xl:p-2.75 w-full text-sm lg2:text-2xl tracking-4.5")
+            a(href="#application") записаться на экскурсию
+          div(class="bg-yellow lg2:p-1 xl:p-2.75 w-full text-sm lg2:text-2xl tracking-4.5")
+            a(href="choice-element.html") выбрать таунхаус
+        
+
+       
+    main
+      include ./layouts/about-village.pug
+      include ./layouts/location.pug
+      include ./layouts/why.pug
+      include ./layouts/history.pug
+      include ./layouts/about-development.pug
+
+
+    include ./layouts/footer.pug

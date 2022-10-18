@@ -1,7 +1,7 @@
 mixin back(color="white",href='#')
   - var textColor = 'text-' + color
-  - var fillColor = 'fill-gray'
+  - var fillColor = 'fill-' + color
   a(class="flex items-center mb-9 gap-5 cursor-pointer " href=href)&attributes(attributes)
     svg(width='30' height='6' viewbox='0 0 30 6' fill='none' xmlns='http://www.w3.org/2000/svg')
-      path(d='M0 3L5 5.88675L5 0.113249L0 3ZM4.5 3.5L30 3.5L30 2.5L4.5 2.5L4.5 3.5Z'  class=" fill-gray"  )
-    span(data-back="plan_1-1" class=" text-base normal-case block underline"+ " " + textColor) Назад к выбору
+      path(d='M0 3L5 5.88675L5 0.113249L0 3ZM4.5 3.5L30 3.5L30 2.5L4.5 2.5L4.5 3.5Z'  class=fillColor  )
+    span(data-back="plan_1-1" class=" normal-case block underline"+ " " + textColor) Назад к выбору

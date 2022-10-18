@@ -20,102 +20,77 @@ section(id="20min" class="location")
         h3(class="hidden lg2:block text-center text-5.25-5xl text-dark vetical ") 54.756604, 55.745656
         div(class="travel-time__map shrink-0")
           img(src=require("./img/map.gif"), alt="" )
-       
-    div(class="lg2:flex justify-between mb-32 travel-time__path")
+  div(class="container-195")  
+    div(class="hidden gap-2.5 lg2:flex justify-between  mb-32 travel-time__path")
 
-      div(class="card card_yellow flex flex-col gap-12 justify-between ")
-        h3(class=" text-title text-5.25-5xl") от Монумента Дружбы 
-        +number('21', 'через дему', 'км')(class="justify-between text-white")
-      div(class="card card_yellow flex flex-col gap-12 justify-between ")
-        h3(class=" text-title text-5.25-5xl") От Затонского моста
-        +number('22', 'через затон', 'км')(class="justify-between text-white")
-      div(class="card card_yellow flex flex-col gap-12 justify-between ")
-        h3(class=" text-title text-5.25-5xl") От демы
-        +number('10', 'все рядом', 'км')(class="justify-between text-white")
-      //- div(class="lg:hidden lg2:block shrink-0 mb-12 xl:-ml-40")
-      //-   img(src=require("./img/images/travel-guide/20minuts.png"), alt="20minuts" width="758" height="717" class="travel-time__path-icon" )
-      //- div(class="hidden lg2:block")
-      //-   div(class="travel-time__path-maps swiper mr-0 convertSwiper cursor-pointer" )
-      //-     .swiper-wrapper
-      //-       .swiper-slide
-      //-         div(class="flex justify-between")
-      //-           h4(class=" text-5.25-5xl text-gray") от Монумента Дружбы <br> через Дёмское шоссе
-      //-           +number(21,null,'км')
-      //-       .swiper-slide
-      //-         div(class="flex justify-between")
-      //-           h4(class=" text-5.25-5xl text-gray") От Затонского моста
-      //-           +number(22,null,'км')
-      //-       .swiper-slide
-      //-         div(class="flex justify-between")
-      //-           h4(class=" text-5.25-5xl text-gray") от дЁмы
-      //-           +number(10,null,'км')
-      //-       .swiper-slide
-      //-         div(class="flex justify-between")
-      //-           h4(class=" text-5.25-5xl text-gray") до школы
-      //-           +number(8,null,'км')
-      //-       .swiper-slide
-      //-         div(class="flex justify-between")
-      //-           h4(class=" text-5.25-5xl text-gray") до нового дома
-      //-           +number(1,null,'км')
+      div(class="card  flex flex-col gap-12 justify-between ")
+        h3(class=" text-gray text-5.25-5xl") от Монумента Дружбы 
+        +number('21', 'через дему', 'км')(class="justify-between")
+      div(class="card  flex flex-col gap-12 justify-between ")
+        h3(class=" text-gray text-5.25-5xl") От Затонского моста
+        +number('22', 'через затон', 'км')(class="justify-between ")
+      div(class="card  flex flex-col gap-12 justify-between ")
+        h3(class=" text-gray text-5.25-5xl") От демы
+        +number('10', 'все рядом', 'км')(class="justify-between ")
 
-      div(class="swiper fraction fractionSwiper lg:hidden mb-20")
-        .swiper-wrapper.mb-5
-          div(class="card card__static swiper-slide")
-            h3(class=" text-gray text-5.25-5xl") От Затонского моста
-            div(class="absolute right-6 bottom-0")
-              +number(21,null,'км')
-
-          div(class="card card__static swiper-slide")
-            h3(class=" text-gray text-5.25-5xl") от дЁмы
-            div(class="absolute right-6 bottom-0")
-              +number(10,null,'мин')
-          div(class="card card__static swiper-slide")
-            h3(class=" text-gray text-5.25-5xl") до школы
-            div(class="absolute right-6 bottom-0")
-              +number(8,null,'км')
-          div(class="card card__static swiper-slide") 
-            h3(class=" text-gray text-5.25-5xl") от миловки
-            div(class="absolute right-6 bottom-0")
-              +number(12,null,'км')
-          div(class="card card__static swiper-slide")
-            h3(class=" text-gray text-5.25-5xl") до нового <br> дома
-            div(class="absolute right-6 bottom-0")
-              +number(1,null,'км')
-          div(class="card card__static swiper-slide ")
-            h3(class=" text-gray text-5.25-5xl") от Монумента <br> Дружбы через <br> Дёмское <br> шоссе
-            div(class="absolute right-6 bottom-0")
-              +number(21,null,'км')
-        div(class="fraction__content")
-          div.fraction__content-navigation
-            .swiper-prev
-            .swiper-next 
-          div(class="swiper-fraction ")
-
-      div(class="hidden lg:flex flex-wrap lg:gap-2.5 lg2:hidden")
-        div(class="card card__static")
+    div(class="swiper fraction fractionSwiper lg:hidden mb-20")
+      .swiper-wrapper.mb-5
+        div(class="card card__static swiper-slide")
           h3(class=" text-gray text-5.25-5xl") От Затонского моста
           div(class="absolute right-6 bottom-0")
-            +number(21,null,'км')
-        div(class="card card__static")
+            +number(22,null,'км')
+
+        div(class="card card__static swiper-slide")
           h3(class=" text-gray text-5.25-5xl") от дЁмы
           div(class="absolute right-6 bottom-0")
             +number(10,null,'мин')
-        div(class="card card__static")
+        div(class="card card__static swiper-slide")
           h3(class=" text-gray text-5.25-5xl") до школы
           div(class="absolute right-6 bottom-0")
             +number(8,null,'км')
-        div(class="card card__static") 
+        div(class="card card__static swiper-slide") 
           h3(class=" text-gray text-5.25-5xl") от миловки
           div(class="absolute right-6 bottom-0")
             +number(12,null,'км')
-        div(class="card card__static")
+        div(class="card card__static swiper-slide")
           h3(class=" text-gray text-5.25-5xl") до нового <br> дома
           div(class="absolute right-6 bottom-0")
             +number(1,null,'км')
-        div(class="card card__static ")
+        div(class="card card__static swiper-slide ")
           h3(class=" text-gray text-5.25-5xl") от Монумента <br> Дружбы через <br> Дёмское <br> шоссе
           div(class="absolute right-6 bottom-0")
             +number(21,null,'км')
+      div(class="fraction__content")
+        div.fraction__content-navigation
+          .swiper-prev
+          .swiper-next 
+        div(class="swiper-fraction ")
+
+    div(class="hidden lg:flex flex-wrap lg:gap-2.5  lg:mb-30 lg2:hidden")
+      div(class="card card__static")
+        h3(class=" text-gray text-5.25-5xl") От Затонского моста
+        div(class="absolute right-6 bottom-0")
+          +number(22,null,'км')
+      div(class="card card__static")
+        h3(class=" text-gray text-5.25-5xl") от дЁмы
+        div(class="absolute right-6 bottom-0")
+          +number(10,null,'мин')
+      div(class="card card__static")
+        h3(class=" text-gray text-5.25-5xl") до школы
+        div(class="absolute right-6 bottom-0")
+          +number(8,null,'км')
+      div(class="card card__static") 
+        h3(class=" text-gray text-5.25-5xl") от миловки
+        div(class="absolute right-6 bottom-0")
+          +number(12,null,'км')
+      div(class="card card__static")
+        h3(class=" text-gray text-5.25-5xl") до нового <br> дома
+        div(class="absolute right-6 bottom-0")
+          +number(1,null,'км')
+      div(class="card card__static ")
+        h3(class=" text-gray text-5.25-5xl") от Монумента <br> Дружбы через <br> Дёмское <br> шоссе
+        div(class="absolute right-6 bottom-0")
+          +number(21,null,'км')
   .container-100
     +card-application('заказать звонок')(class="mb-30 xl:mb-40")
   div(class="container px-0")

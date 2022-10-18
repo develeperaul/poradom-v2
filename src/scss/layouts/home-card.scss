@@ -1,4 +1,4 @@
-.home-card-hks {
+.home-card {
   @include screen-lg2 {
     display: grid;
     grid-template-columns: 350px 1fr;
@@ -6,6 +6,17 @@
   @include screen-xl {
     display: grid;
     grid-template-columns: 470px 1fr;
+  }
+}
+
+.home-card-hks {
+  @include screen-lg2 {
+    display: grid;
+    grid-template-columns: 350px minmax(0, 1290px);
+  }
+  @include screen-xl {
+    display: grid;
+    grid-template-columns: 470px minmax(0, 1450px);
   }
   &__slider {
     min-height: 210px;

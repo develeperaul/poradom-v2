@@ -44,7 +44,11 @@ block content
           //- div(class="bg-yellow -mx-5 px-5 py-15 lg:pt-20 xl:mx-0 xl:pl-32 xl:pt-30 xl:pr-10 xl:pb-12")
           div(class="bg-gray-light py-10 px-5 lg2:px-0 lg2:py-0 w-full")
             div(class="lg2:hidden") 
-              +back('gray')(class="lg2:hidden")
+              div(class="flex justify-between items-center mb-9") 
+                +back('gray')(class="lg2:hidden mb-0")
+                a(onclick="javascript:history.back();return false;" class="") 
+                  svg(width='24' height='24' viewbox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M20 20L4 4M20 4L4 20' stroke='#98999D' stroke-width='2' stroke-linecap='round')
               div(class="flex gap-2.5 mb-7.5 lg2:mb-0")
                 button(class="button button__round button__blue button_none-minw   w-full" data-select="what") Из чего построен
                 button(class="button button__round button_none-bg button_none-minw  w-full" data-select="how") Как отделан
@@ -57,10 +61,14 @@ block content
                       img(src=require("../img/images/card-about/fundament.jpg"), alt="fundament")
                       .swiper-prev
                       .swiper-next
-                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:py-20 lg2:px-10 xl:px-10 lg2:relative")
-                      div(class="hidden lg2:flex gap-2.5 mb-7.5 lg2:mb-0")
-                        button(class="button button__round button__blue button_none-minw   w-full" data-select="what") Из чего построен
-                        button(class="button button__round button_none-bg button_none-minw  w-full" data-select="how") Как отделан
+                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:pb-20 xl:pt-10 lg2:px-10 xl:px-10 lg2:relative")
+                      div(class="hidden lg2:block") 
+                        a(onclick="javascript:history.back();return false;" class=" mb-4 block") 
+                          svg(class="mr-0 ml-auto" width='24' height='24' viewbox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                            path(d='M20 20L4 4M20 4L4 20' stroke='#98999D' stroke-width='2' stroke-linecap='round')
+                        div(class="flex gap-2.5 mb-7.5 lg2:mb-0")
+                          button(class="button button__round button__blue button_none-minw   w-full" data-select="what") Из чего построен
+                          button(class="button button__round button_none-bg button_none-minw  w-full" data-select="how") Как отделан
                       div(class="lg2:absolute lg2:top-1/2 lg2:pr-10")
                         h3(class="text-5.25-5xl text-title mb-5 xl:mb-10") Фундамент 
                         p(class="text-gray normal-case") Свайный буронабивной железобетонный, с монолитным железобетонным ростверком
@@ -70,7 +78,7 @@ block content
                       img(src=require("../img/images/card-about/perekritie.jpg"), alt="perekritie")
                       .swiper-prev
                       .swiper-next
-                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:py-20 lg2:px-6 xl:px-10 lg2:relative")
+                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:pb-20 xl:pt-10 lg2:px-6 xl:px-10 lg2:relative")
                       div(class="hidden lg2:flex gap-2.5 mb-7.5 lg2:mb-0")
                         button(class="button button__round button__blue button_none-minw   w-full" data-select="what") Из чего построен
                         button(class="button button__round button_none-bg button_none-minw  w-full" data-select="how") Как отделан
@@ -83,7 +91,7 @@ block content
                       img(src=require("../img/images/card-about/steni.jpg"), alt="steni")
                       .swiper-prev
                       .swiper-next
-                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:py-20 lg2:px-6 xl:px-10 lg2:relative")
+                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:pb-20 xl:pt-10 lg2:px-6 xl:px-10 lg2:relative")
                       div(class="hidden lg2:flex gap-2.5 mb-7.5 lg2:mb-0")
                         button(class="button button__round button__blue button_none-minw   w-full" data-select="what") Из чего построен
                         button(class="button button__round button_none-bg button_none-minw  w-full" data-select="how") Как отделан
@@ -96,7 +104,7 @@ block content
                       img(src=require("../img/images/card-about/peregodki.jpg"), alt="peregodki")
                       .swiper-prev
                       .swiper-next
-                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:py-20 lg2:px-6 xl:px-10 lg2:relative")
+                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:pb-20 xl:pt-10 lg2:px-6 xl:px-10 lg2:relative")
                       div(class="hidden lg2:flex gap-2.5 mb-7.5 lg2:mb-0")
                         button(class="button button__round button__blue button_none-minw   w-full" data-select="what") Из чего построен
                         button(class="button button__round button_none-bg button_none-minw  w-full" data-select="how") Как отделан
@@ -109,7 +117,7 @@ block content
                       img(src=require("../img/images/card-about/lestnica.jpg"), alt="lestnica")
                       .swiper-prev
                       .swiper-next
-                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:py-20 lg2:px-6 xl:px-10 lg2:relative")
+                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:pb-20 xl:pt-10 lg2:px-6 xl:px-10 lg2:relative")
                       div(class="hidden lg2:flex gap-2.5 mb-7.5 lg2:mb-0")
                         button(class="button button__round button__blue button_none-minw   w-full" data-select="what") Из чего построен
                         button(class="button button__round button_none-bg button_none-minw  w-full" data-select="how") Как отделан
@@ -122,7 +130,7 @@ block content
                       img(src=require("../img/images/card-about/fasad.jpg"), alt="fasad")
                       .swiper-prev
                       .swiper-next
-                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:py-20 lg2:px-6 xl:px-10 lg2:relative")
+                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:pb-20 xl:pt-10 lg2:px-6 xl:px-10 lg2:relative")
                       div(class="hidden lg2:flex gap-2.5 mb-7.5 lg2:mb-0")
                         button(class="button button__round button__blue button_none-minw   w-full" data-select="what") Из чего построен
                         button(class="button button__round button_none-bg button_none-minw  w-full" data-select="how") Как отделан
@@ -135,7 +143,7 @@ block content
                       img(src=require("../img/images/card-about/krovla.jpg"), alt="krovla")
                       .swiper-prev
                       .swiper-next
-                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:py-20 lg2:px-6 xl:px-10 lg2:relative")
+                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:pb-20 xl:pt-10 lg2:px-6 xl:px-10 lg2:relative")
                       div(class="hidden lg2:flex gap-2.5 mb-7.5 lg2:mb-0")
                         button(class="button button__round button__blue button_none-minw   w-full" data-select="what") Из чего построен
                         button(class="button button__round button_none-bg button_none-minw  w-full" data-select="how") Как отделан
@@ -148,7 +156,7 @@ block content
                       img(src=require("../img/images/card-about/okna.jpg"), alt="okna")
                       .swiper-prev
                       .swiper-next
-                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:py-20 lg2:px-6 xl:px-10 lg2:relative")
+                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:pb-20 xl:pt-10 lg2:px-6 xl:px-10 lg2:relative")
                       div(class="hidden lg2:flex gap-2.5 mb-7.5 lg2:mb-0")
                         button(class="button button__round button__blue button_none-minw   w-full" data-select="what") Из чего построен
                         button(class="button button__round button_none-bg button_none-minw  w-full" data-select="how") Как отделан
@@ -167,7 +175,7 @@ block content
                       img(src=require("../img/images/card-about/poli.jpg"), alt="poli")
                       .swiper-prev
                       .swiper-next
-                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:py-20 lg2:px-6 xl:px-10 lg2:relative")
+                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:pb-20 xl:pt-10 lg2:px-6 xl:px-10 lg2:relative")
                       div(class="hidden lg2:flex gap-2.5 mb-7.5 lg2:mb-0")
                         button(class="button button__round button__blue button_none-minw   w-full" data-select="what") Из чего построен
                         button(class="button button__round button_none-bg button_none-minw  w-full" data-select="how") Как отделан
@@ -180,7 +188,7 @@ block content
                       img(src=require("../img/images/card-about/otkoci.jpg"), alt="otkoci")
                       .swiper-prev
                       .swiper-next
-                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:py-20 lg2:px-6 xl:px-10 lg2:relative")
+                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:pb-20 xl:pt-10 lg2:px-6 xl:px-10 lg2:relative")
                       div(class="hidden lg2:flex gap-2.5 mb-7.5 lg2:mb-0")
                         button(class="button button__round button__blue button_none-minw   w-full" data-select="what") Из чего построен
                         button(class="button button__round button_none-bg button_none-minw  w-full" data-select="how") Как отделан
@@ -193,7 +201,7 @@ block content
                       img(src=require("../img/images/card-about/potolki.jpg"), alt="potolki")
                       .swiper-prev
                       .swiper-next
-                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:py-20 lg2:px-6 xl:px-10 lg2:relative")
+                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:pb-20 xl:pt-10 lg2:px-6 xl:px-10 lg2:relative")
                       div(class="hidden lg2:flex gap-2.5 mb-7.5 lg2:mb-0")
                         button(class="button button__round button__blue button_none-minw   w-full" data-select="what") Из чего построен
                         button(class="button button__round button_none-bg button_none-minw  w-full" data-select="how") Как отделан
@@ -206,7 +214,7 @@ block content
                       img(src=require("../img/images/card-about/boiler.jpg"), alt="boilder")
                       .swiper-prev
                       .swiper-next
-                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:py-20 lg2:px-6 xl:px-10 lg2:relative")
+                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:pb-20 xl:pt-10 lg2:px-6 xl:px-10 lg2:relative")
                       div(class="hidden lg2:flex gap-2.5 mb-7.5 lg2:mb-0")
                         button(class="button button__round button__blue button_none-minw   w-full" data-select="what") Из чего построен
                         button(class="button button__round button_none-bg button_none-minw  w-full" data-select="how") Как отделан
@@ -219,7 +227,7 @@ block content
                       img(src=require("../img/images/card-about/electro.jpg"), alt="electro")
                       .swiper-prev
                       .swiper-next
-                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:py-20 lg2:px-6 xl:px-10 lg2:relative")
+                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:pb-20 xl:pt-10 lg2:px-6 xl:px-10 lg2:relative")
                       div(class="hidden lg2:flex gap-2.5 mb-7.5 lg2:mb-0")
                         button(class="button button__round button__blue button_none-minw   w-full" data-select="what") Из чего построен
                         button(class="button button__round button_none-bg button_none-minw  w-full" data-select="how") Как отделан
@@ -232,7 +240,7 @@ block content
                       img(src=require("../img/images/card-about/kanalizacia.jpg"), alt="kanalizacia")
                       .swiper-prev
                       .swiper-next
-                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:py-20 lg2:px-6 xl:px-10 lg2:relative")
+                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:pb-20 xl:pt-10 lg2:px-6 xl:px-10 lg2:relative")
                       div(class="hidden lg2:flex gap-2.5 mb-7.5 lg2:mb-0")
                         button(class="button button__round button__blue button_none-minw   w-full" data-select="what") Из чего построен
                         button(class="button button__round button_none-bg button_none-minw  w-full" data-select="how") Как отделан
@@ -245,7 +253,7 @@ block content
                       img(src=require("../img/images/card-about/otoplenie.jpg"), alt="otoplenie")
                       .swiper-prev
                       .swiper-next
-                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:py-20 lg2:px-6 xl:px-10 lg2:relative")
+                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:pb-20 xl:pt-10 lg2:px-6 xl:px-10 lg2:relative")
                       div(class="hidden lg2:flex gap-2.5 mb-7.5 lg2:mb-0")
                         button(class="button button__round button__blue button_none-minw   w-full" data-select="what") Из чего построен
                         button(class="button button__round button_none-bg button_none-minw  w-full" data-select="how") Как отделан
@@ -258,7 +266,7 @@ block content
                       img(src=require("../img/images/card-about/vodosnab.jpg"), alt="vodosnab")
                       .swiper-prev
                       .swiper-next
-                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:py-20 lg2:px-6 xl:px-10 lg2:relative")
+                    div(class="home-card-about__slide-right px-5 lg2:py-10 xl:pb-20 xl:pt-10 lg2:px-6 xl:px-10 lg2:relative")
                       div(class="hidden lg2:flex gap-2.5 mb-7.5 lg2:mb-0")
                         button(class="button button__round button__blue button_none-minw   w-full" data-select="what") Из чего построен
                         button(class="button button__round button_none-bg button_none-minw  w-full" data-select="how") Как отделан
@@ -285,15 +293,12 @@ block content
         //-     p(class="text-gray normal-case") Улучшенная штукатурка цементными
         //-       | (в санузлах, бойлерной, гараже, кладовой) и гипсовыми (в остальных помещениях) смесями. Местами применение обшивки и коробов из ГКЛ   
                 
-      .container.px-0(class="block") 
-        div(class="font-reformagrotesk text-center flex flex-wrap divide-x " )
-          div.flex.w-full.divide-x
-            div(class="bg-gray p-2.75 w-full lg2:text-2xl")
+      .container.px-0(class=" fixed bottom-0 z-10 lg2:bottom-auto lg2:static") 
+        div(class="font-reformagrotesk text-center  flex divide-x")
+            div(class="bg-dark p-2.75 w-full lg2:text-2xl ")
               a(href="#new") про ипотеку
-            div(class="bg-dark p-2.75 w-full lg2:text-2xl")
+            div(class="bg-gray p-2.75 w-full lg2:text-2xl ")
               a(href="#20min") Комплектация таунхауса
-            div(class="bg-green p-2.75 w-full lg2:text-2xl hidden lg2:block")
+            div(class="bg-green p-2.75 w-full lg2:text-2xl")
               a(href="#") забронировать таунхаус
-          div(class="bg-green p-2.75 w-full lg2:text-2xl lg2:hidden  border-t border-white border-solid")
-            a(href="#") забронировать таунхаус
     

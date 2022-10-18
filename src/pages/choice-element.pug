@@ -1,0 +1,356 @@
+extend ../layouts/layouts/other.pug
+
+block content
+  include ../components/flag.pug
+  
+  section(class="flex flex-col grow")
+    include ../components/buttons.pug
+
+    
+    div(class="container px-0 relative flex flex-col grow" data-toggle_els)
+      div(class="toggle-element toggle-element__active grow"
+          data-toggle_el
+          data-open-wrapper="first"
+          id="plan_0")
+        div.plan
+          .plan__map
+            
+            h2(class=" absolute top-25 lg:top-20 lg2:top-25 left-5") выберите Очередь
+            img(src=require("../img/images/villages.png"), alt="villages")
+            include ../components/plan-default.pug
+
+            div(class="plan__popup absolute bg-white " style="display:none")
+              div(class="plan__popup-wrapper relative p-5 flex flex-col gap-5") 
+                h3(class="text-4xl text-title") выберите дом мечты
+                  a(href="poradom.ru" class="text-blue underline")  на poradom.ru
+                a(href='poradom.ru' class="button button_yellow") Выбрать дом
+      div(class="toggle-element grow"
+          data-toggle_el
+          id="plan_1")
+        div.plan
+          .plan__map.plan-liters
+            h2(class=" absolute top-25 lg:top-20 lg2:top-25 left-5") выберите литер
+            img(src=require("../img/images/letter.png"), alt="villages")
+            include ../components/plan-1.pug
+      div(class="toggle-element    h-full bg-purple  pt-10 grow"
+            data-toggle_el
+            id="plan_1-1")
+        .px-5
+          div(class="flex items-center mb-9 gap-5 cursor-pointer ")
+            <svg width="30" height="6" viewBox="0 0 30 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 3L5 5.88675L5 0.113249L0 3ZM4.5 3.5L30 3.5L30 2.5L4.5 2.5L4.5 3.5Z" fill="white"/>
+            </svg>
+            a(data-back="plan_1-1" class=" block underline ") Назад к выбору
+          div(class="lg2:flex lg2:justify-between lg2:mr-72 mb-7.5  lg2:mb-14")
+            h2 выберите таунхаус
+            h2(class="text-gray hidden lg2:block") Литер 36 - 37
+        div.plan
+          .plan__map.plan-liters-home
+            img(src=require("../img/images/36-37.jpg"), alt="homes")
+            svg(  viewBox="-30 -70 2500 500" fill="none" preserveAspectRatio="xMinYMin slice"
+              class=" absolute top-0"
+            ) 
+
+              path(data-status='free' data-location="www.google.com" stroke='#4A8D45' stroke-width='3' fill-opacity='0.36' d="M0.5 108V265.5L102.5 280V286.5H131.5V301L217.5 307.5V238.5L240 157.5L202 156V75.5L184.5 21V10H172.5L168 14V17.5L104 12.5L36 8.5V0.5H22L19 4V15.5L0.5 108Z"
+                class="fill-green"
+              )
+              path(data-status='free' data-location="www.google.com" stroke='#4A8D45' stroke-width='3' fill-opacity='0.36' d="M293 160L241 158L218 238V307.5L300 310L297.5 313.5L352 315.5L355 313.5L453 315.5V194H448.5V186.5L396 115L466.5 117.5L415.5 91.5L378.5 105.5V84H367L360 91.5V112.5L325.5 125L293 160Z"
+                class="fill-green"
+              )
+              path(data-status='free' data-location="www.google.com" stroke='#4A8D45' stroke-width='3' fill-opacity='0.36' d="M632.5 129L396 115L448.5 186.5V194H453.5V316L536 321L536.5 318L588.5 321V326.5H591.5L595 321L680 326.5V256.5L700 177L648 174V145.5L661.5 147.5V139.5L632.5 129Z"
+                class="fill-green"
+              )
+              path(data-status='free' data-location="www.google.com" stroke='#4A8D45' stroke-width='3' fill-opacity='0.36' d="M742 178.5L700.5 177L680 256.5V326.5L756 328L754 335.5H821L823.5 330.5L908.5 333.5V205V198L911 192.5H904V155L908.5 127L766.5 119.5L742 178.5Z"
+                class="fill-green"
+              )
+
+              path(data-status='free' data-location="www.google.com" stroke='#4A8D45' stroke-width='3' fill-opacity='0.36' d="M921.5 61L909 127L904 155V192H911L908.5 198V333.5L1006 331.5L1002.5 338.5L1065.5 339.5L1105.5 277V120L1087.5 56.5H1076L1070.5 63L938 54.5V47H925.5L921.5 51V61Z"
+                class="fill-green"
+              )
+
+              path(data-status='free' data-location="www.google.com" stroke='#4A8D45' stroke-width='3' fill-opacity='0.36' d="M1335.5 214.5V343.5V349H1378.5L1383.5 341.5H1402.5V346.5L1484 350.5V216L1494.5 146.5L1350.5 138L1323 206.5V214.5H1335.5Z"
+                class="fill-green"
+              )
+              path(data-status='free' data-location="www.google.com" stroke='#4A8D45' stroke-width='3' fill-opacity='0.36' d="M1563 150.5L1495 146.5L1483.5 216L1484 350.5L1592.5 353.5L1590 359.5L1631.5 361L1634 358L1716 362.5V293L1738.5 213L1688 211.5V192L1701 180.5V174.5L1631 139V126.5H1618.5L1615 129H1610L1563 150.5Z"  
+                class="fill-green"
+              )
+
+              path(data-status='free' data-location="www.google.com" stroke='#4A8D45' stroke-width='3' fill-opacity='0.36' d="M1793.5 215.5L1739 213L1716 293V362.5L1785.5 363.5L1784.5 365.5L1802.5 366.5L1866 368V374L1945.5 375.5V240L1963.5 171.5L1814 162L1793.5 215.5Z"
+                class="fill-green"
+              )
+              path(data-status='free' data-location="www.google.com" stroke='#4A8D45' stroke-width='3' fill-opacity='0.36' d="M2026.5 174.5L1963.5 171.5L1945 240V375.5L2048.5 378V372H2064.5V384L2105.5 385L2118 372L2207 375L2210 309L2197 308L2195.5 230.5L2152 229V219.5L2166 205.5V199L2095 163V151H2083L2079.5 154H2073.5L2026.5 174.5Z"
+                class="fill-green"
+              )
+              path(data-status='free' data-location="www.google.com" stroke='#4A8D45' stroke-width='3' fill-opacity='0.36' d="M2195.5 199.5V230.5L2197.5 308L2210.5 309.5L2206.5 376L2300.5 378L2294 386.5L2342.5 388.5L2346.5 384H2359L2398 332.5L2400 167.5L2381.5 112.5V103H2368L2363 109L2233 100V92H2219.5L2214 98V107.5L2195.5 199.5Z"
+                class="fill-green"
+              )
+            
+
+      div(class="toggle-element   h-full bg-purple  pt-10 grow"
+            data-toggle_el
+            id="plan_1-2")
+        .px-5
+          div(class="flex items-center mb-9 gap-5 cursor-pointer ")
+            <svg width="30" height="6" viewBox="0 0 30 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 3L5 5.88675L5 0.113249L0 3ZM4.5 3.5L30 3.5L30 2.5L4.5 2.5L4.5 3.5Z" fill="white"/>
+            </svg>
+            a(data-back="plan_1-2" class=" block underline ") Назад к выбору
+          div(class="lg2:flex lg2:justify-between lg2:mr-72 mb-7.5  lg2:mb-14")
+            h2 выберите таунхаус
+            h2(class="text-gray hidden lg2:block") Литер 38
+        div.plan
+          .plan__map.plan-liters-home 
+            img(src=require("../img/images/38.jpg"), alt="homes")
+            svg(  viewBox="-30 -120 2500 500" fill="none" preserveAspectRatio="xMinYMin slice"
+              class=" absolute top-0"
+            ) 
+              path(d='M2210.5 93V137.5L2277 229.5V236.5H2272.5V289.5L2280.5 294L2446.5 281V119.5L2413.5 22V12L2406.5 6.5H2392.5V16.5L2262.5 29L2256.5 23.5H2240.5V33.5L2210.5 93Z' fill='#D9D9D9' fill-opacity='0.5' stroke='black')
+              path(d='M2146.5 80.5L1910 104.5L1980.5 138.5V147L2002.5 180.5H2009.5V285.5L2031 304L2169 283L2191 293.5L2272.5 289.5V236H2277V229.5L2211 137.5L2185.5 139L2146.5 80.5Z' fill='#D9D9D9' fill-opacity='0.5' stroke='black')
+              path(d='M1718 126.5L1654.5 131.5L1663 144V155.5L1746.5 208V290L1828.5 284.5L1844.5 295.5L2009 285.5V180.5H2002.5L1980.5 147V138.5L1909.5 104.5L1940.5 101.5L1854.5 70.5L1847.5 65.5L1836 67.5V74L1752 121.5V128.5L1768.5 138.5V158L1718 126.5Z' fill='#D9D9D9' fill-opacity='0.5' stroke='black')
+              path(d='M1616.5 75L1471.5 89L1482.5 119.5V137.5H1474L1475.5 150H1481L1482 288L1496 298L1632 281.5L1663 298L1746.5 290V208L1663 156V145L1616.5 75Z' fill='#D9D9D9' fill-opacity='0.5' stroke='black')
+              path(d='M1196 136L1110 144.5L1225 216V303L1310.5 297L1316.5 299.5L1480.5 287V150.5H1475L1473.5 136.5H1481.5V120.5L1450 25V12L1441.5 6L1429 8V17.5L1331 28V9.5L1318.5 1L1309 2V30.5H1297V28L1289.5 24.5H1277V34.5L1245.5 93.5V166.5L1196 136Z' fill='#D9D9D9' fill-opacity='0.5' stroke='black')
+              path(d='M930 55L877 87.5L967 78.5L934 160H929V290.5L1088.5 280L1142 310.5L1224 304V216.5L1108.5 144.5V139L1047 101.5L1004.5 78V53L993.5 45.5H980.5V72.5L930 55Z' fill='#D9D9D9' fill-opacity='0.5' stroke='black')
+              path(d='M658.5 140.5L581 148.5L689.5 222V305.5L771.5 299L780.5 301.5L928 291V159H933.5L966 79L926.5 83L727 105L680 118V123.5H695V161L658.5 140.5Z' fill='#D9D9D9' fill-opacity='0.5' stroke='black')
+              path(d='M427.5 90.5L379 97L386.5 121V127.5H380V133.5L386.5 139.5V284.5L410 298.5L552 282.5L604.5 313L689.5 305.5V222L579.5 148H576.5L532 80L450 88.5V66L439 58H427.5V90.5Z' fill='#D9D9D9' fill-opacity='0.5' stroke='black')
+              path(d='M96.5 153.5L0.5 163.5V168.5L6 171V236L127 303L214.5 293L222 297L272 290.5L277 293H280L386 284V139L379.5 133.5V127H386V121L355.5 23V13.5L346.5 8.5L334.5 10V18L230 29V10L217.5 2.5L208.5 3.5V31.5H203V30L194.5 23.5L182 25.5V36.5L150.5 94.5L149.5 158.5L96.5 153.5Z' fill='#D9D9D9' fill-opacity='0.5' stroke='black')
+
+            
+            p(class="absolute bottom-2.5 right-10 normal-case hidden lg2:block") * Изображения являются приблизительными
+            //- path(data-status='free' data-location="www.google.com" stroke='#4A8D45' stroke-width='3' fill-opacity='0.36'  d="M2062.5 88L2089.5 86.5V93.5L2134 89.5L2177 193.5V201.5H2183.5L2186.5 316.5L2431 299.5L2429.5 180H2448V174L2388 26L2349 29V10.5L2335.5 1L2319.5 4L2321 31L2165.5 43L2164 33.5L2155 26L2139.5 28.5V46H2118L2062.5 81.5V88Z"
+            //-   class="fill-green"
+            //- )  
+      div(class="toggle-element   h-full bg-purple  pt-10 grow"
+            data-toggle_el
+            id="plan_1-3")
+        .px-5
+          div(class="flex items-center mb-9 gap-5 cursor-pointer ")
+            <svg width="30" height="6" viewBox="0 0 30 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 3L5 5.88675L5 0.113249L0 3ZM4.5 3.5L30 3.5L30 2.5L4.5 2.5L4.5 3.5Z" fill="white"/>
+            </svg>
+            a(data-back="plan_1-3" class=" block underline ") Назад к выбору
+          div(class="lg2:flex lg2:justify-between lg2:mr-72 mb-7.5  lg2:mb-14")
+            h2 выберите таунхаус
+            h2(class="text-gray hidden lg2:block") Литер 39
+        div.plan
+          .plan__map.plan-liters-home 
+            img(src=require("../img/images/39.jpg"), alt="homes")
+            svg(preserveAspectRatio="xMinYMin slice"  viewbox='0 -130 2500 500' fill='none')
+              path(d='M2188 64.5V70L2243.5 66.5L2280 147V155L2281.5 158.5V248.5L2383 242L2396.5 253L2443 250.5L2436 235.5H2482V143H2496.5V136.5L2446.5 20L2415 22.5V8.5L2402.5 1.5L2392.5 3.5L2393.5 24L2271 32.5V25L2260.5 20L2251 22V35.5H2232L2188 64.5Z' fill='#D9D9D9' fill-opacity='0.5' stroke='black')
+              path(d='M2023 107L1986.5 109L2027 200V265L2039.5 264V261.5L2116 258L2135 266.5L2179.5 262.5L2177.5 257H2188.5L2280.5 249.5V158L2279 154.5V147.5L2243 67.5L2188.5 70.5L2120.5 75.5V58L2107.5 52H2097L2096.5 77.5L2082.5 78.5L2008.5 97V102.5H2023V107Z' fill='#D9D9D9' fill-opacity='0.5' stroke='black')
+              path(d='M1448.5 123L1413.5 125L1454 216.5V281H1464V277L1541 273.5L1562 283.5L1608.5 279.5L1605.5 273.5L1722 267.5V170H1730.5V162.5L1705.5 111H1701L1698 103L1704.5 101.5L1696 82L1663.5 83V66L1652.5 59.5H1639.5V85L1510.5 94.5L1435.5 112.5V121L1448.5 119.5V123Z' fill='#D9D9D9' fill-opacity='0.5' stroke='black')
+              path(d='M1132.5 105L1108 112L1143.5 132L1144 162.5L1156 189V197H1145.5V281L1170 292L1283 281L1310 284L1348.5 281L1365.5 286.5L1453.5 281V226.5V216.5L1413 125.5L1335.5 130L1317 92.5L1170.5 102.5V84.5L1157 78L1146.5 79.5L1147 104L1132.5 105Z' fill='#D9D9D9' fill-opacity='0.5' stroke='black')
+              path(d='M562.5 125.5H559L547 129.5L550 135.5H555.5L588 197V207.5H580V301.5L604 308.5L714 299.5L716.5 304.5L790.5 301.5V296.5L860.5 293.5V235H872V226.5L805.5 135.5L764.5 137.5L752 110.5L587 122.5V103L574 97.5L562.5 99V125.5Z' fill='#D9D9D9' fill-opacity='0.5' stroke='black')
+              path(d='M826 114L771 136.5L806 135L872.5 226V236H861V294L891 302.5H911V297.5L978 294L1032 290.5L1040 295.5L1084.5 292.5V283.5L1145 282V196.5H1155.5V189.5L1143.5 163L1143 132.5L1106 112L1133 105L1149 103.5L1134.5 68.5H1123V48L1111.5 41H1099.5V72L930.5 83.5V66.5L924 62H912V89L883.5 109.5L826 114Z' fill='#D9D9D9' fill-opacity='0.5' stroke='black')
+              path(d='M42.5 181.5L1 184V191.5L15 192.5V260L117 311L167.5 314.5L187.5 327L253 322.5V311H294V225H298.5L330.5 223.5V216L279.5 97H269V75L254.5 68.5L244.5 71V100.5L77 112.5V95L69 91L58 92V118L22.5 142.5V150.5L42.5 149V181.5Z' fill='#D9D9D9' fill-opacity='0.5' stroke='black')
+              path(d='M579.5 206V301L473.5 306L477.5 316L422 317.5L411 312L330 314.5L331.5 319H313L295 312V225.5L331.5 224V216L307 159L304.5 154L300.5 145L370.5 129L498 119V94L511 93L522 99V117.5L554.5 116.5L558 125.5L545.5 129L550 136H554.5L587 197.5V206H579.5Z' fill='#D9D9D9' fill-opacity='0.5' stroke='black')
+              path(d='M1719.5 98.5L1699.5 103L1701.5 110.5H1706L1731.5 162.5V171H1723V266.5L1762 282.5L1870 271.5L1880.5 278L1948.5 274V268.5L2026.5 265V200.5L1986 109.5L1921.5 113L1908 85L1743 96V77.5L1729.5 71.5L1718.5 73L1719.5 98.5Z' fill='#D9D9D9' fill-opacity='0.5' stroke='black')
+
+      div(class="toggle-element   h-full bg-purple  pt-10 grow"
+            data-toggle_el
+            id="plan_1-4")
+        .px-5
+          div(class="flex items-center mb-9 gap-5 cursor-pointer ")
+            <svg width="30" height="6" viewBox="0 0 30 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 3L5 5.88675L5 0.113249L0 3ZM4.5 3.5L30 3.5L30 2.5L4.5 2.5L4.5 3.5Z" fill="white"/>
+            </svg>
+            a(data-back="plan_1-4" class=" block underline ") Назад к выбору
+          div(class="lg2:flex lg2:justify-between lg2:mr-72 mb-7.5  lg2:mb-14")
+            h2 выберите таунхаус
+            h2(class="text-gray hidden lg2:block") Литер 38
+        div.plan
+          .plan__map.plan-liters-home 
+            img(src=require("../img/images/40.jpg"), alt="homes")
+            svg(preserveAspectRatio="xMinYMin slice"  viewbox='0 -140 2500 500' fill='none')
+              path(data-status='free' data-location="www.google.com" stroke='#4A8D45' stroke-width='3' fill-opacity='0.36' d="M93.5 255.5L121.5 274.5L178.5 265L187 276L240.5 274.5L236.5 267L305.5 265V186.5H314.5V180.5L299.5 141H315.5V129L329.5 132.5V124.5L278.5 96.5V93H305.5L289 49H270V35L249.5 22.5L237.5 24V33L233 30L220 31L220.5 53L88.5 63.5V50.5L78.5 43.5H65V65.5L24.5 93V99.5H54.5V136L1 153V158.5L43.5 181V258L93.5 255.5Z"
+                class="fill-green"
+              )
+              path(data-status='free' data-location="www.google.com" stroke='#4A8D45' stroke-width='3' fill-opacity='0.36' d="M306.5 92.5L489.5 78.5L509 122.5L586.5 117L628.5 204V270L530.5 276.5L513 264.5H434L317 269L306 264.5V187.5H315.5V180.5L300.5 141.5H316V130L330 133.5V124.5L279 96V94L306.5 92.5Z"
+                class="fill-green"
+              )
+              path(data-status='free' data-location="www.google.com" stroke='#4A8D45' stroke-width='3' fill-opacity='0.36' d="M628 114L587.5 116.5L629.5 204V270L682.5 265L725 262.5L742 273.5L757.5 283L823.5 279.5V272L941.5 266.5V199.5H935V197.5L931 183L925.5 176L893.5 86.5L700.5 101.5L628 114Z"
+                class="fill-green"
+              )
+              path(data-status='free' data-location="www.google.com" stroke='#4A8D45' stroke-width='3' fill-opacity='0.36' d="M889.5 62.5L849.5 89L894.5 86L935.5 190.5V199.5H942.5V271L1035.5 269L1132.5 266.5L1156.5 279.5L1262 274.5V206L1229 99L1135 105L1112.5 45.5L1069.5 48.5V34L1059 27.5L1046.5 28.5V50L942 58V44.5L922.5 31.5L910 33.5V42.5L903 38.5L890.5 41L889.5 62.5Z"
+                class="fill-green"
+              )
+              path(data-status='free' data-location="www.google.com" stroke='#4A8D45' stroke-width='3' fill-opacity='0.36' d="M1262.5 205.5V274.5L1421 261L1424.5 271L1486 268V261H1547L1546 181.5H1557.5V174L1548 148.5V110L1558.5 108L1536 43.5L1516.5 45V31.5L1497 18.5L1484 19.5V28.5L1479.5 26H1466.5L1467 48L1335 58.5V45L1324.5 37.5L1311 39L1312 59.5L1271 87.5V95L1229.5 98.5L1262.5 205.5Z"
+                class="fill-green"
+              )
+
+              path(data-status='free' data-location="www.google.com" stroke='#4A8D45' stroke-width='3' fill-opacity='0.36' d="M1755.5 93.5L1559 108.5L1548.5 110.5V148L1558.5 173.5V182.5H1547L1549 261L1583 283.5L1700.5 276.5L1708 283.5L1779 279L1877 273.5V197L1843.5 111L1767 116.5L1755.5 93.5Z"
+                class="fill-green"
+              )
+
+              path(data-status='free' data-location="www.google.com" stroke='#4A8D45' stroke-width='3' fill-opacity='0.36' d="M1861.5 111H1845L1878 197L1877.5 272L1974 264.5L1990.5 275L2058 272L2055 262L2184.5 256V174.5H2192V167L2163 98L2158 102.5H2147V99.5L2158 86.5L2155.5 77.5L1933 95.5L1861.5 106.5V111Z"
+                class="fill-green"
+              )
+
+              path(data-status='free' data-location="www.google.com" stroke='#4A8D45' stroke-width='3' fill-opacity='0.36' d="M2077.5 70.5V83L2156 77L2158.5 86L2148 98.5V101.5H2157.5L2163.5 97L2193 166V176H2185.5V243.5L2262.5 241H2283L2286 243.5H2330.5L2354 254L2436 250L2439.5 251L2461.5 250V185.5H2482V175.5L2417 72.5L2329.5 78.5L2310 20.5L2267.5 23V9.5L2255.5 1L2241.5 2.5V25.5L2137.5 33V20.5L2120.5 6.5L2104.5 8V17L2099.5 13L2085 15V37L2044.5 65V72L2077.5 70.5Z"
+                class="fill-green"
+              )
+
+
+      div(class="toggle-element   h-full bg-purple  pt-10 grow"
+            data-toggle_el
+            id="plan_1-5")
+        .px-5
+          div(class="flex items-center mb-9 gap-5 cursor-pointer ")
+            <svg width="30" height="6" viewBox="0 0 30 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 3L5 5.88675L5 0.113249L0 3ZM4.5 3.5L30 3.5L30 2.5L4.5 2.5L4.5 3.5Z" fill="white"/>
+            </svg>
+            a(data-back="plan_1-5" class=" block underline ") Назад к выбору
+          div(class="lg2:flex lg2:justify-between lg2:mr-72 mb-7.5  lg2:mb-14")
+            h2 выберите таунхаус
+            h2(class="text-gray hidden lg2:block") Литер 41
+        div.plan
+          .plan__map.plan-liters-home 
+            img(src=require("../img/images/41.jpg"), alt="homes")
+            svg(preserveAspectRatio="xMinYMin slice"  viewbox='-30 -20 2500 500'  fill='none')
+              path(data-status='free' data-location="www.google.com" stroke='#4A8D45' stroke-width='3' fill-opacity='0.36' 
+                d="M68 184V230L0.5 249.5V256.5L8 260.5V340L60 368.5L112.5 354L115.5 368.5L172.5 409L240 406L248 419L264 417.5L311.5 414L305 399L380 397V281L425 279V270.5L403 214.5L416.5 220.5V211.5L396.5 201L393.5 193.5L365 122H360.5V114L347.5 108.5L334.5 110.5V127L107.5 143V123.5L90.5 115.5L78 118V154.5L38.5 180L40 184H68Z"
+                class="fill-green"
+              )
+              path(data-status='free' data-location="www.google.com" stroke='#4A8D45' stroke-width='3' fill-opacity='0.36' 
+                d="M474.5 180L395 197L417 211L416.5 222L405.5 217.5L426 270V280L381.5 282L382.5 401L511.5 398.5L556.5 411.5L640 406V394.5L756.5 390.5V267L712.5 172.5L730.5 168L727.5 160.5L474.5 180Z"
+                class="fill-green"
+              )
+              path(data-status='free' data-location="www.google.com" stroke='#4A8D45' stroke-width='3' fill-opacity='0.36' 
+                d="M770 274L719 169L977 150L992.5 181.5L1042.5 179L1124 302.5H1110.5L1112 372.5L1027 376V380.5H1017.5V387.5L936.5 391.5L917 377.5L762.5 389L760 275.688L770 274Z"
+                class="fill-green"
+              )
+              path(data-status='free' data-location="www.google.com" stroke='#4A8D45' stroke-width='3' fill-opacity='0.36' 
+                d="M1471 229L1425.5 127L1191.5 145L1099 163V173H1106V177.5L1047 182L1126 302.5L1114 304.5V375.5H1125H1144.5V371.5L1229 368H1244L1273 378.5L1355.5 372.5V363.5L1464.5 357.5V240L1471 239V229Z"
+                class="fill-green"
+              )
+              path(data-status='free' data-location="www.google.com" stroke='#4A8D45' stroke-width='3' fill-opacity='0.36' 
+                d="M1692.5 109L1428 127.5L1472 227V241.5H1467V357.5L1635.5 345L1654.5 352L1732 345V341H1743V337.5L1835 335V262.5H1839L1847.5 264V255L1767 140L1778.5 139L1777 136L1707 139.5L1692.5 109Z"
+                class="fill-green"
+              )
+              path(data-status='free' data-location="www.google.com" stroke='#4A8D45' stroke-width='3' fill-opacity='0.36' 
+                d="M1815 137.5L1780 140L1770 141L1848.5 253.5V265.5L1836 264V334.5L1841.5 336H1862.5V331L1942 325H1957L1990 339L2075.5 335L2070.5 322L2184.5 318.5L2182 203H2176V195.5L2133.5 91L1909 108.5L1815 128.5V137.5Z"
+                class="fill-green"
+              )
+
+              path(data-status='free' data-location="www.google.com" stroke='#4A8D45' stroke-width='3' fill-opacity='0.36' 
+                d="M2062.5 88L2089.5 86.5V93.5L2134 89.5L2177 193.5V201.5H2183.5L2186.5 316.5L2431 299.5L2429.5 180H2448V174L2388 26L2349 29V10.5L2335.5 1L2319.5 4L2321 31L2165.5 43L2164 33.5L2155 26L2139.5 28.5V46H2118L2062.5 81.5V88Z"
+                class="fill-green"
+              )
+      
+           
+      div(class="absolute bottom-3 lg2:bottom-10 w-full overflow-hidden flex flex-col  justify-between items-center xl:grid xl:grid-cols-12 ")
+        div(class=" self-end xl:self-auto flex justify-between items-center w-full xl:w-auto xl:col-span-2")
+          div
+            div(style="display:none" data-status-labels)
+              div(  class="flex flex-col xl:flex-row xl:gap-14 items-center capitalize pl-5") 
+                div(class="flex gap-2.5 items-center")
+                  div(class="rounded-full w-2.5 h-2.5 bg-green")
+                  span свободные
+                div(class="flex gap-2.5 items-center") 
+                  div(class="rounded-full w-2.5 h-2.5 bg-red")
+                  span проданные
+          div(class="xl:hidden")
+            svg(width='85' height='85' viewbox='0 0 85 85' fill='none' xmlns='http://www.w3.org/2000/svg')
+              circle(cx='42.2831' cy='42.283' r='29' transform='rotate(-52.2866 42.2831 42.283)' stroke='white' stroke-width='2')
+              g(transform="rotate(0,42.5,42.5)")
+                line(x1='42.8802' y1='21.1992' x2='42.9417' y2='42.1991' stroke='#A61C20' stroke-width='2')
+                path(d='M42.8802 21.1993C42.8899 24.5129 40.2115 27.2071 36.8978 27.2168' stroke='#A61C20' stroke-width='2')
+                path(d='M48.8978 27.1816C45.5841 27.1913 42.89 24.5129 42.8802 21.1992' stroke='#A61C20' stroke-width='2')
+                line(x1='43.0033' y1='63.1992' x2='42.9418' y2='42.1993' stroke='white' stroke-width='2')
+                path(d='M43.0033 63.1992C42.9936 59.8855 45.672 57.1913 48.9857 57.1816' stroke='white' stroke-width='2')
+                path(d='M36.9858 57.2168C40.2994 57.2071 42.9936 59.8855 43.0033 63.1992' stroke='white' stroke-width='2')
+                line(x1='63.9416' y1='42.1377' x2='42.9417' y2='42.1992' stroke='white' stroke-width='2')
+                path(d='M63.9416 42.1377C60.6279 42.1474 57.9338 39.469 57.9241 36.1553' stroke='white' stroke-width='2')
+                path(d='M57.9592 48.1552C57.9495 44.8415 60.628 42.1474 63.9417 42.1377' stroke='white' stroke-width='2')
+                line(x1='21.9419' y1='42.2607' x2='42.9418' y2='42.1992' stroke='white' stroke-width='2')
+                path(d='M21.9419 42.2608C25.2556 42.2511 27.9498 44.9295 27.9595 48.2432' stroke='white' stroke-width='2')
+                path(d='M27.9243 36.2432C27.934 39.5569 25.2556 42.251 21.9419 42.2607' stroke='white' stroke-width='2')
+                circle(r='3.5' transform='matrix(-0.611712 0.791081 0.791081 0.611712 42.9845 42.1935)' fill='white')
+              circle(cx='42.5254' cy='12.5253' r='6.5' transform='rotate(0.223642 42.5254 12.5253)' fill='#A61C20')
+              path(d='M45.4602 13.7262C45.3859 14.0632 45.2685 14.3772 45.1078 14.6682C44.9472 14.9547 44.7434 15.2046 44.4965 15.4178C44.2541 15.631 43.9755 15.7986 43.6606 15.9204C43.3502 16.0377 43.0127 16.0956 42.6482 16.0942C42.2289 16.0925 41.8373 16.0135 41.4733 15.8572C41.1093 15.6962 40.7889 15.474 40.512 15.1903C40.2397 14.9022 40.0268 14.5618 39.8734 14.1693C39.7246 13.7768 39.6511 13.3412 39.6529 12.8627C39.6548 12.3888 39.7317 11.9561 39.8836 11.5648C40.0401 11.1735 40.2556 10.8371 40.5301 10.5556C40.8092 10.2696 41.1314 10.0475 41.4966 9.88944C41.8618 9.73136 42.254 9.65314 42.6733 9.65478C43.0379 9.6562 43.3749 9.71904 43.6843 9.84329C43.9983 9.96301 44.2756 10.1327 44.5163 10.3524C44.7615 10.5676 44.9611 10.8213 45.1149 11.1135C45.2733 11.4013 45.3905 11.7116 45.4667 12.0446L44.1337 12.0394C44.0303 11.6835 43.8582 11.3957 43.6176 11.1761C43.3769 10.9564 43.0606 10.8457 42.6686 10.8442C42.4453 10.8433 42.2264 10.8926 42.0118 10.992C41.7972 11.0869 41.6099 11.2252 41.4496 11.4068C41.2894 11.5885 41.1587 11.8045 41.0575 12.0547C40.9608 12.3005 40.9119 12.5714 40.9107 12.8676C40.9096 13.1684 40.9563 13.442 41.0511 13.6885C41.1504 13.935 41.2794 14.1497 41.4382 14.3326C41.597 14.5155 41.7833 14.6575 41.9971 14.7586C42.2109 14.8552 42.4295 14.9039 42.6528 14.9047C43.0447 14.9063 43.3619 14.7981 43.6043 14.5803C43.8512 14.3625 44.0255 14.0761 44.1272 13.721L45.4602 13.7262Z' fill='white')
+        div(class="relative overflow-x-auto w-full xl:col-span-8 lg2:flex lg2:justify-center"  id='reviews-btns')
+          +buttons-card()(class="justify-self-center")
+        div(class="hidden xl:block xl:col-span-2 xl:justify-self-end")
+            svg(width='85' height='85' viewbox='0 0 85 85' fill='none' xmlns='http://www.w3.org/2000/svg')
+              circle(cx='42.2831' cy='42.283' r='29' transform='rotate(-52.2866 42.2831 42.283)' stroke='white' stroke-width='2')
+              g(transform="rotate(0,42.5,42.5)")
+                line(x1='42.8802' y1='21.1992' x2='42.9417' y2='42.1991' stroke='#A61C20' stroke-width='2')
+                path(d='M42.8802 21.1993C42.8899 24.5129 40.2115 27.2071 36.8978 27.2168' stroke='#A61C20' stroke-width='2')
+                path(d='M48.8978 27.1816C45.5841 27.1913 42.89 24.5129 42.8802 21.1992' stroke='#A61C20' stroke-width='2')
+                line(x1='43.0033' y1='63.1992' x2='42.9418' y2='42.1993' stroke='white' stroke-width='2')
+                path(d='M43.0033 63.1992C42.9936 59.8855 45.672 57.1913 48.9857 57.1816' stroke='white' stroke-width='2')
+                path(d='M36.9858 57.2168C40.2994 57.2071 42.9936 59.8855 43.0033 63.1992' stroke='white' stroke-width='2')
+                line(x1='63.9416' y1='42.1377' x2='42.9417' y2='42.1992' stroke='white' stroke-width='2')
+                path(d='M63.9416 42.1377C60.6279 42.1474 57.9338 39.469 57.9241 36.1553' stroke='white' stroke-width='2')
+                path(d='M57.9592 48.1552C57.9495 44.8415 60.628 42.1474 63.9417 42.1377' stroke='white' stroke-width='2')
+                line(x1='21.9419' y1='42.2607' x2='42.9418' y2='42.1992' stroke='white' stroke-width='2')
+                path(d='M21.9419 42.2608C25.2556 42.2511 27.9498 44.9295 27.9595 48.2432' stroke='white' stroke-width='2')
+                path(d='M27.9243 36.2432C27.934 39.5569 25.2556 42.251 21.9419 42.2607' stroke='white' stroke-width='2')
+                circle(r='3.5' transform='matrix(-0.611712 0.791081 0.791081 0.611712 42.9845 42.1935)' fill='white')
+              circle(cx='42.5254' cy='12.5253' r='6.5' transform='rotate(0.223642 42.5254 12.5253)' fill='#A61C20')
+              path(d='M45.4602 13.7262C45.3859 14.0632 45.2685 14.3772 45.1078 14.6682C44.9472 14.9547 44.7434 15.2046 44.4965 15.4178C44.2541 15.631 43.9755 15.7986 43.6606 15.9204C43.3502 16.0377 43.0127 16.0956 42.6482 16.0942C42.2289 16.0925 41.8373 16.0135 41.4733 15.8572C41.1093 15.6962 40.7889 15.474 40.512 15.1903C40.2397 14.9022 40.0268 14.5618 39.8734 14.1693C39.7246 13.7768 39.6511 13.3412 39.6529 12.8627C39.6548 12.3888 39.7317 11.9561 39.8836 11.5648C40.0401 11.1735 40.2556 10.8371 40.5301 10.5556C40.8092 10.2696 41.1314 10.0475 41.4966 9.88944C41.8618 9.73136 42.254 9.65314 42.6733 9.65478C43.0379 9.6562 43.3749 9.71904 43.6843 9.84329C43.9983 9.96301 44.2756 10.1327 44.5163 10.3524C44.7615 10.5676 44.9611 10.8213 45.1149 11.1135C45.2733 11.4013 45.3905 11.7116 45.4667 12.0446L44.1337 12.0394C44.0303 11.6835 43.8582 11.3957 43.6176 11.1761C43.3769 10.9564 43.0606 10.8457 42.6686 10.8442C42.4453 10.8433 42.2264 10.8926 42.0118 10.992C41.7972 11.0869 41.6099 11.2252 41.4496 11.4068C41.2894 11.5885 41.1587 11.8045 41.0575 12.0547C40.9608 12.3005 40.9119 12.5714 40.9107 12.8676C40.9096 13.1684 40.9563 13.442 41.0511 13.6885C41.1504 13.935 41.2794 14.1497 41.4382 14.3326C41.597 14.5155 41.7833 14.6575 41.9971 14.7586C42.2109 14.8552 42.4295 14.9039 42.6528 14.9047C43.0447 14.9063 43.3619 14.7981 43.6043 14.5803C43.8512 14.3625 44.0255 14.0761 44.1272 13.721L45.4602 13.7262Z' fill='white')
+
+      div(class="absolute lg:hidden w-full h-full bg-background cursor-pointer" style="opacity:.9" data-wrapper)       
+        .container
+          div(class=" pt-20 flex justify-between") 
+            svg(width='12' height='24' viewbox='0 0 12 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+              path(d='M5 7L6.41 8.41L3.83 11H10V0H12V24H10V13H3.83L6.41 15.59L5 17L0 12L5 7Z' fill='white')
+
+            h3(class="text-4xl text-center") перемещайте картинку <br> для выбора 
+            svg(width='12' height='24' viewbox='0 0 12 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+              path(d='M7 7L5.59 8.41L8.17 11H2V0H0V24H2V13H8.17L5.59 15.59L7 17L12 12L7 7Z' fill='white')
+
+    script.
+      // <![CDATA[ window.addEventListener('DOMContentLoaded', () =>
+      { 
+        document.querySelectorAll('a[data-hover]').forEach(a=>{
+        const status = document.querySelector('[data-status-labels]')
+        const btnsGr = document.querySelector('#reviews-btns')
+        const ishPopup = document.querySelector('.plan__popup')
+        a.addEventListener('click', (event)=>{ event.preventDefault()
+          const button =
+            document.querySelector(`[data-toggle='${a.getAttribute('data-button')}']`)
+            btnsGr.style.display = 'flex'
+            status.style.display = 'none'
+            ishPopup.style.display = 'none'
+          if(button === null){
+            console.log(window.screen.width )
+            if(window.screen.width < 770){
+              btnsGr.style.display = 'none'
+            }
+            status.style.display = 'block'
+            //- console.log(btnsGr)
+            const el = a.getAttribute('data-button')
+            const parent = a.closest(`#${el.replace(/-\d+/g,'')}`)
+            parent.classList.remove('toggle-element__active')
+            const newParent = document.querySelector(`#${el}`)
+            newParent.classList.add('toggle-element__active')
+          }
+          if(button){button.onclick(); status.style.display = 'none';}
+        }) 
+      })
+      
+      const btnsGr = document.querySelectorAll('#reviews-btns')
+      btnsGr.forEach(btn=>btn.addEventListener('click', ()=>status.style.display = 'none') )
+      
+      const buttonsBack = document.querySelectorAll('a[data-back]')
+      const btns = document.querySelector('.button__group')
+        const status = document.querySelector('[data-status]')
+        buttonsBack.forEach(el=>{
+          el.addEventListener('click', function(event){
+            event.preventDefault();
+            btns.style.display = 'flex'
+            const id = this.getAttribute('data-back')
+            const parent = document.querySelector(`#${id.replace(/-\d+/g,'')}`)
+            status.style.display = 'none'
+            console.log(status)
+            this.closest(`#${id}`).classList.remove('toggle-element__active')
+            parent.classList.add('toggle-element__active')
+
+          })
+
+        })
+        } // ]]>
+
+
+
+      

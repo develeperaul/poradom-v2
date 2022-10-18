@@ -1,7 +1,8 @@
 // import "../scss/main.scss";
-// import "./pages/index";
+import "./pages/index";
 import "../scss/style.scss";
-// import "./pages/choice-element";
+import "./pages/choice-element";
+import "./pages/card";
 import "./pages/card-hks";
 import "./pages/card-about";
 
